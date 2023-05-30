@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".feature_dashboard.ui.fragment.ExploreFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color_layout"
+            tools:ignore="ScrollViewSize">
+
+            <ImageView
+                android:id="@+id/imageBackground"
+                android:layout_width="0dp"
+                android:layout_height="310dp"
+                android:src="@drawable/background_form_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SearchView
+                android:id="@+id/search"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_34"
+                android:layout_marginTop="@dimen/margin_33"
+                android:background="@drawable/background_search"
+                android:queryHint="@string/search_title"
+                android:searchIcon="@drawable/ic_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/backgroundFilter"
+                android:layout_width="58dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/margin_33"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:background="@drawable/background_filter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/search"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/buttonFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:background="@drawable/background_rounded_filter"
+                app:layout_constraintBottom_toBottomOf="@id/backgroundFilter"
+                app:layout_constraintEnd_toEndOf="@id/backgroundFilter"
+                app:layout_constraintStart_toStartOf="@id/backgroundFilter"
+                app:layout_constraintTop_toTopOf="@id/backgroundFilter" />
+
+            <ImageView
+                android:id="@+id/filter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@id/buttonFilter"
+                app:layout_constraintEnd_toEndOf="@id/buttonFilter"
+                app:layout_constraintStart_toStartOf="@id/buttonFilter"
+                app:layout_constraintTop_toTopOf="@id/buttonFilter" />
+
+            <ImageView
+                android:id="@+id/backgroundListBooks"
+                android:layout_width="0dp"
+                android:layout_height="370dp"
+                android:layout_marginStart="@dimen/margin_34"
+                android:layout_marginTop="@dimen/margin_32"
+                android:src="@drawable/background_list_books"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/FB.21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_21"
+                android:text="@string/list_books_title"
+                app:layout_constraintStart_toStartOf="@id/backgroundListBooks"
+                app:layout_constraintTop_toTopOf="@id/backgroundListBooks" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/FBI.13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:gravity="start|center"
+                android:maxLines="2"
+                android:text="@string/description_categories_book"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/viewMore"
+                style="@style/FB.14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:text="@string/view_more"
+                android:textColor="@color/btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/backgroundListBooks" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_24"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="@id/backgroundListBooks"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/backgroundListBooks"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                tools:listitem="@layout/view_book_item" />
+
+            <TextView
+                android:id="@+id/categorii"
+                style="@style/FB.23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_34"
+                android:layout_marginTop="@dimen/margin_25"
+                android:text="@string/categories"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backgroundListBooks" />
+
+            <TextView
+                android:id="@+id/viewMore2"
+                style="@style/FB.11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_33"
+                android:layout_marginEnd="@dimen/margin_19"
+                android:text="@string/view_more"
+                android:textColor="@color/btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backgroundListBooks" />
+
+            <TextView
+                android:id="@+id/recomandate"
+                style="@style/FB.23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_34"
+                android:layout_marginTop="@dimen/margin_25"
+                android:text="@string/recomandate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categorii" />
+
+            <TextView
+                android:id="@+id/viewMore3"
+                style="@style/FB.11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_33"
+                android:layout_marginEnd="@dimen/margin_19"
+                android:text="@string/view_more"
+                android:textColor="@color/btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewMore2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</layout>

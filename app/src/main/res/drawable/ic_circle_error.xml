@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <stroke
+                android:width="0.92dp"
+                android:color="@color/error" />
+            <solid
+                android:color="@color/borderBottomNav"/>
+            <size
+                android:height="11dp"
+                android:width="11dp" />
+        </shape>
+    </item>
+</selector>

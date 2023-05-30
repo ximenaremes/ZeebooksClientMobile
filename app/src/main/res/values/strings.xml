@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">Zeebooks</string>
+
+    <!-- region GetStarted -->
+    <!--    <string name="button_next_initial_text">Explorează mai departe</string>-->
+    <string name="button_next_text">Începe aventura</string>
+    <string name="button_skip_text">Continuă spre librărie</string>
+    <string name="title_one_text">Descoperă lumea cărților</string>
+    <string name="title_two_text">O aventură pentru fiecare</string>
+    <string name="title_three_text">Cărți pentru dezvoltarea personală</string>
+    <string name="title_four_text">Explorează noi lumii</string>
+    <string name="description_one_text">Lasă-te învăluit în magia cărților și explorează o varietate de genuri literare,
+        de la aventuri și romane de dragoste, până la cărți de dezvoltare personală și non-ficțiune.</string>
+    <string name="description_two_text">Indiferent dacă îți place să călătorești în locuri îndepărtate sau să explorezi
+        lumea imaginară a personajelor, biblioteca noastră îți oferă o mulțime de cărți care să te ajute să evadezi din cotidian.</string>
+    <string name="description_three_text">Cărțile sunt o modalitate excelentă de a-ți dezvolta abilitățile și de a învăța
+        lucruri noi. Descoperă cărțile noastre de dezvoltare personală care îți vor oferi inspirație și îți vor ajuta să devii cea mai bună versiune a ta.</string>
+    <string name="description_four_text">Descoperă lumi noi prin lectură. Biblioteca noastră este plină de cărți care îți vor
+        oferi oportunitatea să explorezi noi culturi și să înțelegi perspective diferite.</string>
+    <!-- endregion -->
+
+    <!-- region SignUp -->
+    <string name="register_text_title">Înregistrează-te</string>
+    <string name="type_input_last_name_text">Nume</string>
+    <string name="type_input_first_name_text">Prenume</string>
+    <string name="type_input_email_text">Adresa de e-mail</string>
+    <string name="type_input_password_text">Parola</string>
+    <string name="type_input_confirm_password_text">Confirmă parola</string>
+    <string name="create_account_text">Creează cont</string>
+    <string name="exist_account_text">Ai deja cont?</string>
+    <!-- endregion -->
+
+    <!-- region SignIn -->
+    <string name="login_text_title">Autentifică-te</string>
+    <string name="forget_password_text">Ai uitat parola?</string>
+    <string name="retine">Reține</string>
+    <string name="retinut">Reținut</string>
+    <string name="login_account_text">Intră în cont</string>
+    <string name="do_not_have_account">Nu ai cont?</string>
+    <!-- endregion -->
+
+    <!-- region Reset password -->
+    <string name="reset_password">Resetează parola</string>
+    <string name="new_password">Parolă nouă</string>
+    <string name="save_password">Salvează parola</string>
+    <string name="solicita">Solicită</string>
+    <string name="type_password_text">Introdu adresa de e-mail pentru a solicita resetarea parolei.</string>
+
+    <!-- endregion -->
+
+    <!-- region Explore -->
+    <string name="search_title">Caută cărți</string>
+    <string name="list_books_title">Descoperă acum</string>
+    <string name="description_categories_book">Vânează cărțile noi înaintea cititorilor din bibliotecă</string>
+    <string name="view_more">vezi toate</string>
+    <string name="categories">Categorii</string>
+    <string name="recomandate">Recomandate</string>
+    <!-- endregion -->
+
+    <!-- region Details book -->
+    <string name="purchase_now">Cumpără acum</string>
+    <string name="votes">Voturi</string>
+    <string name="number_of_page">Număr de pagini</string>
+    <string name="language">limba</string>
+    <string name="year_of_publication">Anul</string>
+    <string name="book_description">Descriere</string>
+    <string name="view_more_text">vezi mai mult</string>
+    <string name="ratinds_and_review">Voturi &amp; Recenzii</string>
+    <string name="write_a_review">Scrie o recenzie</string>
+    <string name="books_similari">Cărți similare</string>
+    <!-- endregion -->
+
+    <!-- region filter -->
+    <string name="filter_title">Filtre</string>
+    <string name="filter_sort">Sortare</string>
+    <string name="filter_price">Preț</string>
+    <string name="filter_rating">Rating</string>
+    <string name="filter_type">Gen</string>
+    <string name="filter_language">Limbă</string>
+    <string name="filter_years">Ani</string>
+    <string name="filter_button_cancel">Renunță</string>
+    <string name="filter_button_apply">Aplică</string>
+    <!-- endregion -->
+
+    <!-- region profile -->
+    <string name="details_text">Detalii personale</string>
+    <string name="edit_details_text">Editare date personale</string>
+    <string name="language_text">Configurare limbă</string>
+    <string name="dark_mode_text">Dark Mode</string>
+    <string name="about_us_text">Informații generale</string>
+    <string name="sign_out_text">Deconectare</string>
+    <!-- endregion -->
+
+    <!-- region change user details -->
+    <string name="lastname_text">Numele de familie</string>
+    <string name="firstName_text">Prenumele</string>
+    <string name="phone_number_text">Număr de telefon</string>
+    <string name="date_of_birth">Data nașterii</string>
+    <string name="save">Salvează modificările</string>
+    <!-- endregion -->
+
+    <!-- region language -->
+    <string name="language_description">Alegeți limba în care doriți să utilizați aplicația:</string>
+    <string name="language_romana">Română</string>
+    <string name="language_engleza">Engleză</string>
+    <string name="language_franceza">Franceză</string>
+    <!-- endregion -->
+
+    <!-- region about -->
+    <string name="version_text">Version 1.0.0</string>
+    <string name="terms_and_condition_text">Termeni și condiții </string>
+    <string name="privacy">Politica de confidențialitate</string>
+    <!-- endregion -->
+
+
+    <!-- region terms and conditions-->
+    <string name="welcome_in_app">Bine ai venit în aplicația noastră!</string>
+    <string name="term_title">Te rugăm să citești cu atenție Termenii și Condițiile de utilizare a aplicației.</string>
+    <string name="term_subtitle">Prin folosirea aplicației noastre, ești de acord să respecți și să fii angajat de acești termeni și condiții. Dacă nu ești de acord cu acești termeni și condiții, te rugăm să nu folosești aplicația.</string>
+    <string name="term_one_title">Drepturi de proprietate intelectuală</string>
+    <string name="term_one_text">Toate drepturile de proprietate intelectuală asupra aplicației noastre și a conținutului său (incluzând, dar nelimitându-se la text, imagini, logo-uri, design grafic etc.) sunt rezervate. Nu este permisă copierea, distribuirea, reproducerea sau utilizarea neautorizată a oricărui material din aplicație fără acordul scris al proprietarului.</string>
+    <string name="term_two_title">Contul de utilizator</string>
+    <string name="term_two_text">Pentru a beneficia în mod complet de funcționalitățile aplicației, este necesar să creezi un cont de utilizator. Ești responsabil pentru menținerea confidențialității datelor de conectare și pentru orice activitate care are loc în contul tău. Ne rezervăm dreptul de a suspenda sau închide contul tău în cazul în care există încălcări ale Termenilor și Condițiilor sau a politicilor noastre.</string>
+    <string name="term_three_title">Informații personale</string>
+    <string name="term_three_text">Colectăm și utilizăm informațiile personale în conformitate cu Politica noastră de Confidențialitate. Ne angajăm să protejăm confidențialitatea datelor tale personale și să le utilizăm doar în scopurile prevăzute de acești Termeni și Condiții și de lege.</string>
+    <string name="term_four_title">Comenzi și Plăți</string>
+    <string name="term_four_text">Prin utilizarea aplicației noastre, ai posibilitatea de a plasa comenzi pentru achiziționarea cărților disponibile în librăria noastră online. Prețurile afișate sunt în valută locală și pot varia în funcție de oferte și promoții. Plata comenzilor se va efectua conform metodelor de plată acceptate în aplicație.</string>
+    <string name="term_five_title">Livrare și Retur</string>
+    <string name="term_five_text">Ne străduim să livrăm comenzile în cel mai scurt timp posibil și să oferim produse de calitate. În cazul în care nu ești mulțumit de produsul primit, te rugăm să consulți politica noastră de retur și să urmezi pașii necesari pentru returnarea acestuia.</string>
+    <string name="term_six_title">Limitarea responsabilității</string>
+    <string name="term_six_text">Utilizarea aplicației se face pe propriul risc. Nu ne asumăm responsabilitatea pentru orice pierdere sau daune directe, indirecte, accidentale.</string>
+    <string name="termination">Prin utilizarea aplicației noastre, ești de acord și angajat de Termenii și Condițiile de mai sus. Te rugăm să citești cu atenție acești termeni și condiții și să îi respecți în timpul utilizării aplicației. Dacă nu ești de acord cu acești termeni și condiții, te rugăm să nu utilizezi aplicația noastră.</string>
+    <string name="termination_text">Mulțumim pentru utilizarea aplicației noastre și ne dorim să ai o experiență plăcută și satisfăcătoare!</string>
+    <!-- endregion -->
+
+    <!-- region privacy-->
+    <string name="privacy_title">Această politică de confidențialitate stabilește modul în care colectăm, utilizăm și protejăm informațiile tale personale în timp ce utilizezi aplicația noastră.</string>
+    <string name="privacy_subtitle">Prin utilizarea aplicației, ești de acord cu prelucrarea datelor tale personale în conformitate cu această politică.</string>
+    <string name="privacy_one_title">Informații colectate</string>
+    <string name="privacy_one_text">Colectăm informații personale, cum ar fi nume, adresă de e-mail și număr de telefon, pentru a facilita procesarea comenzilor și pentru a îmbunătăți experiența utilizatorului.</string>
+    <string name="privacy_two_title">Utilizarea informațiilor</string>
+    <string name="privacy_two_text">Utilizăm informațiile colectate pentru a procesa comenzile, a furniza suport clienți și a comunica oferte și actualizări relevante. Nu vom partaja informațiile cu terți fără consimțământul tău, exceptând cazurile prevăzute de lege.</string>
+    <string name="privacy_three_title">Protecția informațiilor</string>
+    <string name="privacy_three_text">Implementăm măsuri de securitate pentru a proteja informațiile tale personale și utilizăm tehnologii de criptare pentru a asigura confidențialitatea datelor.</string>
+    <string name="privacy_four_title">Cookie-uri și tehnologii similare</string>
+    <string name="privacy_four_text">Utilizăm cookie-uri și tehnologii similare pentru a colecta informații despre utilizarea aplicației și pentru a personaliza experiența ta. Poți gestiona preferințele cookie-urilor prin setările browser-ului tău.</string>
+    <string name="privacy_five_title">Link-uri către terți</string>
+    <string name="privacy_five_text">Aplicația noastră poate conține link-uri către site-uri web sau servicii oferite de terți. Nu suntem responsabili pentru practicile lor de confidențialitate.</string>
+    <string name="privacy_six_title">Drepturile tale</string>
+    <string name="privacy_six_text">Ai dreptul de a accesa, rectifica sau șterge informațiile personale pe care le deținem. Pentru exercitarea acestor drepturi sau pentru orice întrebări suplimentare, te rugăm să ne contactezi prin intermediul informațiilor de contact furnizate în aplicație.</string>
+    <string name="privacy_termination">Ne angajăm să protejăm confidențialitatea datelor tale personale și să le utilizăm în conformitate cu această politică. Înțelegem importanța confidențialității tale și depunem toate eforturile pentru a păstra informațiile tale în siguranță.</string>
+    <!-- endregion -->
+
+
+</resources>
