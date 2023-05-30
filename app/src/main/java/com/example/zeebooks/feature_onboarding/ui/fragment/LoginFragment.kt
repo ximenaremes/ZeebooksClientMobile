@@ -30,7 +30,7 @@ class LoginFragment :BaseFragment<FragmentLoginBinding>() {
                 findNavController().navigate(R.id.action_loginFragment_to_resetPasswordFragment)
             }
             btnLogin.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_nav_dashboard)
+                findNavController().navigate(R.id.action_loginFragment_to_dashboardActivity)
             }
 
             imageToggle.setOnClickListener {

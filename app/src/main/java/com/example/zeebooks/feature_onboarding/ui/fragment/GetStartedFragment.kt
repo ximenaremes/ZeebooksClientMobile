@@ -69,7 +69,7 @@ class GetStartedFragment : BaseFragment<FragmentGetStartedBinding>() {
        }
 
         binding.textSkip.setOnClickListener {
-            findNavController().navigate(R.id.action_getStartedFragment_to_mainActivity)
+            findNavController().navigate(R.id.action_getStartedFragment_to_loginFragment)
         }
 
 //        if (position < pagerAdapter.itemCount){

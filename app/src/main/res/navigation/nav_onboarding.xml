@@ -12,9 +12,6 @@
         <action
             android:id="@+id/action_getStartedFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_getStartedFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -25,8 +22,8 @@
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_registerFragment_to_nav_dashboard"
-            app:destination="@id/nav_dashboard" />
+            android:id="@+id/action_registerFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -40,8 +37,8 @@
             android:id="@+id/action_loginFragment_to_resetPasswordFragment"
             app:destination="@id/resetPasswordFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_nav_dashboard"
-            app:destination="@id/nav_dashboard" />
+            android:id="@+id/action_loginFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity" />
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
@@ -64,9 +61,8 @@
             android:id="@+id/action_newPasswordFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-    <include app:graph="@navigation/nav_dashboard" />
     <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.zeebooks.feature_dashboard.MainActivity"
-        android:label="MainActivity" />
+        android:id="@+id/dashboardActivity"
+        android:name="com.example.zeebooks.feature_dashboard.ui.activity.DashboardActivity"
+        android:label="DashboardActivity" />
 </navigation>
