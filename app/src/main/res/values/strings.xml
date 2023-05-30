@@ -149,6 +149,10 @@
     <string name="privacy_six_title">Drepturile tale</string>
     <string name="privacy_six_text">Ai dreptul de a accesa, rectifica sau șterge informațiile personale pe care le deținem. Pentru exercitarea acestor drepturi sau pentru orice întrebări suplimentare, te rugăm să ne contactezi prin intermediul informațiilor de contact furnizate în aplicație.</string>
     <string name="privacy_termination">Ne angajăm să protejăm confidențialitatea datelor tale personale și să le utilizăm în conformitate cu această politică. Înțelegem importanța confidențialității tale și depunem toate eforturile pentru a păstra informațiile tale în siguranță.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
     <!-- endregion -->
 
 

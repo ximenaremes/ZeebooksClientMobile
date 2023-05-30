@@ -15,17 +15,21 @@
         android:theme="@style/Theme.Zeebooks"
         tools:targetApi="31">
         <activity
+            android:name=".feature_dashboard.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main" />
+        <activity
             android:name=".feature_onboarding.ui.activity.OnboardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
         <activity
             android:name=".feature_dashboard.ui.activity.DashboardActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
