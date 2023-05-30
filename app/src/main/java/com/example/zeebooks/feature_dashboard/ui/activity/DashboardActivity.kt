@@ -24,12 +24,10 @@ class DashboardActivity: BaseActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setupBottomNavigation()
-
     }
 
     private fun setupBottomNavigation() {
@@ -73,7 +71,7 @@ class DashboardActivity: BaseActivity() {
 
     private fun navigateToFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.nav_dashboard_items, fragment)
+            .replace(R.id.nav_dashboard, fragment)
             .commit()
     }
 

@@ -22,7 +22,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
             buttonRegister.setOnClickListener {
-                findNavController().navigate(R.id.action_registerFragment_to_nav_dashboard)
+                findNavController().navigate(R.id.action_registerFragment_to_dashboardActivity)
             }
         }
     }
