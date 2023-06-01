@@ -90,7 +90,7 @@
     <string name="lastname_text">Numele de familie</string>
     <string name="firstName_text">Prenumele</string>
     <string name="phone_number_text">Număr de telefon</string>
-    <string name="date_of_birth">Data nașterii</string>
+    <string name="user_details_date_of_join_text">Data înregistrării</string>
     <string name="save">Salvează modificările</string>
     <!-- endregion -->
 

@@ -127,7 +127,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_field_edit"
-                android:hint="@string/date_of_birth"
+                android:hint="@string/user_details_date_of_join_text"
+                android:text="10.03.2023"
                 android:inputType="date"
                 android:textColor="@color/border" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -147,8 +148,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dateOfBirthText" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </layout>
