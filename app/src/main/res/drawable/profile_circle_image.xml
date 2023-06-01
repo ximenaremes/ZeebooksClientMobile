@@ -8,7 +8,7 @@
                 android:angle="360"
                 android:endColor="@color/transparent"
                 android:gradientRadius="150dp"
-                android:startColor="@color/shadow_blue_40"
+                android:width="3dp"
                 android:type="radial" />
         </shape>
     </item>
@@ -19,8 +19,8 @@
                 android:height="120dp" />
             <solid android:color="#CEDCF0" />
             <stroke
-                android:width="2dp"
-                android:color="#24495E24" />
+                android:width="4dp"
+                android:color="@color/white" />
         </shape>
     </item>
     <item android:gravity="center">
@@ -30,8 +30,8 @@
                 android:height="132dp" />
             <solid android:color="@color/transparent" />
             <stroke
-                android:width="4dp"
-                android:color="@color/no_name_blue_20" />
+                android:width="3dp"
+                android:color="#542C5474" />
         </shape>
     </item>
 </layer-list>

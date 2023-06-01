@@ -74,6 +74,11 @@
     <style name="FB.16">
         <item name="android:textSize">16dp</item>
     </style>
+
+    <style name="FB.19">
+        <item name="android:textSize">19dp</item>
+    </style>
+
     <style name="FB.20">
         <item name="android:textSize">20dp</item>
     </style>
