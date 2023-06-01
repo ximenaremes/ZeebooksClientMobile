@@ -24,6 +24,8 @@
     <string name="type_input_confirm_password_text">Confirmă parola</string>
     <string name="create_account_text">Creează cont</string>
     <string name="exist_account_text">Ai deja cont?</string>
+    <string name="checkbox_text">Am citit și sunt de acord cu</string>
+    <string name="checkbox_terms_text">termenii și condițiile.</string>
     <!-- endregion -->
 
     <!-- region SignIn -->
@@ -107,7 +109,7 @@
     <string name="privacy">Politica de confidențialitate</string>
     <string name="questions">Întrebări frecvente</string>
     <string name="number_phone">+40 316301973</string>
-    <string name="time">luni - vineri 9:00 - 16:00</string>
+    <string name="time">luni – vineri 9:00 - 16:00</string>
     <string name="email">info.ro@zeebooks.shop</string>
     <!-- endregion -->
 

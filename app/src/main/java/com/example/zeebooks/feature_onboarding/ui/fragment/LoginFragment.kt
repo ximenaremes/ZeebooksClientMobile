@@ -6,24 +6,21 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.commons.network.RetrofitClient.apiService
-import com.example.zeebooks.databinding.FragmentLoginBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
+import com.example.zeebooks.databinding.FragmentLoginBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class LoginFragment :BaseFragment<FragmentLoginBinding>() {
+class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override val resId = R.layout.fragment_login
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        with(binding){
-            noAccount.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
-            }
-            registerText.setOnClickListener {
+        with(binding) {
+            login.setOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
             }
             textForgetPassword.setOnClickListener {

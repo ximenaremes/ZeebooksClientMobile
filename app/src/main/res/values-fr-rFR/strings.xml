@@ -24,6 +24,8 @@
     <string name="type_input_confirm_password_text">Confirmă parola</string>
     <string name="create_account_text">Creează cont</string>
     <string name="exist_account_text">Ai deja cont?</string>
+    <string name="checkbox_text">Am citit și sunt de acord cu</string>
+    <string name="checkbox_terms_text">termenii și condițiile.</string>
     <!-- endregion -->
 
     <!-- region SignIn -->
