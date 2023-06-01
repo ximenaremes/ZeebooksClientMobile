@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.databinding.ActivityDashboardBinding
@@ -20,19 +19,14 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(binding.root)
         val navController = findNavController(R.id.nav_dashboard_items)
 
-        AppBarConfiguration(
-            setOf(
-                R.id.exploreFragment,
-                R.id.categoriesFragment,
-                R.id.nav_profile,
-            )
-        )
         binding.bottomNavigation.setupWithNavController(navController)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.detailsBookFragment -> hideBottomNav()
-                R.id.filterFragment -> hideBottomNav()
-                else -> showBottomNav()
+                R.id.exploreFragment -> showBottomNav()
+                R.id.wishlistFragment -> showBottomNav()
+                R.id.paymentFragment -> showBottomNav()
+                R.id.profileFragment -> showBottomNav()
+                else -> hideBottomNav()
             }
         }
     }

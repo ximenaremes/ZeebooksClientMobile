@@ -5,11 +5,15 @@
         android:title=""
         android:icon="@drawable/ic_home" />
 
-    <item android:id="@+id/categoriesFragment"
+    <item android:id="@+id/wishlistFragment"
         android:title=""
-        android:icon="@drawable/ic_search" />
+        android:icon="@drawable/ic_favorite" />
+
+    <item android:id="@+id/nav_payment"
+        android:title=""
+        android:icon="@drawable/ic_shopping_cart" />
 
     <item android:id="@+id/nav_profile"
         android:title=""
-        android:icon="@drawable/ic_search" />
+        android:icon="@drawable/ic_profile" />
 </menu>
