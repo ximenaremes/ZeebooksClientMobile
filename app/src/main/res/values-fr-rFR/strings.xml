@@ -28,6 +28,19 @@
     <string name="checkbox_terms_text">termenii și condițiile.</string>
     <!-- endregion -->
 
+    <!-- region validation -->
+    <string name="textErroLastName">Numele este obligatoriu!</string>
+    <string name="textErroFirstName">Prenumele este obligatoriu!</string>
+    <string name="textErroEmail">Email-ul este obligatoriu!</string>
+    <string name="textErroEmailCharacters">Ați introdus o adresă de email invalidă!</string>
+    <string name="textErroPassword">Parola este obligatorie!</string>
+    <string name="textErroPasswordLength">Parola trebuie să aibă cel puțin 8 caractere!</string>
+    <string name="textErroPasswordCharacters">Parola este prea slabă!</string>
+    <string name="textErroConfPassword">Confirmarea parolei este obligatorie!</string>
+    <string name="textErroConfPasswordIdentical">Parola nu sunt corespunde!</string>
+    <!--Parola trebui să conțină 1 simbol, 1 cifră, 1 literă mică, 1 literă mare și cel puțin 4 caractere-->
+    <!-- endregion -->
+
     <!-- region SignIn -->
     <string name="login_text_title">Autentifică-te</string>
     <string name="forget_password_text">Ai uitat parola?</string>
@@ -77,6 +90,10 @@
     <string name="filter_years">Ani</string>
     <string name="filter_button_cancel">Renunță</string>
     <string name="filter_button_apply">Aplică</string>
+    <!-- endregion -->
+
+    <!-- region favorite -->
+    <string name="book_favorite">Cărțile tale favorite</string>
     <!-- endregion -->
 
     <!-- region profile -->

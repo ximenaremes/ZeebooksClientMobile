@@ -1,4 +1,4 @@
-package com.example.zeebooks.feature_onboarding.domain.model
+package com.example.zeebooks.commons.domain.model
 
 import android.os.Parcelable
 import java.util.Date
@@ -9,10 +9,10 @@ import java.util.Date
 data class User(
     val id:Int,
     val firstName: String,
-    val lastName: String
-//    val numberPhone: String,
-//    val email: String,
-//    val password: String,
+    val lastName: String,
+    val numberPhone: String,
+    val email: String,
+    val password: String
 //    val role: String,
 //    val image: Byte,
 //    val lastActivity: Date

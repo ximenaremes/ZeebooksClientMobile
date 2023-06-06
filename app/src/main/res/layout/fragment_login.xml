@@ -98,25 +98,6 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputEmail"
             tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
 
-        <ImageView
-            android:id="@+id/exclamationMarkEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="2dp"
-            android:src="@drawable/ic_exclamation_mark"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@+id/circleErrorEmail"
-            app:layout_constraintEnd_toEndOf="@+id/circleErrorEmail"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/circleErrorEmail"
-            app:layout_constraintTop_toTopOf="@+id/circleErrorEmail"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="ContentDescription,ImageContrastCheck" />
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputPassword"
             android:layout_width="0dp"
@@ -169,24 +150,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputPassword"
             tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/exclamationMarkPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="2dp"
-            android:src="@drawable/ic_exclamation_mark"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@+id/circleErrorPassword"
-            app:layout_constraintEnd_toEndOf="@+id/circleErrorPassword"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/circleErrorPassword"
-            app:layout_constraintTop_toTopOf="@+id/circleErrorPassword"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <ToggleButton
             android:id="@+id/image_toggle"

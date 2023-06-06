@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 data class RegisterUseCaseArgs(
-    val firstNmae: String,
+    val firstName: String,
     val lastName: String
 )
 
@@ -18,7 +18,7 @@ class RegisterUseCase @Inject constructor(
 
     override fun execute(args: RegisterUseCaseArgs): Flow<DataModel<Boolean>> {
         return flow {
-            onboardingRepository.createUser(args.firstNmae, args.lastName)
+            onboardingRepository.createUser(args.firstName, args.lastName)
             DataModel(data = true)
         }
     }

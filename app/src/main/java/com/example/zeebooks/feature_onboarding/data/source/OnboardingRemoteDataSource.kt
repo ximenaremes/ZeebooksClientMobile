@@ -1,7 +1,6 @@
 package com.example.zeebooks.feature_onboarding.data.source
 
 import com.example.zeebooks.commons.network.ApiService
-import com.example.zeebooks.feature_onboarding.domain.model.User
 import javax.inject.Inject
 
 class OnboardingRemoteDataSource @Inject constructor(
