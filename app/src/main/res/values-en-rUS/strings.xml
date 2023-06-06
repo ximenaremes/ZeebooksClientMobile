@@ -28,6 +28,11 @@
     <string name="checkbox_terms_text">termenii și condițiile.</string>
     <!-- endregion -->
 
+    <!-- region popup -->
+    <string name="title_popup"> Contul tău a fost creat cu succes</string>
+    <string name="message_popup">Te rugăm să aștepți câteva momente în timp ce pregătim totul pentru tine.</string>
+    <!-- endregion -->
+
     <!-- region validation -->
     <string name="textErroLastName">Numele este obligatoriu!</string>
     <string name="textErroFirstName">Prenumele este obligatoriu!</string>

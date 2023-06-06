@@ -1,7 +1,10 @@
 package com.example.zeebooks.feature_onboarding.ui.fragment
 
+import android.app.Dialog
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import android.view.Window
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
@@ -27,7 +30,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                 findNavController().navigate(R.id.action_registerFragment_to_termsAndConditionsFragment)
             }
             buttonRegister.setOnClickListener {
-                validateInputs(view)
+                validateInputs()
             }
             checkBox.setOnCheckedChangeListener { _, isChecked ->
                 buttonRegister.isEnabled = isChecked
@@ -41,7 +44,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         }
     }
 
-    private fun validateInputs(view: View) {
+    private fun validateInputs() {
 
         when (viewModel.validation(
 
@@ -151,7 +154,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             }
             Constants.DEFAULT_VALUE -> {
                 changeErrorsVisibility()
-                findNavController().navigate(R.id.action_registerFragment_to_dashboardActivity)
+                showDialog()
                 //api calls viewmodel
             }
 
@@ -263,6 +266,29 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             tvPassConfError1.visibility = View.GONE
             circleErrorConfrimPassword.visibility = View.GONE
         }
+    }
+
+    private fun showDialog() {
+        val dialog = this.context?.let { Dialog(it) }
+        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog?.setCancelable(false)
+        dialog?.setContentView(R.layout.view_custom_popup)
+
+//        val imageView: ImageView = view.findViewById(R.id.animatedImage)
+//
+//        Glide.with(this)
+//            .asGif()
+//            .load(R.drawable.ic_login)
+//            .into(imageView)
+
+        Handler().postDelayed({
+            dialog?.dismiss()
+
+            findNavController().navigate(R.id.action_registerFragment_to_dashboardActivity)
+
+        }, 2500)
+
+        dialog?.show()
     }
 
 }

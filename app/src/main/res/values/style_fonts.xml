@@ -48,11 +48,14 @@
     <style name="FB.16.Dark">
         <item name="android:textColor">@color/text_about</item>
     </style>
+
+    <style name="FB.16.Blue">
+        <item name="android:textColor">@color/my_acc_pie_chart_color_1</item>
+    </style>
+
     <style name="FB.18">
         <item name="android:textSize">18dp</item>
     </style>
-
-
 
     <style name="FB.14.GrayscaleLabel">
         <item name="android:textColor">@color/grayscale_label</item>
