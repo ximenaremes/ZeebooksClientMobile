@@ -11,12 +11,9 @@ import com.example.zeebooks.databinding.FragmentTermsAndConditionsBinding
 class TermsAndConditionsFragment : BaseFragment<FragmentTermsAndConditionsBinding>(){
 
     override val resId = R.layout.fragment_terms_and_conditions
-    private var isTermsAndConditions: Boolean = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        isTermsAndConditions = arguments?.getBoolean(Extras.IS_TERMS_AND_CONDITIONS) ?: false
 
         with(binding) {
 

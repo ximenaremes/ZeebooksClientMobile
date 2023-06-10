@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_field_enabled"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_30"
+        android:paddingTop="@dimen/margin_40"
+        android:paddingBottom="@dimen/margin_44">
+
+        <TextView
+            android:id="@+id/logoutText"
+            style="@style/FB.19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out_text"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/verticalLine1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_14"
+            android:layout_marginTop="@dimen/margin_30"
+            android:src="@drawable/background_vertical_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoutText" />
+
+        <TextView
+            android:id="@+id/messageText"
+            style="@style/FB.14.DarkColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/sign_out_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verticalLine1" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            style="@style/FB.16.Dark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_30"
+            android:alpha="0.7"
+            android:background="@drawable/background_button_cancel"
+            android:gravity="center"
+            android:padding="@dimen/margin_14"
+            android:text="@string/sign_out_answer_no"
+            android:textColor="@color/color_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/messageText" />
+
+        <TextView
+            android:id="@+id/btn_confirm"
+            style="@style/FB.16.Dark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:alpha="0.5"
+            android:background="@drawable/background_button_confirm"
+            android:gravity="center"
+            android:padding="@dimen/margin_14"
+            android:text="@string/sign_out_answer_yes"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+            app:layout_constraintTop_toBottomOf="@id/messageText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

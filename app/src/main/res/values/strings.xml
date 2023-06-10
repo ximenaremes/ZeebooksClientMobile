@@ -28,6 +28,26 @@
     <string name="type_input_confirm_password_text">Confirmă parola</string>
     <string name="create_account_text">Creează cont</string>
     <string name="exist_account_text">Ai deja cont?</string>
+    <string name="checkbox_text">Am citit și sunt de acord cu</string>
+    <string name="checkbox_terms_text">termenii și condițiile.</string>
+    <!-- endregion -->
+
+    <!-- region popup -->
+    <string name="title_popup"> Contul tău a fost creat cu succes</string>
+    <string name="message_popup">Te rugăm să aștepți câteva momente în timp ce pregătim totul pentru tine.</string>
+    <!-- endregion -->
+
+    <!-- region validation -->
+    <string name="textErroLastName">Numele este obligatoriu!</string>
+    <string name="textErroFirstName">Prenumele este obligatoriu!</string>
+    <string name="textErroEmail">Email-ul este obligatoriu!</string>
+    <string name="textErroEmailCharacters">Ați introdus o adresă de email invalidă!</string>
+    <string name="textErroPassword">Parola este obligatorie!</string>
+    <string name="textErroPasswordLength">Parola trebuie să aibă cel puțin 8 caractere!</string>
+    <string name="textErroPasswordCharacters">Parola este prea slabă!</string>
+    <string name="textErroConfPassword">Confirmarea parolei este obligatorie!</string>
+    <string name="textErroConfPasswordIdentical">Parola nu sunt corespunde!</string>
+    <!--Parola trebui să conțină 1 simbol, 1 cifră, 1 literă mică, 1 literă mare și cel puțin 4 caractere-->
     <!-- endregion -->
 
     <!-- region SignIn -->
@@ -82,6 +102,10 @@
     <string name="filter_button_apply">Aplică</string>
     <!-- endregion -->
 
+    <!-- region favorite -->
+    <string name="book_favorite">Cărțile tale favorite</string>
+    <!-- endregion -->
+
     <!-- region profile -->
     <string name="details_text">Detalii personale</string>
     <string name="edit_details_text">Editare date personale</string>
@@ -89,13 +113,16 @@
     <string name="dark_mode_text">Dark Mode</string>
     <string name="about_us_text">Informații generale</string>
     <string name="sign_out_text">Deconectare</string>
+    <string name="sign_out_message">Ești sigur că dorești să te deconectezi?</string>
+    <string name="sign_out_answer_yes">Da</string>
+    <string name="sign_out_answer_no">Anulare</string>
     <!-- endregion -->
 
     <!-- region change user details -->
     <string name="lastname_text">Numele de familie</string>
     <string name="firstName_text">Prenumele</string>
     <string name="phone_number_text">Număr de telefon</string>
-    <string name="date_of_birth">Data nașterii</string>
+    <string name="user_details_date_of_join_text">Data înregistrării</string>
     <string name="save">Salvează modificările</string>
     <!-- endregion -->
 
@@ -110,6 +137,10 @@
     <string name="version_text">Version 1.0.0</string>
     <string name="terms_and_condition_text">Termeni și condiții </string>
     <string name="privacy">Politica de confidențialitate</string>
+    <string name="questions">Întrebări frecvente</string>
+    <string name="number_phone">+40 316 301 973</string>
+    <string name="time">luni - vineri 9:00 - 16:00</string>
+    <string name="email">info.ro@zeebooks.shop</string>
     <!-- endregion -->
 
 
@@ -149,6 +180,33 @@
     <string name="privacy_six_title">Drepturile tale</string>
     <string name="privacy_six_text">Ai dreptul de a accesa, rectifica sau șterge informațiile personale pe care le deținem. Pentru exercitarea acestor drepturi sau pentru orice întrebări suplimentare, te rugăm să ne contactezi prin intermediul informațiilor de contact furnizate în aplicație.</string>
     <string name="privacy_termination">Ne angajăm să protejăm confidențialitatea datelor tale personale și să le utilizăm în conformitate cu această politică. Înțelegem importanța confidențialității tale și depunem toate eforturile pentru a păstra informațiile tale în siguranță.</string>
+    <!-- endregion -->
+
+    <!-- region question-->
+    <string name="question_title">Bine ați venit în secțiunea noastră de Întrebări Frecvente!</string>
+    <string name="question_fragment_one">Apreciem implicarea și interesul dumneavoastră în ceea ce privește librăria noastră. Am creat această secțiune pentru a răspunde celor mai comune întrebări pe care le primim de la utilizatorii noștri.</string>
+    <string name="question_subtitle">Întrebări frecvente - Răspunsurile pe care le căutați!</string>
+    <string name="question_one">Cum pot să plasez o comandă?</string>
+    <string name="answer_one">Pentru a plasa o comandă, accesați site-ul nostru, căutați cărțile dorite și adăugați-le în coșul de cumpărături. Apoi, finalizați comanda completând detaliile de facturare și livrare și confirmați plata.</string>
+    <string name="question_two">Care sunt opțiunile de plată disponibile?</string>
+    <string name="answer_two">Opțiunile de plată disponibile includ carduri de credit/debit, plăți online (PayPal, Google Pay, Apple Pay), transfer bancar și plata la livrare (în funcție de locație).</string>
+    <string name="question_three">Cât durează să primesc comanda?</string>
+    <string name="answer_three">Timpul de primire a comenzii variază în funcție de locația de livrare și metoda de livrare alese.</string>
+    <string name="question_four">Pot să returnez sau să schimb o carte?</string>
+    <string name="answer_four">Da, de obicei acceptăm returnarea sau schimbul cărților conform politicii noastre.</string>
+    <string name="question_five">Cum pot să urmăresc starea comenzii mele?</string>
+    <string name="answer_five">Verificați e-mailul de confirmare sau accesați contul dvs. în aplicație pentru a urmări starea comenzii.</string>
+    <string name="question_six">Care sunt costurile de livrare?</string>
+    <string name="answer_six">Costurile de livrare pot varia în funcție de locație și metoda de livrare aleasă.</string>
+    <string name="question_seven">Ce se întâmplă dacă o carte comandată nu este disponibilă?</string>
+    <string name="answer_seven">Vă vom oferi o alternativă sau o rambursare.</string>
+    <string name="question_eight">Pot să anulez o comandă?</string>
+    <string name="answer_eight">Da, de obicei puteți anula o comandă, cu condiția să o faceți în termenul specificat în politica noastră de anulare a comenzilor. Vă recomandăm să contactați cât mai curând posibil serviciul nostru de asistență pentru clienți pentru a solicita anularea comenzii.</string>
+    <string name="question_nine">Cum pot contacta serviciul de asistență pentru clienți?</string>
+    <string name="answer_nine">Prin telefon, e-mail sau formularul de contact.</string>
+    <string name="question_teen">Ce măsuri de securitate luați pentru protejarea datelor personale?</string>
+    <string name="answer_teen">Criptare, restricționarea accesului, securitate fizică și tehnică, politici de confidențialitate și conformitate cu legile privind protecția datelor.</string>
+    <string name="thanks">Vă mulțumim că ați ales librăria noastră și sperăm că această secțiune vă va fi utilă în navigarea și utilizarea serviciilor noastre. Lectură plăcută!"</string>
     <!-- endregion -->
 
 

@@ -48,11 +48,14 @@
     <style name="FB.16.Dark">
         <item name="android:textColor">@color/text_about</item>
     </style>
+
+    <style name="FB.16.Blue">
+        <item name="android:textColor">@color/my_acc_pie_chart_color_1</item>
+    </style>
+
     <style name="FB.18">
         <item name="android:textSize">18dp</item>
     </style>
-
-
 
     <style name="FB.14.GrayscaleLabel">
         <item name="android:textColor">@color/grayscale_label</item>
@@ -74,6 +77,11 @@
     <style name="FB.16">
         <item name="android:textSize">16dp</item>
     </style>
+
+    <style name="FB.19">
+        <item name="android:textSize">19dp</item>
+    </style>
+
     <style name="FB.20">
         <item name="android:textSize">20dp</item>
     </style>
@@ -102,6 +110,10 @@
 
     <style name="FB.14.Dark">
         <item name="android:textColor">@color/dark</item>
+    </style>
+
+    <style name="FB.14.DarkColor">
+        <item name="android:textColor">@color/text_about</item>
     </style>
 
     <style name="FR.23.White">

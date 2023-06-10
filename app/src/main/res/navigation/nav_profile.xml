@@ -60,6 +60,9 @@
         <action
             android:id="@+id/action_aboutUsFragment_to_privacyPolicyFragment"
             app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_aboutUsFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/termsAndConditionsFragment"
@@ -75,6 +78,14 @@
         android:label="PrivacyPolicyFragment" >
         <action
             android:id="@+id/action_privacyPolicyFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionsFragment"
+        android:name="com.example.zeebooks.feature_profile.ui.fragment.QuestionsFragment"
+        android:label="QuestionsFragment" >
+        <action
+            android:id="@+id/action_questionsFragment_to_aboutUsFragment"
             app:destination="@id/aboutUsFragment" />
     </fragment>
 </navigation>

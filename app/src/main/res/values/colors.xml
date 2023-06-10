@@ -51,6 +51,7 @@
     <color name="primary_light">#DAE9FF</color>
     <color name="no_name_blue_20">#332D61CD</color>
     <color name="shadow_blue">#66226BFF</color>
+
     <!-- endregion -->
 
     <!-- region Input field -->
@@ -101,6 +102,8 @@
 
     <color name="background_color_layout">#F6F8FC</color>
     <color name="shadow_blue_40">#66226BFF</color>
+    <color name="shadow_blue_41">#66495E24</color>
+
 
     <!-- region Explore -->
     <color name="dashboard_background_color">#662B7890</color>
@@ -111,8 +114,13 @@
 
     <!-- region Profile -->
     <color name="backround_image">#153F7D75</color>
+    <color name="background_profile">#34A3C5D8</color>
     <color name="text_about">#001447</color>
     <color name="border_field">#CEDCF0</color>
+    <color name="color_profile_text">#19558C</color>
+    <color name="color_profile">#092C30</color>
+    <color name="button_cancel">#6AA29C</color>
+    <color name="button_confirm">#E91010</color>
 
     <!-- endregion -->
 

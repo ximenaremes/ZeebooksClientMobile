@@ -2,19 +2,171 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/gray_background">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background">
 
-            <include
-                android:id="@+id/toolbar"
-                layout="@layout/view_toolbar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sectionDetails"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_80"
+            android:layout_marginBottom="@dimen/margin_250"
+            android:background="@drawable/background_rounded_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <TextView
+            android:id="@+id/firstNameText"
+            style="@style/FB.16.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_72"
+            android:text="@string/firstName_text"
+            app:layout_constraintStart_toStartOf="@id/sectionDetails"
+            app:layout_constraintTop_toTopOf="@id/sectionDetails" />
+
+        <TextView
+            android:id="@+id/firstNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_72"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:text="@string/details_text"
+            android:textColor="@color/grayscale_navy"
+            android:textSize="@dimen/margin_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/sectionDetails"
+            app:layout_constraintTop_toTopOf="@id/sectionDetails" />
+
+        <TextView
+            android:id="@+id/lastNameText"
+            style="@style/FB.16.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_25"
+            android:text="@string/lastname_text"
+            app:layout_constraintStart_toStartOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/firstNameText" />
+
+        <TextView
+            android:id="@+id/lastNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:text="@string/details_text"
+            android:textColor="@color/grayscale_navy"
+            android:textSize="@dimen/margin_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/firstNameValue" />
+
+        <TextView
+            android:id="@+id/emailText"
+            style="@style/FB.16.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_25"
+            android:text="@string/type_input_email_text"
+            app:layout_constraintStart_toStartOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/lastNameText" />
+
+        <TextView
+            android:id="@+id/emailValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:text="@string/details_text"
+            android:textSize="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/lastNameValue" />
+
+        <TextView
+            android:id="@+id/numberText"
+            style="@style/FB.16.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_25"
+            android:text="@string/phone_number_text"
+            app:layout_constraintStart_toStartOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/emailText" />
+
+        <TextView
+            android:id="@+id/numberValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:text="@string/details_text"
+            android:textSize="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/emailValue" />
+
+        <TextView
+            android:id="@+id/dateOfJoinText"
+            style="@style/FB.16.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_25"
+            android:text="@string/user_details_date_of_join_text"
+            app:layout_constraintStart_toStartOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/numberText" />
+
+        <TextView
+            android:id="@+id/dateOfJoinValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:text="@string/details_text"
+            android:textSize="@dimen/margin_16"
+            app:layout_constraintEnd_toEndOf="@id/sectionDetails"
+            app:layout_constraintTop_toBottomOf="@id/numberValue" />
+
+
+        <ImageView
+            android:id="@+id/profileBackground"
+            android:layout_width="241dp"
+            android:layout_height="256dp"
+            android:layout_marginTop="@dimen/margin_32"
+            android:src="@drawable/profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/initials"
+            style="@style/FB.20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="X.R."
+            android:textColor="@color/btn"
+            app:layout_constraintBottom_toBottomOf="@+id/profileBackground"
+            app:layout_constraintEnd_toEndOf="@+id/profileBackground"
+            app:layout_constraintStart_toStartOf="@+id/profileBackground"
+            app:layout_constraintTop_toTopOf="@+id/profileBackground" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

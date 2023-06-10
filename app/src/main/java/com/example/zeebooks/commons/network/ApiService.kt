@@ -1,8 +1,7 @@
 package com.example.zeebooks.commons.network
 
 
-import com.example.zeebooks.feature_onboarding.domain.model.User
-import retrofit2.Response
+import com.example.zeebooks.commons.domain.model.User
 import retrofit2.http.*
 
 
@@ -15,4 +14,7 @@ interface ApiService {
 
     @GET("users/getById/user")
     suspend fun getUserById(@Query("id") userid:String): User
+
+    @GET("users/loginUser")
+    suspend fun getUserByEmailAndPassword(@Query("email") email:String, password:String): User
 }

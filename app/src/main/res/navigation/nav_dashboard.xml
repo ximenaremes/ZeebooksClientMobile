@@ -56,4 +56,10 @@
             android:id="@+id/action_exploreFragment_to_nav_profile"
             app:destination="@id/nav_profile" />
     </fragment>
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+    <include app:graph="@navigation/nav_payment" />
 </navigation>

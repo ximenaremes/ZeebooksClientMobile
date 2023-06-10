@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_registerFragment_to_dashboardActivity"
             app:destination="@id/dashboardActivity" />
+        <action
+            android:id="@+id/action_registerFragment_to_termsAndConditionsFragment"
+            app:destination="@id/termsAndConditionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -65,4 +68,12 @@
         android:id="@+id/dashboardActivity"
         android:name="com.example.zeebooks.feature_dashboard.ui.activity.DashboardActivity"
         android:label="DashboardActivity" />
+    <fragment
+        android:id="@+id/termsAndConditionsFragment"
+        android:name="com.example.zeebooks.feature_profile.ui.fragment.TermsAndConditionsFragment"
+        android:label="TermsAndConditionsFragment" >
+        <action
+            android:id="@+id/action_termsAndConditionsFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
 </navigation>

@@ -2,8 +2,13 @@ package com.example.zeebooks.feature_profile.ui.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.PopupWindow
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
@@ -28,7 +33,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
                 findNavController().navigate(R.id.action_profileFragment_to_aboutUsFragment)
             }
             logout.setOnClickListener {
-
+                showDialog()
             }
         }
         changeDarkMode()
@@ -57,6 +62,33 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
         }
     }
 
+    private fun showDialog() {
+        val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val popupView = inflater.inflate(R.layout.view_custom_popup_logout, null)
+
+        val popupWindow = PopupWindow(
+            popupView,
+            ConstraintLayout.LayoutParams.WRAP_CONTENT,
+            ConstraintLayout.LayoutParams.WRAP_CONTENT
+        )
+        popupWindow.isOutsideTouchable = true
+        popupWindow.isFocusable = true
+
+        val btnCancel = popupView.findViewById<TextView>(R.id.btn_cancel)
+        val btnConfirm = popupView.findViewById<TextView>(R.id.btn_confirm)
+
+
+        btnCancel.setOnClickListener {
+            popupWindow.dismiss()
+        }
+
+        btnConfirm.setOnClickListener {
+            // apelarea functiei de logout
+//            findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
+            popupWindow.dismiss()
+        }
+        popupWindow.showAtLocation(requireView(), Gravity.CENTER, 0, 195)
+
+    }
 
 }
-
