@@ -112,6 +112,10 @@
         <item name="android:textColor">@color/dark</item>
     </style>
 
+    <style name="FB.14.DarkColor">
+        <item name="android:textColor">@color/text_about</item>
+    </style>
+
     <style name="FR.23.White">
         <item name="android:textColor">@color/white</item>
     </style>

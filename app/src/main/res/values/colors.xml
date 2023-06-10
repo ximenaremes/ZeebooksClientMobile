@@ -118,7 +118,9 @@
     <color name="text_about">#001447</color>
     <color name="border_field">#CEDCF0</color>
     <color name="color_profile_text">#19558C</color>
-
+    <color name="color_profile">#092C30</color>
+    <color name="button_cancel">#6AA29C</color>
+    <color name="button_confirm">#E91010</color>
 
     <!-- endregion -->
 

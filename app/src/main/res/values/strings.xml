@@ -113,6 +113,9 @@
     <string name="dark_mode_text">Dark Mode</string>
     <string name="about_us_text">Informații generale</string>
     <string name="sign_out_text">Deconectare</string>
+    <string name="sign_out_message">Ești sigur că dorești să te deconectezi?</string>
+    <string name="sign_out_answer_yes">Da</string>
+    <string name="sign_out_answer_no">Anulare</string>
     <!-- endregion -->
 
     <!-- region change user details -->
