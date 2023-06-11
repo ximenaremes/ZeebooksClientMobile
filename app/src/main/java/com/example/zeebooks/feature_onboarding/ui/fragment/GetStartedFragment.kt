@@ -29,25 +29,21 @@ class GetStartedFragment : BaseFragment<FragmentGetStartedBinding>() {
                 (OnboardingData(
                     title = "Descoperă lumea cărților",
                     description = "Lasă-te învăluit în magia cărților și explorează o varietate de genuri literare, de la aventuri și romane de dragoste, până la cărți de dezvoltare personală și non-ficțiune.",
-//                    button = "Explorează mai departe",
                     image = R.drawable.ic_background_viewpager3_onboarding
                 )),
                 (OnboardingData(
                     title = "O aventură pentru fiecare",
                     description = "Indiferent dacă îți place să călătorești în locuri îndepărtate sau să explorezi lumea imaginară a personajelor, biblioteca noastră îți oferă o mulțime de cărți care să te ajute să evadezi din cotidian.",
-//                    button = "Explorează mai departe",
                     image = R.drawable.ic_background_viewpager4_onboarding
                 )),
                 (OnboardingData(
                     title = "Cărți pentru dezvoltarea personală",
                     description = "Cărțile sunt o modalitate excelentă de a-ți dezvolta abilitățile și de a învăța lucruri noi. Descoperă cărțile noastre de dezvoltare personală care îți vor oferi inspirație și îți vor ajuta să devii cea mai bună versiune a ta.",
-//                    button = "Explorează mai departe",
                     image = R.drawable.ic_background_viewpager5_onboarding
                 )),
                 (OnboardingData(
                     title = "Explorează noi lumi",
                     description = "Descoperă lumi noi prin lectură. Biblioteca noastră este plină de cărți care îți vor oferi oportunitatea să explorezi noi culturi și să înțelegi perspective diferite.",
-//                    button = "Începe aventura",
                     image = R.drawable.ic_background_viewpager1_onboarding
                 ))
             )

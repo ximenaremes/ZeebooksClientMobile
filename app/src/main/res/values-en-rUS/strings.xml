@@ -101,6 +101,15 @@
     <string name="book_favorite">Cărțile tale favorite</string>
     <!-- endregion -->
 
+    <!-- region categories -->
+    <string name="categories_one">Literatură și poezie</string>
+    <string name="categories_two">Psihologie și motivaționale</string>
+    <string name="categories_three">Istorie, politică, artă</string>
+    <string name="categories_four">Cărți pentru copii</string>
+    <string name="categories_five">Hobby și ghiduri practice</string>
+    <string name="categories_six">Spiritualitate și religie</string>
+    <!-- endregion -->
+
     <!-- region profile -->
     <string name="details_text">Detalii personale</string>
     <string name="language_text">Configurare limbă</string>

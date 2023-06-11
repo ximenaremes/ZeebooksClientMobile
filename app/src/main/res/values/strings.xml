@@ -65,7 +65,6 @@
     <string name="save_password">Salvează parola</string>
     <string name="solicita">Solicită</string>
     <string name="type_password_text">Introdu adresa de e-mail pentru a solicita resetarea parolei.</string>
-
     <!-- endregion -->
 
     <!-- region Explore -->
@@ -73,7 +72,7 @@
     <string name="list_books_title">Descoperă acum</string>
     <string name="description_categories_book">Vânează cărțile noi înaintea cititorilor din bibliotecă</string>
     <string name="view_more">vezi toate</string>
-    <string name="categories">Categorii</string>
+    <string name="categories"> Categorii </string>
     <string name="recomandate">Recomandate</string>
     <!-- endregion -->
 
@@ -104,6 +103,15 @@
 
     <!-- region favorite -->
     <string name="book_favorite">Cărțile tale favorite</string>
+    <!-- endregion -->
+
+    <!-- region categories -->
+    <string name="categories_one">Literatură și poezie</string>
+    <string name="categories_two">Psihologie și motivaționale</string>
+    <string name="categories_three">Istorie, politică, artă</string>
+    <string name="categories_four">Cărți pentru copii</string>
+    <string name="categories_five">Hobby și ghiduri practice</string>
+    <string name="categories_six">Spiritualitate și religie</string>
     <!-- endregion -->
 
     <!-- region profile -->
