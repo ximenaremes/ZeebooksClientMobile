@@ -1,4 +1,4 @@
-package com.example.zeebooks.feature_dashboard.ui.adapter
+package com.example.zeebooks.feature_home.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.zeebooks.R
-import com.example.zeebooks.feature_dashboard.domain.model.CategoryModel
+import com.example.zeebooks.feature_home.domain.model.CategoryModel
 
 class CategoriesAdapter(
     private val items: List<CategoryModel>,

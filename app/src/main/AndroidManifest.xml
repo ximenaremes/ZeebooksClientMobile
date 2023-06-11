@@ -23,7 +23,7 @@
             </intent-filter>
             </activity>
         <activity
-            android:name=".feature_dashboard.ui.activity.DashboardActivity"
+            android:name=".feature_home.ui.activity.DashboardActivity"
             android:exported="false">
         </activity>
     </application>

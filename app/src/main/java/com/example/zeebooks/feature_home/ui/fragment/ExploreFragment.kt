@@ -1,4 +1,4 @@
-package com.example.zeebooks.feature_dashboard.ui.fragment
+package com.example.zeebooks.feature_home.ui.fragment
 
 import android.os.Bundle
 import android.view.View

@@ -66,7 +66,7 @@
     </fragment>
     <activity
         android:id="@+id/dashboardActivity"
-        android:name="com.example.zeebooks.feature_dashboard.ui.activity.DashboardActivity"
+        android:name="com.example.zeebooks.feature_home.ui.activity.DashboardActivity"
         android:label="DashboardActivity" />
     <fragment
         android:id="@+id/termsAndConditionsFragment"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/detailsBookFragment"
-        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.BookDetailsFragment"
+        android:name="com.example.zeebooks.feature_home.ui.fragment.BookDetailsFragment"
         android:label="fragment_details_book"
         tools:layout="@layout/fragment_book_details" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/reviewFragment"
-        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.ReviewFragment"
+        android:name="com.example.zeebooks.feature_home.ui.fragment.ReviewFragment"
         android:label="fragment_review"
         tools:layout="@layout/fragment_review" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.CategoriesFragment"
+        android:name="com.example.zeebooks.feature_home.ui.fragment.CategoriesFragment"
         android:label="fragment_categories"
         tools:layout="@layout/fragment_categories" >
         <action
@@ -34,13 +34,13 @@
     </fragment>
     <fragment
         android:id="@+id/filterFragment"
-        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.FilterFragment"
+        android:name="com.example.zeebooks.feature_home.ui.fragment.FilterFragment"
         android:label="fragment_filter"
         tools:layout="@layout/fragment_filter" />
     <include app:graph="@navigation/nav_profile" />
     <fragment
         android:id="@+id/exploreFragment"
-        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.ExploreFragment"
+        android:name="com.example.zeebooks.feature_home.ui.fragment.ExploreFragment"
         android:label="fragment_explore"
         tools:layout="@layout/fragment_explore" >
         <action
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/wishlistFragment"
-        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.WishlistFragment"
+        android:name="com.example.zeebooks.feature_home.ui.fragment.WishlistFragment"
         android:label="fragment_wishlist"
         tools:layout="@layout/fragment_wishlist" />
     <include app:graph="@navigation/nav_payment" />

@@ -1,4 +1,4 @@
-package com.example.zeebooks.feature_dashboard.ui.fragment
+package com.example.zeebooks.feature_home.ui.fragment
 
 import android.os.Bundle
 import android.view.View
@@ -6,8 +6,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.databinding.FragmentCategoriesBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
-import com.example.zeebooks.feature_dashboard.domain.model.CategoryModel
-import com.example.zeebooks.feature_dashboard.ui.adapter.CategoriesAdapter
+import com.example.zeebooks.feature_home.ui.adapter.CategoriesAdapter
 
 class CategoriesFragment : BaseFragment<FragmentCategoriesBinding>() {
     override val resId = R.layout.fragment_categories

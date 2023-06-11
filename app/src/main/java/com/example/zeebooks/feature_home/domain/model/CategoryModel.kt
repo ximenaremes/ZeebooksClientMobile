@@ -1,4 +1,4 @@
-package com.example.zeebooks.feature_dashboard.domain.model
+package com.example.zeebooks.feature_home.domain.model
 
 import androidx.annotation.DrawableRes
 

@@ -1,4 +1,4 @@
-package com.example.zeebooks.feature_dashboard.ui.activity
+package com.example.zeebooks.feature_home.ui.activity
 
 import android.os.Bundle
 import android.view.View
