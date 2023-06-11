@@ -6,7 +6,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.databinding.FragmentNewPasswordBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class NewPasswordFragment : BaseFragment<FragmentNewPasswordBinding>() {
 
     override val resId = R.layout.fragment_new_password

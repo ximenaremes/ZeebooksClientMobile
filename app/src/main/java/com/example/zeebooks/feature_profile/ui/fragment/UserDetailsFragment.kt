@@ -7,7 +7,9 @@ import com.example.zeebooks.R
 import com.example.zeebooks.databinding.FragmentProfileBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.databinding.FragmentUserDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding>() {
     override val resId = R.layout.fragment_user_details
 

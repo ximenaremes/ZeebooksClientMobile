@@ -11,7 +11,9 @@ import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.commons.utils.Extras
 import com.example.zeebooks.databinding.FragmentPrivacyPolicyBinding
 import com.example.zeebooks.databinding.FragmentTermsAndConditionsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PrivacyPolicyFragment : BaseFragment<FragmentPrivacyPolicyBinding>(){
 
     override val resId = R.layout.fragment_privacy_policy

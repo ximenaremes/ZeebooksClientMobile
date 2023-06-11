@@ -7,7 +7,9 @@ import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.commons.utils.Extras
 import com.example.zeebooks.databinding.FragmentTermsAndConditionsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TermsAndConditionsFragment : BaseFragment<FragmentTermsAndConditionsBinding>(){
 
     override val resId = R.layout.fragment_terms_and_conditions

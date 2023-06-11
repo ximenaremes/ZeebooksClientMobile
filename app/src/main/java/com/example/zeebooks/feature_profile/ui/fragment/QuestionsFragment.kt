@@ -6,7 +6,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.databinding.FragmentQuestionsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class QuestionsFragment : BaseFragment<FragmentQuestionsBinding>() {
 
     override val resId = R.layout.fragment_questions

@@ -8,8 +8,8 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.activity.BaseActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
-
+import dagger.hilt.android.AndroidEntryPoint
+@AndroidEntryPoint
 class OnboardingActivity : BaseActivity() {
 
     override val contentResId = R.layout.activity_onboarding

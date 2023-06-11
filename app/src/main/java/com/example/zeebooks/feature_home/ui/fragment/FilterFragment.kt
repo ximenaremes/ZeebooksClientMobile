@@ -6,7 +6,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.databinding.FragmentFilterBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FilterFragment : BaseFragment<FragmentFilterBinding>() {
     override val resId = R.layout.fragment_filter
 

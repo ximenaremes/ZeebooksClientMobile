@@ -8,7 +8,9 @@ import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.databinding.FragmentGetStartedBinding
 import com.example.zeebooks.feature_onboarding.domain.model.OnboardingData
 import com.example.zeebooks.feature_onboarding.ui.adapter.PagerAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GetStartedFragment : BaseFragment<FragmentGetStartedBinding>() {
 
     private lateinit var pagerAdapter: PagerAdapter

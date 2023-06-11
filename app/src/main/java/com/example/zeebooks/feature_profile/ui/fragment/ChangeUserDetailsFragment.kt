@@ -6,8 +6,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.databinding.FragmentChangeUserDetailsBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ChangeUserDetailsFragment : BaseFragment<FragmentChangeUserDetailsBinding>() {
 
     override val resId = R.layout.fragment_change_user_details

@@ -3,11 +3,12 @@ package com.example.zeebooks.feature_profile.viewmodel
 import androidx.constraintlayout.motion.utils.ViewState
 import com.example.zeebooks.commons.viewmodel.model.BaseViewModel
 import com.example.zeebooks.feature_profile.domain.model.LanguageItem
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
-
+@HiltViewModel
 class LanguageViewModel @Inject constructor() : BaseViewModel()  {
 
     private val _reconciliationViewState = MutableStateFlow(ReconciliationViewState())

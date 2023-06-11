@@ -11,7 +11,9 @@ import com.example.zeebooks.feature_profile.domain.model.LanguageItem
 import com.example.zeebooks.feature_profile.domain.model.LanguageItemType
 import com.example.zeebooks.feature_profile.ui.adapter.ListLanguageAdapter
 import com.example.zeebooks.feature_profile.viewmodel.LanguageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LanguageFragment : BaseFragment<FragmentLanguageBinding>() {
 
     override val resId = R.layout.fragment_language

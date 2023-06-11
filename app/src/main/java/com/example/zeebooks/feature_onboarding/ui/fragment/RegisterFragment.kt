@@ -5,19 +5,31 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.view.Window
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navGraphViewModels
 import com.example.zeebooks.R
+import com.example.zeebooks.commons.domain.model.request.RegisterRequest
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.commons.utils.Constants
 import com.example.zeebooks.commons.utils.Enums
 import com.example.zeebooks.databinding.FragmentRegisterBinding
 import com.example.zeebooks.feature_onboarding.viewmodel.RegisterViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Date
 
+@AndroidEntryPoint
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
 
     override val resId = R.layout.fragment_register
-    override val viewModel: RegisterViewModel by viewModels()
+
+    private val sharedViewModel: RegisterViewModel by navGraphViewModels(R.id.nav_onboarding) {
+        defaultViewModelProviderFactory
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -35,7 +47,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             checkBox.setOnCheckedChangeListener { _, isChecked ->
                 buttonRegister.isEnabled = isChecked
             }
-
+            initObservers()
             checkFocusableInputLastName()
             checkFocusableInputFirstName()
             checkFocusableInputEmail()
@@ -44,15 +56,16 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         }
     }
 
+
     private fun validateInputs() {
 
-        when (viewModel.validation(
+        when (sharedViewModel.validation(
 
-            binding.textName.text.toString(),
-            binding.textEmail.text.toString(),
-            binding.textPassword.text.toString(),
-            binding.textConfPassword.text.toString(),
-            binding.textConfPassword1.text.toString()
+            lastName = binding.textName.text.toString(),
+            firstName = binding.textEmail.text.toString(),
+            email = binding.textPassword.text.toString(),
+            password = binding.textConfPassword.text.toString(),
+            confirmPassword = binding.textConfPassword1.text.toString()
         )) {
 
             Constants.VALID_LASTNAME -> {
@@ -154,8 +167,16 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             }
             Constants.DEFAULT_VALUE -> {
                 changeErrorsVisibility()
+
+                val lastName = binding.textName.text.toString()
+                val firstName = binding.textEmail.text.toString()
+                val email = binding.textPassword.text.toString()
+                val password = binding.textConfPassword.text.toString()
+                val role = "STANDARD"
+                val dateOfJoin = SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(Date())
+
+                sharedViewModel.registerUser(lastName, firstName, email, password, role, dateOfJoin)
                 showDialog()
-                //api calls viewmodel
             }
 
         }
@@ -267,6 +288,16 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             circleErrorConfrimPassword.visibility = View.GONE
         }
     }
+
+
+    private fun initObservers(){
+        viewLifecycleOwner.lifecycleScope.launch{
+            repeatOnLifecycle(Lifecycle.State.STARTED){
+
+            }
+        }
+    }
+
 
     private fun showDialog() {
         val dialog = this.context?.let { Dialog(it) }

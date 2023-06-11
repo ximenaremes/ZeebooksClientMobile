@@ -7,7 +7,9 @@ import com.example.zeebooks.R
 
 import com.example.zeebooks.databinding.FragmentResetPasswordBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ResetPasswordFragment : BaseFragment<FragmentResetPasswordBinding>() {
 
     override val resId = R.layout.fragment_reset_password

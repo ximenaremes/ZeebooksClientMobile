@@ -1,20 +1,31 @@
 package com.example.zeebooks.feature_onboarding.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navGraphViewModels
 import com.example.zeebooks.R
+import com.example.zeebooks.commons.network.RetrofitClient.apiService
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.commons.utils.Constants
 import com.example.zeebooks.commons.utils.Enums
 import com.example.zeebooks.databinding.FragmentLoginBinding
 import com.example.zeebooks.feature_onboarding.viewmodel.LoginViewModel
+import com.example.zeebooks.feature_onboarding.viewmodel.RegisterViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override val resId = R.layout.fragment_login
 
-    override val viewModel: LoginViewModel by viewModels()
+    private val sharedViewModel:LoginViewModel by navGraphViewModels(R.id.nav_onboarding) {
+        defaultViewModelProviderFactory
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -47,15 +58,15 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                 }
 
 
-//            CoroutineScope(Dispatchers.IO).launch {
-//                try {
-//                    val userId = "1"
-//                    val user = apiService.getUserById(userId)
-//                    Log.d("User", "FirstName: ${user.firstName}, LastName: ${user.lastName}")
-//                } catch (e: Exception) {
-//                    Log.e("Error", "Failed to fetch user: ${e.message}")
-//                }
-//            }
+            CoroutineScope(Dispatchers.IO).launch {
+                try {
+                    val userId = "1"
+                    val user = apiService.getUserById(userId)
+                    Log.d("User", "FirstName: ${user.firstName}, LastName: ${user.lastName}")
+                } catch (e: Exception) {
+                    Log.e("Error", "Failed to fetch user: ${e.message}")
+                }
+            }
             }
 
             btnLogin.setOnClickListener {
@@ -68,7 +79,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     }
     private fun validateInputs(view: View) {
 
-        when (viewModel.validation(
+        when (sharedViewModel.validation(
 
             binding.textEmail.text.toString(),
             binding.textPassword.text.toString()
@@ -129,6 +140,10 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             }
             Constants.DEFAULT_VALUE -> {
                 changeErrorsVisibility(view)
+
+                val email = binding.textEmail.text.toString()
+                val password =binding.textPassword.text.toString()
+                sharedViewModel.loginUser(email, password)
                 findNavController().navigate(R.id.action_loginFragment_to_dashboardActivity)
             }
         }

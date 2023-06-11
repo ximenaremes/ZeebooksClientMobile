@@ -10,6 +10,8 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.zeebooks.commons.viewmodel.model.BaseViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
 
 abstract class BaseFragment<VB : ViewDataBinding> : Fragment() {
 

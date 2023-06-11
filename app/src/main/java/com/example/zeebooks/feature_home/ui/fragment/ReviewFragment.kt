@@ -5,7 +5,9 @@ import android.view.View
 import com.example.zeebooks.R
 import com.example.zeebooks.databinding.FragmentReviewBinding
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ReviewFragment : BaseFragment<FragmentReviewBinding>() {
 
     override val resId = R.layout.fragment_review
