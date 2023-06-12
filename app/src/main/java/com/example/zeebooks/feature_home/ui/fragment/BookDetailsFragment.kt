@@ -2,6 +2,7 @@ package com.example.zeebooks.feature_home.ui.fragment
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
@@ -19,8 +20,9 @@ class BookDetailsFragment : BaseFragment<FragmentBookDetailsBinding>() {
             findNavController().navigateUp()
         }
 
+        binding.buttonRating.setOnClickListener {
+            val getRatingValue = binding.ratingBar.rating
+            Toast.makeText(this.context, "Rating$getRatingValue", Toast.LENGTH_SHORT).show()
+        }
     }
-
-
-
 }

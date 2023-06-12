@@ -126,7 +126,10 @@
 
     <!-- region Categories -->
     <color name="categories_text">#153F7D</color>
+
     <!-- endregion -->
+
+    <color name="book_details_text">#332DA8</color>
 
 
 

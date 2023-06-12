@@ -28,6 +28,9 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>() {
             viewMore2.setOnClickListener {
                 findNavController().navigate(R.id.action_exploreFragment_to_categoriesFragment)
             }
+            viewMore3.setOnClickListener {
+                findNavController().navigate(R.id.action_exploreFragment_to_detailsBookFragment)
+            }
         }
 
     }

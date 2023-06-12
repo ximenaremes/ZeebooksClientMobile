@@ -84,7 +84,9 @@
     <string name="year_of_publication">Anul</string>
     <string name="book_description">Descriere</string>
     <string name="view_more_text">vezi mai mult</string>
-    <string name="ratinds_and_review">Voturi &amp; Recenzii</string>
+    <string name="view_less_text">vezi mai puțin</string>
+    <string name="ratinds_and_review">Voturi</string>
+    <string name="rating_button">Acordă un rating</string>
     <string name="write_a_review">Scrie o recenzie</string>
     <string name="books_similari">Cărți similare</string>
     <!-- endregion -->
