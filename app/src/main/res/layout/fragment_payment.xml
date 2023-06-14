@@ -13,7 +13,6 @@
             layout="@layout/view_toolbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/language_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,8 +29,8 @@
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
             <ImageView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:src="@drawable/ic_empty_cart" />
 
             <TextView
@@ -66,17 +65,17 @@
                 android:text="@string/payment_button_text" />
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listDebitCards"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/margin_40"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar" />
-<!--        tools:listitem="@layout/view_book_item"-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/listDebitCards"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="@dimen/margin_40"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/toolbar" />-->
+<!--&lt;!&ndash;        tools:listitem="@layout/view_book_item"&ndash;&gt;-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

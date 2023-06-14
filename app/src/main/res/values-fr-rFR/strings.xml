@@ -100,7 +100,9 @@
     <!-- endregion -->
 
     <!-- region favorite -->
-    <string name="book_favorite">Cărțile tale favorite</string>
+    <string name="book_favorite_title">Listă favorite</string>
+    <string name="book_favorite_subtitle">Lista de favorite este goală.</string>
+    <string name="book_favorite_description">Adaugă produse la favorite și noi te anunțăm când le scade prețul. Este atât de simplu!.</string>
     <!-- endregion -->
 
     <!-- region categories -->
@@ -114,7 +116,7 @@
 
     <!-- region Payment -->
     <string name="payment_title">Coș de cumpărături</string>
-    <string name="payment_subtitle">Coșul tău este gol</string>
+    <string name="payment_subtitle">Coșul tău este gol.</string>
     <string name="payment_description">Descoperă cele mai avantajoase oferte și achiziționează într-un mod sigur.</string>
     <string name="payment_button_text">Vezi produsele</string>
     <!-- endregion -->

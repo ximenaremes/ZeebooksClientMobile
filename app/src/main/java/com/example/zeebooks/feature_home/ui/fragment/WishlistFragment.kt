@@ -15,6 +15,14 @@ class WishlistFragment : BaseFragment<FragmentWishlistBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        with(binding){
+            toolbar.titleText.setText(R.string.book_favorite_title)
+            toolbar.iconBack.visibility =View.INVISIBLE
+            toolbar.iconEdit.visibility =View.INVISIBLE
+
+        }
+
+
     }
 
 
