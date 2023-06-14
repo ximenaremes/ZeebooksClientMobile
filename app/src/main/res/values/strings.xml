@@ -116,6 +116,15 @@
     <string name="categories_six">Spiritualitate și religie</string>
     <!-- endregion -->
 
+
+    <!-- region Payment -->
+    <string name="payment_title">Coș de cumpărături</string>
+    <string name="payment_subtitle">Coșul tău este gol</string>
+    <string name="payment_description">Descoperă cele mai avantajoase oferte și achiziționează într-un mod sigur.</string>
+    <string name="payment_button_text">Vezi produsele</string>
+    <!-- endregion -->
+
+
     <!-- region profile -->
     <string name="details_text">Detalii personale</string>
     <string name="edit_details_text">Editare date personale</string>
@@ -217,7 +226,6 @@
     <string name="question_teen">Ce măsuri de securitate luați pentru protejarea datelor personale?</string>
     <string name="answer_teen">Criptare, restricționarea accesului, securitate fizică și tehnică, politici de confidențialitate și conformitate cu legile privind protecția datelor.</string>
     <string name="thanks">Vă mulțumim că ați ales librăria noastră și sperăm că această secțiune vă va fi utilă în navigarea și utilizarea serviciilor noastre. Lectură plăcută!"</string>
-    <!-- endregion -->
 
 
 </resources>

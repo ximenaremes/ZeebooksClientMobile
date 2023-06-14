@@ -112,6 +112,14 @@
     <string name="categories_six">Spiritualitate și religie</string>
     <!-- endregion -->
 
+    <!-- region Payment -->
+    <string name="payment_title">Coș de cumpărături</string>
+    <string name="payment_subtitle">Coșul tău este gol</string>
+    <string name="payment_description">Descoperă cele mai avantajoase oferte și achiziționează într-un mod sigur.</string>
+    <string name="payment_button_text">Vezi produsele</string>
+    <!-- endregion -->
+
+
     <!-- region profile -->
     <string name="details_text">Detalii personale</string>
     <string name="language_text">Configurare limbă</string>

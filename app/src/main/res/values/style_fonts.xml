@@ -124,4 +124,8 @@
         <item name="android:textColor">@color/blue</item>
     </style>
 
+    <style name="FB.20.DarkColor">
+        <item name="android:textColor">@color/secondary_dark</item>
+    </style>
+
 </resources>
