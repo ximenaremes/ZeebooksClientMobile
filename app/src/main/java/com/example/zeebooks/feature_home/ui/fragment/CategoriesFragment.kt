@@ -20,7 +20,7 @@ class CategoriesFragment : BaseFragment<FragmentCategoriesBinding>() {
 
         with(binding) {
             toolbar.titleText.setText(R.string.categories)
-            toolbar.iconBack.setOnClickListener { findNavController().navigateUp() }
+            toolbar.iconBack.visibility = View.INVISIBLE
 
 
         }

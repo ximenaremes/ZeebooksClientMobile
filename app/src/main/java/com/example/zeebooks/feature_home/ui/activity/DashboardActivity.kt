@@ -28,6 +28,7 @@ class DashboardActivity : AppCompatActivity() {
                 R.id.wishlistFragment -> showBottomNav()
                 R.id.paymentFragment -> showBottomNav()
                 R.id.profileFragment -> showBottomNav()
+                R.id.categoriesFragment -> showBottomNav()
                 else -> hideBottomNav()
             }
         }

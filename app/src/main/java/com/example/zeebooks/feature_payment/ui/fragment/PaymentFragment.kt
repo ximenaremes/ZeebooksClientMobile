@@ -1,11 +1,14 @@
 package com.example.zeebooks.feature_payment.ui.fragment
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.databinding.FragmentPaymentBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,9 +23,12 @@ class PaymentFragment : BaseFragment<FragmentPaymentBinding>() {
             toolbar.titleText.setText(R.string.payment_title)
             toolbar.iconBack.visibility =View.INVISIBLE
             toolbar.iconEdit.visibility =View.INVISIBLE
-            buttonEmptyList.setOnClickListener {
-                findNavController().navigate(R.id.action_paymentFragment_to_categoriesFragment)
-            }
+
+//
+//            buttonEmptyList.setOnClickListener {
+//                findNavController().navigate(R.id.action_paymentFragment_to_categoriesFragment)
+//
+//            }
             buttonEmptyList.alpha=0.8f
         }
 
