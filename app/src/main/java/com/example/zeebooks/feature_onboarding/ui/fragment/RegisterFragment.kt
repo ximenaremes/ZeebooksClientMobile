@@ -11,7 +11,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import com.example.zeebooks.R
-import com.example.zeebooks.commons.domain.model.request.RegisterRequest
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.commons.utils.Constants
 import com.example.zeebooks.commons.utils.Enums
@@ -303,7 +302,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         val dialog = this.context?.let { Dialog(it) }
         dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog?.setCancelable(false)
-        dialog?.setContentView(R.layout.view_custom_popup)
+        dialog?.setContentView(R.layout.view_custom_popup_register)
 
 //        val imageView: ImageView = view.findViewById(R.id.animatedImage)
 //

@@ -2,14 +2,12 @@ package com.example.zeebooks.feature_onboarding.viewmodel
 
 import android.util.Patterns
 import androidx.lifecycle.viewModelScope
-import com.example.zeebooks.commons.domain.model.request.LoginRequest
-import com.example.zeebooks.commons.domain.model.request.RegisterRequest
+import com.example.zeebooks.commons.domain.model.User
 import com.example.zeebooks.commons.utils.Constants
 import com.example.zeebooks.commons.utils.Constants.DEFAULT_VALUE
 import com.example.zeebooks.commons.utils.Constants.PASSWORD_PATTERN
 import com.example.zeebooks.commons.viewmodel.model.BaseViewModel
 import com.example.zeebooks.feature_onboarding.domain.usecase.LoginUseCase
-import com.example.zeebooks.feature_onboarding.domain.usecase.RegisterUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -38,18 +36,25 @@ class LoginViewModel @Inject constructor(
     fun loginUser(
         email: String,
         password: String,
+        onSuccessAdminCallback: (User) -> Unit,
+        onSuccessUserCallback: () -> Unit,
+        onErrorCallback: (String) -> Unit,
 
-    ) {
+        ) {
         viewModelScope.launch {
-            val loginRequest =
-                LoginRequest(email, password)
-            loginUseCase.loginUser(loginRequest).fold(
-                onSuccess = {
-                    Timber.e("succes register ")
+            loginUseCase.loginUser(email, password).fold(
+                onSuccess = { user ->
+                    Timber.tag("User").d("SUCCESS Login")
+
+                    if (user.role == "ADMIN") {
+                        onSuccessAdminCallback.invoke(user)
+                    } else {
+                        onSuccessUserCallback.invoke()
+                    }
                 },
                 onFailure = {
-                    Timber.e("error register")
-
+                    Timber.tag("User").d("ERROR Login")
+                    onErrorCallback.invoke("Emailul sau parola introduse sunt incorecte!")
                 }
             )
         }

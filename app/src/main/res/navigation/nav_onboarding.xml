@@ -12,9 +12,6 @@
         <action
             android:id="@+id/action_getStartedFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_getStartedFragment_to_nav_dashboard"
-            app:destination="@id/nav_dashboard" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -45,6 +42,9 @@
         <action
             android:id="@+id/action_loginFragment_to_dashboardActivity"
             app:destination="@id/dashboardActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_dashboard"
+            app:destination="@id/nav_dashboard" />
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"

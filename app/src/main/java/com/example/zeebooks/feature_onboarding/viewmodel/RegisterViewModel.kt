@@ -26,7 +26,6 @@ class RegisterViewModel @Inject constructor(
     private val registerUseCase: RegisterUseCase,
 ) : BaseViewModel() {
 
-
     fun validation(
         lastName: String,
         firstName: String,

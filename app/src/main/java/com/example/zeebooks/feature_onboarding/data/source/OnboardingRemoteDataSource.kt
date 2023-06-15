@@ -1,8 +1,7 @@
 package com.example.zeebooks.feature_onboarding.data.source
 
-import com.example.zeebooks.commons.domain.model.request.LoginRequest
+import com.example.zeebooks.commons.domain.model.User
 import com.example.zeebooks.commons.domain.model.request.RegisterRequest
-import com.example.zeebooks.commons.domain.model.response.LoginResponse
 import com.example.zeebooks.commons.domain.model.response.RegisterResponse
 import com.example.zeebooks.commons.network.ApiService
 import com.example.zeebooks.commons.network.RetrofitClient
@@ -22,10 +21,10 @@ class OnboardingRemoteDataSource @Inject constructor(
         }
     }
 
-    suspend fun loginUser(loginRequest: LoginRequest): Result<LoginResponse> {
+    suspend fun loginUser(email: String, password: String): Result<User>{
         return withContext(Dispatchers.IO){
             kotlin.runCatching {
-                RetrofitClient.apiService.login(loginRequest= loginRequest)
+                RetrofitClient.apiService.login(email= email,password= password)
             }
         }
     }

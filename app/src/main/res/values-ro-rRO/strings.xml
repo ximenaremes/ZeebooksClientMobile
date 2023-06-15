@@ -31,6 +31,8 @@
     <!-- region popup -->
     <string name="title_popup"> Contul tău a fost creat cu succes</string>
     <string name="message_popup">Te rugăm să aștepți câteva momente în timp ce pregătim totul pentru tine.</string>
+
+    <string name="error_title_popup">Eroare</string>
     <!-- endregion -->
 
     <!-- region validation -->

@@ -67,8 +67,7 @@ class GetStartedFragment : BaseFragment<FragmentGetStartedBinding>() {
        }
 
         binding.textSkip.setOnClickListener {
-//            findNavController().navigate(R.id.action_getStartedFragment_to_loginFragment) //creare ecran admin
-            findNavController().navigate(R.id.action_getStartedFragment_to_nav_dashboard)
+            findNavController().navigate(R.id.action_getStartedFragment_to_loginFragment)
         }
 
 //        if (position < pagerAdapter.itemCount){

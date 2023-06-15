@@ -1,8 +1,7 @@
 package com.example.zeebooks.feature_onboarding.data.repository
 
-import com.example.zeebooks.commons.domain.model.request.LoginRequest
+import com.example.zeebooks.commons.domain.model.User
 import com.example.zeebooks.commons.domain.model.request.RegisterRequest
-import com.example.zeebooks.commons.domain.model.response.LoginResponse
 import com.example.zeebooks.feature_onboarding.data.source.OnboardingRemoteDataSource
 import com.example.zeebooks.commons.domain.model.response.RegisterResponse
 
@@ -16,8 +15,8 @@ class OnboardingRepositoryImpl @Inject internal constructor(
         return onboardingRemoteDataSource.createUser(registerRequest)
     }
 
-    override suspend fun loginUser(loginRequest: LoginRequest): Result<LoginResponse>{
-        return onboardingRemoteDataSource.loginUser(loginRequest)
+    override suspend fun loginUser(email: String, password: String): Result<User> {
+        return onboardingRemoteDataSource.loginUser(email,password)
     }
 
 }
