@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_dashboard">
+    android:id="@+id/nav_dashboard"
+    app:startDestination="@id/adminDashboardFragment">
 
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.AdminDashboardFragment"
+        android:label="AdminDashboardFragment" >
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.UsersFragment"
+        android:label="UsersFragment" >
+        <action
+            android:id="@+id/action_usersFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+    </fragment>
 </navigation>

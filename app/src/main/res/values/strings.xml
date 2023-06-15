@@ -230,4 +230,12 @@
     <string name="thanks">Vă mulțumim că ați ales librăria noastră și sperăm că această secțiune vă va fi utilă în navigarea și utilizarea serviciilor noastre. Lectură plăcută!"</string>
 
 
+    <!-- region Admin Dashboard-->
+    <string name="dashboard_button_users">Clienți</string>
+    <string name="dashboard_button_books">Cărți</string>
+    <string name="dashboard_button_categories">Categorii</string>
+    <string name="dashboard_button_cart">Comenzi</string>
+    <!-- endregion -->
+
+
 </resources>
