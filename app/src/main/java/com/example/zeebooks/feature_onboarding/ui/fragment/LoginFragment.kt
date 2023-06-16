@@ -1,8 +1,11 @@
 package com.example.zeebooks.feature_onboarding.ui.fragment
 
 import android.app.AlertDialog
+import android.app.Dialog
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import android.view.Window
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
@@ -128,11 +131,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                     email, password,
                     onSuccessAdminCallback = { user ->
                         if (user.role == "ADMIN") {
-                            findNavController().navigate(R.id.action_loginFragment_to_nav_dashboard)
+                            showSuccessAdminDialog()
                         }
                     },
                     onSuccessUserCallback = {
-                        findNavController().navigate(R.id.action_loginFragment_to_dashboardActivity)
+                        showSuccessUserDialog()
                     },
                     onErrorCallback = { errorMessage ->
                         showErrorDialog(errorMessage)
@@ -204,5 +207,41 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
         }
         val dialog = dialogBuilder.create()
         dialog.show()
+    }
+
+    private fun showSuccessUserDialog() {
+        val dialog = this.context?.let { Dialog(it) }
+        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog?.setCancelable(false)
+        dialog?.setContentView(R.layout.view_custom_popup_register)
+
+        val messageTextView = dialog?.findViewById<TextView>(R.id.titleText)
+        messageTextView?.setText(R.string.success_title_popup_login)
+
+        Handler().postDelayed({
+            dialog?.dismiss()
+            findNavController().navigate(R.id.action_loginFragment_to_dashboardActivity)
+
+        }, 2500)
+
+        dialog?.show()
+    }
+
+    private fun showSuccessAdminDialog() {
+        val dialog = this.context?.let { Dialog(it) }
+        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog?.setCancelable(false)
+        dialog?.setContentView(R.layout.view_custom_popup_register)
+
+        val messageTextView = dialog?.findViewById<TextView>(R.id.titleText)
+        messageTextView?.setText(R.string.success_title_popup_login_admin)
+
+        Handler().postDelayed({
+            dialog?.dismiss()
+            findNavController().navigate(R.id.action_loginFragment_to_nav_dashboard)
+
+        }, 2500)
+
+        dialog?.show()
     }
 }

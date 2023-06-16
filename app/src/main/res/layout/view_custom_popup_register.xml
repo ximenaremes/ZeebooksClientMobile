@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,17 +19,18 @@
             android:src="@drawable/ic_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/titleText"
             style="@style/FB.16.Blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/animatedImage"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_14"
-            android:text="@string/title_popup"
+            android:gravity="center"
+            android:text="@string/success_title_popup_register"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/animatedImage" />
@@ -36,12 +38,12 @@
         <TextView
             android:id="@+id/messageText"
             style="@style/FB.14.Dark"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="@dimen/margin_24"
             android:layout_marginTop="@dimen/margin_14"
-            android:maxLines="3"
+            android:gravity="center"
+            android:maxLines="2"
             android:text="@string/message_popup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

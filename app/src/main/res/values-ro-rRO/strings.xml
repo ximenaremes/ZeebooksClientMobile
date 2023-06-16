@@ -29,12 +29,12 @@
     <!-- endregion -->
 
     <!-- region popup -->
-    <string name="title_popup"> Contul tău a fost creat cu succes</string>
+    <string name="success_title_popup_register"> Contul tău a fost creat cu succes!</string>
+    <string name="success_title_popup_login"> Autentificare finalizată cu succes!</string>
+    <string name="success_title_popup_login_admin">Autentificare ca administrator reușită!</string>
     <string name="message_popup">Te rugăm să aștepți câteva momente în timp ce pregătim totul pentru tine.</string>
-
-    <string name="error_title_popup">Eroare</string>
+    <string name="error_title_popup">Credențiale invalide!</string>
     <!-- endregion -->
-
     <!-- region validation -->
     <string name="textErroLastName">Numele este obligatoriu!</string>
     <string name="textErroFirstName">Prenumele este obligatoriu!</string>
