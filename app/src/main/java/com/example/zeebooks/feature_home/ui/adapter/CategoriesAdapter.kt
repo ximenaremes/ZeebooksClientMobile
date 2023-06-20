@@ -19,8 +19,8 @@ class CategoriesAdapter(
         private val titleCategory = view.findViewById<TextView>(R.id.textTitle)
 
         fun bind(categoryModel: CategoryModel) {
-            imageCategory.setImageResource(categoryModel.image)
-            titleCategory.text = categoryModel.title
+//            imageCategory.setImageResource(categoryModel.image)
+            titleCategory.text = categoryModel.name
         }
     }
 
