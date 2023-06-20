@@ -9,4 +9,9 @@ interface OnboardingRepository {
 
     suspend fun loginUser(email: String, password: String): Result<User>
 
+    suspend fun registerUserToFirebaseAuth(lastName: String,firstName: String,email: String,password: String, role: String, dateOfJoin: String)
+    fun addUserToFirebaseDatabase( uid: String,lastName: String,firstName: String,email: String,password: String, role: String, dateOfJoin: String)
+    suspend fun login(email: String,password: String)
+    suspend fun signOut()
+
 }

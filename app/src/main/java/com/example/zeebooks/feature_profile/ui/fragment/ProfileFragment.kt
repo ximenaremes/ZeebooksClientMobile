@@ -10,15 +10,22 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navGraphViewModels
 import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.databinding.FragmentProfileBinding
+import com.example.zeebooks.feature_onboarding.viewmodel.RegisterViewModel
+import com.example.zeebooks.feature_profile.viewmodel.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
     override val resId = R.layout.fragment_profile
+
+    private val sharedViewModel: ProfileViewModel by navGraphViewModels(R.id.nav_profile) {
+        defaultViewModelProviderFactory
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -84,8 +91,8 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
         }
 
         btnConfirm.setOnClickListener {
-            // apelarea functiei de logout
-//            findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
+            sharedViewModel.signOut()
+            findNavController().navigate(R.id.action_profileFragment_to_nav_onboarding)
             popupWindow.dismiss()
         }
         popupWindow.showAtLocation(requireView(), Gravity.CENTER, 0, 195)

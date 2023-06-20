@@ -16,6 +16,7 @@ import com.example.zeebooks.commons.utils.Constants.VALID_PASSWORD_CHARACTERS
 import com.example.zeebooks.commons.utils.Constants.VALID_PASSWORD_LENGTH
 import com.example.zeebooks.commons.viewmodel.model.BaseViewModel
 import com.example.zeebooks.feature_onboarding.domain.usecase.RegisterUseCase
+import com.example.zeebooks.feature_onboarding.domain.usecase.RegisterUserUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -24,6 +25,7 @@ import javax.inject.Inject
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
     private val registerUseCase: RegisterUseCase,
+    private val registerUserUseCase: RegisterUserUseCase
 ) : BaseViewModel() {
 
     fun validation(
@@ -78,6 +80,14 @@ class RegisterViewModel @Inject constructor(
             )
         }
     }
+
+    fun registerUserToFirebase(lastName: String,firstName: String,email: String,password: String, role: String, dateOfJoin: String){
+
+        viewModelScope.launch {
+            registerUserUseCase.execute(lastName,firstName,email,password, role, dateOfJoin)
+        }
+    }
+
 
 
 }

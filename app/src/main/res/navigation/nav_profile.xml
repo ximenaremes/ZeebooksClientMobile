@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_profileFragment_to_aboutUsFragment"
             app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_nav_onboarding"
+            app:destination="@id/nav_onboarding" />
     </fragment>
     <fragment
         android:id="@+id/userDetailsFragment"
@@ -88,4 +91,5 @@
             android:id="@+id/action_questionsFragment_to_aboutUsFragment"
             app:destination="@id/aboutUsFragment" />
     </fragment>
+    <include app:graph="@navigation/nav_onboarding" />
 </navigation>

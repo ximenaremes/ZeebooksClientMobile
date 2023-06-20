@@ -131,10 +131,12 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                     email, password,
                     onSuccessAdminCallback = { user ->
                         if (user.role == "ADMIN") {
+//                            sharedViewModel.loginUserToFirebase(email, password)
                             showSuccessAdminDialog()
                         }
                     },
                     onSuccessUserCallback = {
+//                        sharedViewModel.loginUserToFirebase(email, password)
                         showSuccessUserDialog()
                     },
                     onErrorCallback = { errorMessage ->
