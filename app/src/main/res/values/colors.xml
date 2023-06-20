@@ -107,6 +107,7 @@
 
     <!-- region Explore -->
     <color name="dashboard_background_color">#662B7890</color>
+    <color name="dashboard_background_color_sheet">#9EC9D6</color>
     <color name="border_field_search">#016483</color>
     <color name="vertical_line">#9D9D9D</color>
     <color name="circle_filter">#A62B7890</color>

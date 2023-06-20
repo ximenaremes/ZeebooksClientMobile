@@ -69,10 +69,10 @@ class RegisterViewModel @Inject constructor(
                 RegisterRequest(firstName, lastName, email, password, role, dateOfJoin)
             registerUseCase.registerUser(registerRequest).fold(
                 onSuccess = {
-                    Timber.e("success register ")
+                    Timber.tag("User").d("SUCCESS Register")
                 },
                 onFailure = {
-                    Timber.e("error register")
+                    Timber.tag("User").d("ERROR Register")
 
                 }
             )

@@ -314,7 +314,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         Handler().postDelayed({
             dialog?.dismiss()
 
-            findNavController().navigate(R.id.action_registerFragment_to_dashboardActivity)
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
 
         }, 2500)
 

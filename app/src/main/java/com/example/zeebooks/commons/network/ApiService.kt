@@ -10,12 +10,9 @@ import retrofit2.http.*
 interface ApiService {
 
     @POST("users/createUser")
-    suspend fun createUser(@Body registerRequest: RegisterRequest): RegisterResponse
+    suspend fun createUser(@Body registerRequest: RegisterRequest): User
 
-//    @POST("users/loginUser")
-//    suspend fun login(@Query("email") loginRequest: LoginRequest): LoginResponse
-
-    @POST("users/loginUser")
+    @POST("users/login")
     suspend fun login(@Query("email")email: String, @Query("password")password: String): User
 
 

@@ -225,12 +225,18 @@
     <string name="thanks">Vă mulțumim că ați ales librăria noastră și sperăm că această secțiune vă va fi utilă în navigarea și utilizarea serviciilor noastre. Lectură plăcută!"</string>
     <!-- endregion -->
 
-
     <!-- region Admin Dashboard-->
+    <string name="dashboard_title">Dashboard</string>
     <string name="dashboard_button_users">Clienți</string>
     <string name="dashboard_button_books">Cărți</string>
     <string name="dashboard_button_categories">Categorii</string>
     <string name="dashboard_button_cart">Comenzi</string>
+    <string name="dashboard_categories_piechart_one_title">Statistici categorii în funcție de numărul de cărți</string>
+    <string name="dashboard_categories_piechart_two_title">Statistici categorii în funcție de preferințele clienților</string>
+    <string name="dashboard_users_lineChart_title">Statistici clienți în funcție de data înregistrării</string>
+    <string name="dashboard_users_title">Statistici clienți în funcție de preferințe </string>
+    <string name="dashboard_books_one_title">Statistici cărți în funcție de anul apariției</string>
+    <string name="dashboard_books_two_title">Statistici cărți achiziționate în funcție de preț</string>
     <!-- endregion -->
 
 </resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/FB.16.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_14"
+            android:layout_marginTop="@dimen/margin_24"
+            android:maxLines="1"
+            android:text="@string/dashboard_books_one_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/pieChartViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <lecho.lib.hellocharts.view.ColumnChartView
+                android:id="@+id/lineChartView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/margin_24"
+                android:rotation="90"
+                android:paddingStart="0dp"
+                android:layout_marginStart="@dimen/margin_12"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/legendLayout"
+                android:layout_width="151dp"
+                android:layout_height="220dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_30"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/verticalLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_10"
+            android:src="@drawable/background_vertical_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pieChartViewLayout" />
+
+        <TextView
+            android:id="@+id/graph_title"
+            style="@style/FB.15.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_21"
+            android:maxLines="1"
+            android:text="@string/dashboard_books_two_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/verticalLine" />
+
+                <LinearLayout
+                    android:id="@+id/BarChartViewLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/margin_50"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/graph_title"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <lecho.lib.hellocharts.view.PieChartView
+                        android:id="@+id/columnChartView"
+                        android:layout_width="236dp"
+                        android:layout_height="245dp"
+                        android:padding="@dimen/margin_18"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/elevation_0" />
+
+                    <LinearLayout
+                        android:id="@+id/legendBarChartLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="243dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_30" />
+
+                </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

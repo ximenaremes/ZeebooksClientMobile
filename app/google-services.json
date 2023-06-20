@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "207120798805",
+    "project_id": "zeebooks-21e63",
+    "storage_bucket": "zeebooks-21e63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207120798805:android:fa9f421f1e985311b670dc",
+        "android_client_info": {
+          "package_name": "com.example.zeebooks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207120798805-7fg394a4ronhvtg1a60atk71op5dish4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm7vk4dp-qeKDptID03RmBzfCdLDX4-dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207120798805-7fg394a4ronhvtg1a60atk71op5dish4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,7 +2,6 @@ package com.example.zeebooks.feature_onboarding.data.source
 
 import com.example.zeebooks.commons.domain.model.User
 import com.example.zeebooks.commons.domain.model.request.RegisterRequest
-import com.example.zeebooks.commons.domain.model.response.RegisterResponse
 import com.example.zeebooks.commons.network.ApiService
 import com.example.zeebooks.commons.network.RetrofitClient
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +12,7 @@ class OnboardingRemoteDataSource @Inject constructor(
     private val apiService: ApiService
 ){
 
-    suspend fun createUser(registerRequest: RegisterRequest): Result<RegisterResponse> {
+    suspend fun createUser(registerRequest: RegisterRequest):  Result<User> {
         return withContext(Dispatchers.IO){
             kotlin.runCatching {
                 RetrofitClient.apiService.createUser(registerRequest = registerRequest)

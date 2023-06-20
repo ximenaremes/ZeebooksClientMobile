@@ -60,6 +60,9 @@
     <style name="FB.14.GrayscaleLabel">
         <item name="android:textColor">@color/grayscale_label</item>
     </style>
+    <style name="FB.15.GrayscaleLabel">
+        <item name="android:textColor">@color/grayscale_label</item>
+    </style>
 
     <style name="FB.16.GrayscaleLabel">
         <item name="android:textColor">@color/grayscale_label</item>
@@ -96,6 +99,10 @@
 
     <style name="FB.24">
         <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="FB.26">
+        <item name="android:textSize">26dp</item>
     </style>
 
 
