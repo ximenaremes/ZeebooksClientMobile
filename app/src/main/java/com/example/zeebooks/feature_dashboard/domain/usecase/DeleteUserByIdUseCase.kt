@@ -4,11 +4,12 @@ import com.example.zeebooks.commons.domain.model.User
 import com.example.zeebooks.feature_dashboard.data.repository.DashboardRepository
 import javax.inject.Inject
 
-class GetAllUsersUseCase @Inject constructor(
+
+class DeleteUserByIdUseCase @Inject constructor(
     private val dashboardRepository: DashboardRepository
 ) {
 
-    suspend fun getAllUsers(): Result<List<User>> {
-        return dashboardRepository.getAllUsers()
+    suspend fun deleteUserById(id :String): Result<User> {
+        return dashboardRepository.deleteUserById(id)
     }
 }

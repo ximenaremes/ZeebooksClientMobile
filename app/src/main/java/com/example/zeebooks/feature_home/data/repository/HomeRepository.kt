@@ -4,5 +4,5 @@ import com.example.zeebooks.feature_home.domain.model.CategoryModel
 
 interface HomeRepository {
 
-    suspend fun getCategories(): Result<CategoryModel>
+    suspend fun getCategories(): Result<List<CategoryModel>>
 }

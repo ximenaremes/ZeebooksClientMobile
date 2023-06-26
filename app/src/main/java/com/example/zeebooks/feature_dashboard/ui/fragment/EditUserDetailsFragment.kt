@@ -1,70 +1,84 @@
-package com.example.zeebooks.feature_onboarding.ui.fragment
+package com.example.zeebooks.feature_dashboard.ui.fragment
 
-import android.app.Dialog
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
-import android.view.Window
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import com.example.zeebooks.R
+import com.example.zeebooks.commons.domain.model.request.RegisterRequest
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.commons.utils.Constants
 import com.example.zeebooks.commons.utils.Enums
-import com.example.zeebooks.databinding.FragmentRegisterBinding
-import com.example.zeebooks.feature_onboarding.viewmodel.RegisterViewModel
+import com.example.zeebooks.databinding.FragmentEditUserDetailsBinding
+import com.example.zeebooks.feature_dashboard.viewmodel.UsersViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.text.SimpleDateFormat
-import java.util.Date
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 @AndroidEntryPoint
-class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
+class EditUserDetailsFragment : BaseFragment<FragmentEditUserDetailsBinding>() {
 
-    override val resId = R.layout.fragment_register
+    override val resId = R.layout.fragment_edit_user_details
 
-    private val sharedViewModel: RegisterViewModel by navGraphViewModels(R.id.nav_onboarding) {
+    private val sharedViewModel: UsersViewModel by navGraphViewModels(R.id.nav_dashboard) {
         defaultViewModelProviderFactory
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding) {
-            authentication.setOnClickListener {
-                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-            }
-            termsAndConditions.setOnClickListener {
-                findNavController().navigate(R.id.action_registerFragment_to_termsAndConditionsFragment)
-            }
-            buttonRegister.setOnClickListener {
-                validateInputs()
-            }
-            checkBox.setOnCheckedChangeListener { _, isChecked ->
-                buttonRegister.isEnabled = isChecked
-            }
+            toolbar.iconBack.setOnClickListener { findNavController().navigateUp() }
+            toolbar.titleText.setText(R.string.edit_user)
+
             initObservers()
             checkFocusableInputLastName()
             checkFocusableInputFirstName()
             checkFocusableInputEmail()
             checkFocusableInputPassword()
-            checkFocusableInputConfPassword()
+            checkFocusableInputNumberPhone()
+
+            binding.buttonAddUser.setOnClickListener {
+                validateInputs()
+            }
         }
+
     }
 
+    private fun onAddUserButtonClick() {
+        val firstName = binding.textFirstName.text.toString()
+        val lastName = binding.textName.text.toString()
+        val email = binding.textEmail.text.toString()
+        val password = binding.passwordValue.text.toString()
+        val phoneNumber = binding.numberPhone.text.toString()
+        val role = "STANDARD"
+
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        val currentDate = LocalDate.now()
+        val dateOfJoin = currentDate.format(formatter)
+
+        val add = RegisterRequest(lastName, firstName, email, password, phoneNumber, role, dateOfJoin)
+//        Timber.e("create user $add")
+        sharedViewModel.addUser(add)
+    }
 
     private fun validateInputs() {
 
         when (sharedViewModel.validation(
 
             lastName = binding.textName.text.toString(),
-            firstName = binding.textEmail.text.toString(),
-            email = binding.textPassword.text.toString(),
-            password = binding.textConfPassword.text.toString(),
-            confirmPassword = binding.textConfPassword1.text.toString()
+            firstName = binding.textFirstName.text.toString(),
+            email = binding.textEmail.text.toString(),
+            password = binding.passwordValue.text.toString(),
+            numberPhone = binding.numberPhone.text.toString()
         )) {
 
             Constants.VALID_LASTNAME -> {
@@ -83,7 +97,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                     circleErrorFirstName.visibility = View.VISIBLE
                     tvEmailError.text = context?.getString(Enums.VALID_FIRSTNAME.stringResource)
                     tvEmailError.setTextColor(resources.getColor(R.color.error, null))
-                    textEmail.setBackgroundResource(R.drawable.background_field_error)
+                    textFirstName.setBackgroundResource(R.drawable.background_field_error)
                     imageEmail.setColorFilter(resources.getColor(R.color.error, null))
                 }
             }
@@ -94,7 +108,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                     tvPassError.text =
                         context?.getString(Enums.VALID_EMAIL.stringResource)
                     tvPassError.setTextColor(resources.getColor(R.color.error, null))
-                    textPassword.setBackgroundResource(R.drawable.background_field_error)
+                    textEmail.setBackgroundResource(R.drawable.background_field_error)
                     imageKey.setColorFilter(resources.getColor(R.color.error, null))
                 }
             }
@@ -104,8 +118,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                     circleErrorEmail.visibility = View.VISIBLE
                     tvPassError.text = context?.getString(Enums.VALID_EMAIL_CHARACTERS.stringResource)
                     tvPassError.setTextColor(resources.getColor(R.color.error, null))
-                    textPassword.setBackgroundResource(R.drawable.background_field_error)
-//                    imagePassword.setColorFilter(resources.getColor(R.color.error, null))
+                    textEmail.setBackgroundResource(R.drawable.background_field_error)
                 }
             }
             Constants.VALID_PASSWORD -> {
@@ -115,8 +128,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                     tvPassConfError.text =
                         context?.getString(Enums.VALID_PASSWORD.stringResource)
                     tvPassConfError.setTextColor(resources.getColor(R.color.error, null))
-                    textConfPassword.setBackgroundResource(R.drawable.background_field_error)
-//                    imagePassword.setColorFilter(resources.getColor(R.color.error, null))
+                    passwordValue.setBackgroundResource(R.drawable.background_field_error)
                 }
             }
             Constants.VALID_PASSWORD_LENGTH -> {
@@ -126,8 +138,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                     tvPassConfError.text =
                         context?.getString(Enums.VALID_PASSWORD_LENGTH.stringResource)
                     tvPassConfError.setTextColor(resources.getColor(R.color.error, null))
-                    textConfPassword.setBackgroundResource(R.drawable.background_field_error)
-//                    imagePassword.setColorFilter(resources.getColor(R.color.error, null))
+                    passwordValue.setBackgroundResource(R.drawable.background_field_error)
                 }
             }
             Constants.VALID_PASSWORD_CHARACTERS -> {
@@ -137,53 +148,40 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                     tvPassConfError.text =
                         context?.getString(Enums.VALID_PASSWORD_CHARACTERS.stringResource)
                     tvPassConfError.setTextColor(resources.getColor(R.color.error, null))
-                    textConfPassword.setBackgroundResource(R.drawable.background_field_error)
-//                    imageConfPassword.setColorFilter(resources.getColor(R.color.error, null))
+                    passwordValue.setBackgroundResource(R.drawable.background_field_error)
                 }
             }
-            Constants.VALID_CONFIRM_PASSWORD -> {
+            Constants.VALID_NUMBER_PHONE -> {
                 with(binding) {
                     tvPassConfError1.visibility = View.VISIBLE
                     circleErrorConfrimPassword.visibility = View.VISIBLE
                     tvPassConfError1.text =
-                        context?.getString(Enums.VALID_CONFIRM_PASSWORD.stringResource)
+                        context?.getString(Enums.VALID_NUMBER_PHONE.stringResource)
                     tvPassConfError1.setTextColor(resources.getColor(R.color.error, null))
-                    textConfPassword1.setBackgroundResource(R.drawable.background_field_error)
-//                    imageConfPassword.setColorFilter(resources.getColor(R.color.error, null))
+                    numberPhone.setBackgroundResource(R.drawable.background_field_error)
+
                 }
 
             }
-            Constants.VALID_CONFIRM_PASSWORD_IDENTICAL -> {
+            Constants.VALID_NUMBER_PHONE_LENGTH -> {
                 with(binding) {
                     tvPassConfError1.visibility = View.VISIBLE
                     circleErrorConfrimPassword.visibility = View.VISIBLE
                     tvPassConfError1.text =
-                        context?.getString(Enums.VALID_CONFIRM_PASSWORD_IDENTICAL.stringResource)
+                        context?.getString(Enums.VALID_NUMBER_PHONE_LENGTH.stringResource)
                     tvPassConfError1.setTextColor(resources.getColor(R.color.error, null))
-                    textConfPassword1.setBackgroundResource(R.drawable.background_field_error)
-//                    imageConfPassword.setColorFilter(resources.getColor(R.color.error, null))
+                    numberPhone.setBackgroundResource(R.drawable.background_field_error)
+
                 }
             }
             Constants.DEFAULT_VALUE -> {
                 changeErrorsVisibility()
-
-                val lastName = binding.textName.text.toString()
-                val firstName = binding.textEmail.text.toString()
-                val email = binding.textPassword.text.toString()
-                val password = binding.textConfPassword.text.toString()
-                val numberPhone =binding.textConfPassword.text.toString() //
-                val role = "ADMIN"
-                val dateOfJoin = SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(Date())
-
-//                sharedViewModel.registerUserToFirebase(lastName, firstName, email, password, role, dateOfJoin)
-
-                sharedViewModel.registerUser(lastName, firstName, email, password,numberPhone, role, dateOfJoin)
-                showDialog()
+                onAddUserButtonClick()
+                findNavController().navigateUp()
             }
 
         }
     }
-
     private fun checkFocusableInputLastName() {
         binding.textName.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
@@ -204,16 +202,16 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     }
 
     private fun checkFocusableInputFirstName() {
-        binding.textEmail.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
+        binding.textFirstName.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 with(binding) {
-                    textEmail.setBackgroundResource(R.drawable.background_field_focus)
+                    textFirstName.setBackgroundResource(R.drawable.background_field_focus)
                     imageEmail.setColorFilter(resources.getColor(R.color.border, null))
                 }
                 changeErrorsVisibility()
             } else {
                 with(binding) {
-                    textEmail.setBackgroundResource(R.drawable.background_field)
+                    textFirstName.setBackgroundResource(R.drawable.background_field)
                     imageEmail.setColorFilter(resources.getColor(R.color.border, null))
                 }
                 changeErrorsVisibility()
@@ -222,16 +220,16 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     }
 
     private fun checkFocusableInputEmail() {
-        binding.textPassword.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
+        binding.textEmail.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 with(binding) {
-                    textPassword.setBackgroundResource(R.drawable.background_field_focus)
+                    textEmail.setBackgroundResource(R.drawable.background_field_focus)
                     imageKey.setColorFilter(resources.getColor(R.color.border, null))
                 }
                 changeErrorsVisibility()
             } else {
                 with(binding) {
-                    textPassword.setBackgroundResource(R.drawable.background_field)
+                    textEmail.setBackgroundResource(R.drawable.background_field)
                     imageKey.setColorFilter(resources.getColor(R.color.border, null))
                 }
                 changeErrorsVisibility()
@@ -240,35 +238,35 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     }
 
     private fun checkFocusableInputPassword() {
-        binding.textConfPassword.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
+        binding.passwordValue.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 with(binding) {
-                    textConfPassword.setBackgroundResource(R.drawable.background_field_focus)
-    //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
+                    passwordValue.setBackgroundResource(R.drawable.background_field_focus)
+                    //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
                 }
                 changeErrorsVisibility()
             } else {
                 with(binding) {
-                    textConfPassword.setBackgroundResource(R.drawable.background_field)
-    //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
+                    passwordValue.setBackgroundResource(R.drawable.background_field)
+                    //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
                 }
                 changeErrorsVisibility()
             }
         }
     }
-    private fun checkFocusableInputConfPassword() {
-        binding.textConfPassword1.onFocusChangeListener =
+    private fun checkFocusableInputNumberPhone() {
+        binding.numberPhone.onFocusChangeListener =
             View.OnFocusChangeListener { view, hasFocus ->
                 if (hasFocus) {
                     with(binding) {
-                        textConfPassword1.setBackgroundResource(R.drawable.background_field_focus)
-    //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
+                        numberPhone.setBackgroundResource(R.drawable.background_field_focus)
+                        //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
                     }
                     changeErrorsVisibility()
                 } else {
                     with(binding) {
-                        textConfPassword1.setBackgroundResource(R.drawable.background_field)
-    //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
+                        numberPhone.setBackgroundResource(R.drawable.background_field)
+                        //                    imageConfPassword.setColorFilter(resources.getColor(R.color.border, null))
                     }
                     changeErrorsVisibility()
                 }
@@ -290,8 +288,6 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             circleErrorConfrimPassword.visibility = View.GONE
         }
     }
-
-
     private fun initObservers(){
         viewLifecycleOwner.lifecycleScope.launch{
             repeatOnLifecycle(Lifecycle.State.STARTED){
@@ -299,31 +295,4 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             }
         }
     }
-
-
-    private fun showDialog() {
-        val dialog = this.context?.let { Dialog(it) }
-        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog?.setCancelable(false)
-        dialog?.setContentView(R.layout.view_custom_popup_register)
-
-//        val imageView: ImageView = view.findViewById(R.id.animatedImage)
-//
-//        Glide.with(this)
-//            .asGif()
-//            .load(R.drawable.ic_login)
-//            .into(imageView)
-
-        Handler().postDelayed({
-            dialog?.dismiss()
-
-            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-
-        }, 2500)
-
-        dialog?.show()
-    }
-
 }
-
-

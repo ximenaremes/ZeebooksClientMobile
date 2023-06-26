@@ -11,7 +11,7 @@ class HomeRemoteDataSource @Inject constructor(
     private val apiService: ApiService
 ){
 
-    suspend fun getCategories(): Result<CategoryModel>{
+    suspend fun getCategories(): Result<List<CategoryModel>>{
         return withContext(Dispatchers.IO){
             kotlin.runCatching {
                 RetrofitClient.apiService.getCategories()

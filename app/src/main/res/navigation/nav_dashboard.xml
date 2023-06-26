@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_dashboard"
     app:startDestination="@id/adminDashboardFragment">
 
@@ -11,6 +12,12 @@
         <action
             android:id="@+id/action_adminDashboardFragment_to_usersFragment"
             app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_categoriesAdminFragment"
+            app:destination="@id/categoriesAdminFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
     </fragment>
     <fragment
         android:id="@+id/usersFragment"
@@ -19,5 +26,66 @@
         <action
             android:id="@+id/action_usersFragment_to_adminDashboardFragment"
             app:destination="@id/adminDashboardFragment" />
+        <action
+            android:id="@+id/action_usersFragment_to_editUserDetailsFragment"
+            app:destination="@id/editUserDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserDetailsFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.EditUserDetailsFragment"
+        android:label="EditUserDetailsFragment" >
+        <action
+            android:id="@+id/action_editUserDetailsFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesAdminFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.CategoriesAdminFragment"
+        android:label="CategoriesAdminFragment" >
+        <action
+            android:id="@+id/action_categoriesAdminFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+        <action
+            android:id="@+id/action_categoriesAdminFragment_to_editCategoriesDetailsFragment"
+            app:destination="@id/editCategoriesDetailsFragment" />
+        <action
+            android:id="@+id/action_categoriesAdminFragment_to_addCategoriesFragment"
+            app:destination="@id/addCategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCategoriesDetailsFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.EditCategoriesDetailsFragment"
+        android:label="EditCategoriesDetailsFragment" >
+        <action
+            android:id="@+id/action_editCategoriesDetailsFragment_to_categoriesAdminFragment"
+            app:destination="@id/categoriesAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.BooksFragment"
+        android:label="BooksFragment" >
+        <action
+            android:id="@+id/action_booksFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+        <action
+            android:id="@+id/action_booksFragment_to_editBookDetailsFragment"
+            app:destination="@id/editBookDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editBookDetailsFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.EditBookDetailsFragment"
+        android:label="EditBookDetailsFragment" >
+        <action
+            android:id="@+id/action_editBookDetailsFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCategoriesFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.AddCategoriesFragment"
+        android:label="fragment_add_categories"
+        tools:layout="@layout/fragment_add_categories" >
+        <action
+            android:id="@+id/action_addCategoriesFragment_to_categoriesAdminFragment"
+            app:destination="@id/categoriesAdminFragment" />
     </fragment>
 </navigation>

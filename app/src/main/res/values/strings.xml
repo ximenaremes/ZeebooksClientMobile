@@ -47,6 +47,8 @@
     <string name="textErroEmailCharacters">Ați introdus o adresă de email invalidă!</string>
     <string name="textErroPassword">Parola este obligatorie!</string>
     <string name="textErroPasswordLength">Parola trebuie să aibă cel puțin 8 caractere!</string>
+    <string name="textErrorNumberLength">Numărul trebuie să aibă 10 caractere!</string>
+    <string name="textErroNumber">Numărul este obligatoriu!</string>
     <string name="textErroPasswordCharacters">Parola este prea slabă!</string>
     <string name="textErroConfPassword">Confirmarea parolei este obligatorie!</string>
     <string name="textErroConfPasswordIdentical">Parola nu sunt corespunde!</string>
@@ -242,9 +244,23 @@
     <string name="dashboard_categories_piechart_one_title">Statistici categorii în funcție de numărul de cărți</string>
     <string name="dashboard_categories_piechart_two_title">Statistici categorii în funcție de preferințele clienților</string>
     <string name="dashboard_users_lineChart_title">Statistici clienți în funcție de data înregistrării</string>
-    <string name="dashboard_users_title">Statistici clienți în funcție de preferințe </string>
+    <string name="dashboard_users_title">Statistici clienți în funcție de timpul petrecut în aplicație </string>
     <string name="dashboard_books_one_title">Statistici cărți în funcție de anul apariției</string>
     <string name="dashboard_books_two_title">Statistici cărți achiziționate în funcție de preț</string>
+
+
+    <string name="allUsers">Toți utilizatorii</string>
+    <string name="allCategories">Toate categoriile</string>
+    <string name="numberOfBook"> Numărul de cărți din categorie este:</string>
+    <string name="add_category">Adăugare categorie</string>
+    <string name="edit_categories">Editare categorie</string>
+    <string name="edit_user">Adăugare utilizator</string>
+    <string name="email_text">E-mail</string>
+    <string name="add_user">Salvează</string>
+    <string name="delete_user">Ștergere</string>
+    <string name="delete_message">Ești sigur că dorești să ștergi utilizatorul?</string>
+    <string name="name_categories">Nume</string>
+    <string name="image_categories">Încarcă o imagine</string>
 
 
 

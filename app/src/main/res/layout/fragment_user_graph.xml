@@ -60,10 +60,10 @@
 
         <TextView
             android:id="@+id/graph_title"
-            style="@style/FB.15.GrayscaleLabel"
+            style="@style/FB.14.GrayscaleLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginStart="@dimen/margin_10"
             android:layout_marginTop="@dimen/margin_21"
             android:maxLines="1"
             android:text="@string/dashboard_users_title"

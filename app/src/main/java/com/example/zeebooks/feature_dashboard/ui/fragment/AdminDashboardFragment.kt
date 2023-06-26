@@ -28,9 +28,6 @@ class AdminDashboardFragment : BaseFragment<FragmentAdminDashboardBinding>() {
             this.state = BottomSheetBehavior.STATE_COLLAPSED
         }
         with(binding) {
-            overviewBottomSheet.buttonAllUsers.setOnClickListener {
-                findNavController().navigate(R.id.action_adminDashboardFragment_to_usersFragment)
-            }
             toolbar.iconBack.visibility = View.INVISIBLE
             val icon = toolbar.iconEdit
             icon.visibility = View.VISIBLE
@@ -42,6 +39,19 @@ class AdminDashboardFragment : BaseFragment<FragmentAdminDashboardBinding>() {
             icon.setColorFilter(colorFilter)
             icon.setImageResource(R.drawable.ic_profile)
             icon.alpha = 0.7f
+
+            overviewBottomSheet.buttonAllUsers.setOnClickListener {
+                findNavController().navigate(R.id.action_adminDashboardFragment_to_usersFragment)
+            }
+            overviewBottomSheet.buttonAllBooks.setOnClickListener {
+                findNavController().navigate(R.id.action_adminDashboardFragment_to_booksFragment)
+            }
+            overviewBottomSheet.buttonCategories.setOnClickListener {
+                findNavController().navigate(R.id.action_adminDashboardFragment_to_categoriesAdminFragment)
+            }
+            overviewBottomSheet.buttonCommand.setOnClickListener {
+                findNavController().navigate(R.id.action_adminDashboardFragment_to_categoriesAdminFragment)
+            }
 
             binding.viewPager.adapter = pagerAdapter
 

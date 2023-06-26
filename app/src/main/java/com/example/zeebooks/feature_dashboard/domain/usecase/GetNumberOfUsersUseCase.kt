@@ -1,14 +1,14 @@
 package com.example.zeebooks.feature_dashboard.domain.usecase
 
-import com.example.zeebooks.commons.domain.model.User
 import com.example.zeebooks.feature_dashboard.data.repository.DashboardRepository
 import javax.inject.Inject
 
-class GetAllUsersUseCase @Inject constructor(
+
+class GetNumberOfUsersUseCase @Inject constructor(
     private val dashboardRepository: DashboardRepository
 ) {
 
-    suspend fun getAllUsers(): Result<List<User>> {
-        return dashboardRepository.getAllUsers()
+    suspend fun getNumberOfUsers(): Result<Int> {
+        return dashboardRepository.getNumberOfUsers()
     }
 }

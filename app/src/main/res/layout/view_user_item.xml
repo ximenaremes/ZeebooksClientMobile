@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="lastName"
+            type="String" />
+
+        <variable
+            name="firstName"
+            type="String" />
+
+        <variable
+            name="email"
+            type="String" />
+
+        <variable
+            name="password"
+            type="String" />
+        <variable
+            name="role"
+            type="String" />
+
+        <variable
+            name="numberOfPhone"
+            type="String" />
+
+        <variable
+            name="dateOfJoin"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:paddingStart="@dimen/margin_24"
+        android:paddingBottom="@dimen/margin_14"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_button_field"
+            android:paddingTop="@dimen/margin_12"
+            android:paddingBottom="@dimen/margin_12">
+
+            <TextView
+                android:id="@+id/imageUser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_12"
+                android:background="@drawable/background_rounded_filter"
+                android:gravity="center"
+                android:text='@{firstName.substring(0, 1).toUpperCase() + "." + lastName.substring(0, 1).toUpperCase() + "."}'
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lastNameText"
+                style="@style/FB.16.GrayscaleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_14"
+                android:text="@{lastName}"
+                app:layout_constraintStart_toEndOf="@id/imageUser"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/firstNameText"
+                style="@style/FB.16.GrayscaleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginStart="@dimen/margin_10"
+                android:text="@{firstName}"
+                app:layout_constraintStart_toEndOf="@id/lastNameText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconSelector"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+               android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:src="@drawable/ic_down_arrow"
+               android:rotation="90"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginStart="@dimen/margin_24"
+                android:text="@{@string/email_text + ':'}"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconSelector" />
+
+            <TextView
+                android:id="@+id/emailValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginStart="@dimen/margin_12"
+                android:text="@{email}"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/emailText"
+                app:layout_constraintTop_toBottomOf="@id/iconSelector" />
+
+            <TextView
+                android:id="@+id/numberPhoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_24"
+                android:text="@{@string/phone_number_text + ':'}"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailText" />
+
+            <TextView
+                android:id="@+id/numberPhoneValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_12"
+                android:text="@{numberOfPhone}"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/numberPhoneText"
+                app:layout_constraintTop_toBottomOf="@id/emailValue" />
+
+            <TextView
+                android:id="@+id/dateOfJoinText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_24"
+                android:text="@{@string/user_details_date_of_join_text + ':'}"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numberPhoneText" />
+
+            <TextView
+                android:id="@+id/dateOfJoinValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_12"
+                android:text="@{dateOfJoin}"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/dateOfJoinText"
+                app:layout_constraintTop_toBottomOf="@id/numberPhoneValue" />
+
+            <ImageView
+                android:id="@+id/buttonDelete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginStart="@dimen/margin_12"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/dateOfJoinText"
+                app:layout_constraintTop_toBottomOf="@id/dateOfJoinValue" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

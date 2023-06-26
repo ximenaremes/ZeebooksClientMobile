@@ -8,7 +8,7 @@ class GetAllCategoriesUseCase @Inject constructor(
     private val homeRepository: HomeRepository
 ) {
 
-    suspend fun getCategories(): Result<CategoryModel> {
+    suspend fun getCategories(): Result<List<CategoryModel>> {
         return homeRepository.getCategories()
     }
 }

@@ -9,6 +9,8 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlin.coroutines.CoroutineContext
 
 open class BaseViewModel : ViewModel(), CoroutineScope {
@@ -18,9 +20,10 @@ open class BaseViewModel : ViewModel(), CoroutineScope {
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main + job + coroutineExceptionHandler
 
-    private val _isLoading = MutableLiveData<Boolean>()
-    val isLoading: LiveData<Boolean>
+    private val _isLoading = MutableStateFlow(false)
+    val isLoading: StateFlow<Boolean>
         get() = _isLoading
+
 
     private val _error = MutableLiveData<Throwable>()
     val error: LiveData<Throwable>
@@ -30,14 +33,14 @@ open class BaseViewModel : ViewModel(), CoroutineScope {
         handleError(throwable)
     }
 
-    protected open fun handleError(throwable: Throwable) {
-        _isLoading.value = false
-        _error.value = throwable
-    }
+   protected open fun handleError(throwable: Throwable) {
+    _isLoading.value = false
+    _error.value = throwable
+}
 
-    protected fun handleSuccess(result: RegisterResponse) {
-        _isLoading.value = false
-    }
+protected fun handleSuccess(result: RegisterResponse) {
+    _isLoading.value = false
+}
 
     override fun onCleared() {
         super.onCleared()

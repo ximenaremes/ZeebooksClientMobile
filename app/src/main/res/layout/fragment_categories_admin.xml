@@ -8,7 +8,6 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,18 +23,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-<!--            <include-->
-<!--                android:id="@+id/progress_bar"-->
-<!--                layout="@layout/view_progress_bar"-->
-<!--                android:visibility="visible"-->
-<!--                android:layout_marginTop="@dimen/margin_24"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"/>-->
-
-
             <TextView
                 android:id="@+id/textToolbar"
                 style="@style/FB.20"
@@ -47,15 +34,14 @@
                 android:layout_marginEnd="@dimen/margin_66"
                 android:gravity="center"
                 android:textColor="@color/grayscale_navy"
-                android:text="@string/allUsers"
+                android:text="@string/allCategories"
                 app:layout_constraintEnd_toEndOf="@id/toolbar"
                 app:layout_constraintStart_toStartOf="@id/toolbar"
                 app:layout_constraintTop_toTopOf="@id/toolbar"
                 app:layout_constraintBottom_toBottomOf="@id/toolbar"/>
 
-
             <ImageView
-                android:id="@+id/buttonAddUser"
+                android:id="@+id/addCategories"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="@dimen/margin_24"
@@ -67,7 +53,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/allUsers"
+                android:id="@+id/allCategories"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_16"
@@ -78,35 +64,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar"
-                tools:listitem="@layout/view_user_item" />
-
-            <TextView
-                android:id="@+id/totalNumber"
-                style="@style/FB.20"
-                android:layout_width="200dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="@dimen/margin_14"
-                android:layout_marginBottom="@dimen/margin_24"
-                android:layout_marginStart="@dimen/margin_24"
-                android:gravity="center"
-                android:paddingStart="@dimen/margin_90"
-                android:textColor="@color/grayscale_navy"
-                android:background="@drawable/background_search"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
-            <ImageView
-                android:id="@+id/imageUser"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="@dimen/margin_24"
-                android:gravity="center"
-                android:src="@drawable/ic_all_users"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/totalNumber"
-                app:layout_constraintStart_toStartOf="@+id/totalNumber"
-                app:layout_constraintTop_toTopOf="@id/totalNumber"
-                app:layout_constraintVertical_bias="1.0" />
+                tools:listitem="@layout/view_category_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

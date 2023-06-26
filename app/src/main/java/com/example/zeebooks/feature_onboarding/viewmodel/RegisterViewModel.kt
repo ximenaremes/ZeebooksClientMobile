@@ -63,12 +63,14 @@ class RegisterViewModel @Inject constructor(
         lastName: String,
         email: String,
         password: String,
+        numberPhone:String,
         role: String,
         dateOfJoin: String,
+
     ) {
         viewModelScope.launch {
             val registerRequest =
-                RegisterRequest(firstName, lastName, email, password, role, dateOfJoin)
+                RegisterRequest(firstName, lastName, email, password, numberPhone,role, dateOfJoin)
             registerUseCase.registerUser(registerRequest).fold(
                 onSuccess = {
                     Timber.tag("User").d("SUCCESS Register")

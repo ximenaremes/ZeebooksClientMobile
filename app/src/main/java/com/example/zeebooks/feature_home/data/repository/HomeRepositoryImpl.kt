@@ -8,7 +8,7 @@ class HomeRepositoryImpl @Inject internal constructor(
     private val homeRemoteDataSource: HomeRemoteDataSource
 ):HomeRepository {
 
-    override suspend fun getCategories(): Result<CategoryModel> {
+    override suspend fun getCategories(): Result<List<CategoryModel>> {
         return homeRemoteDataSource.getCategories()
     }
 }
