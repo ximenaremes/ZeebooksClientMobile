@@ -5,6 +5,109 @@
     android:id="@+id/nav_onboarding"
     app:startDestination="@id/getStartedFragment">
     <fragment
+        android:id="@+id/editBookDetailsFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.EditBookDetailsFragment"
+        android:label="EditBookDetailsFragment">
+        <action
+            android:id="@+id/action_editBookDetailsFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.UsersFragment"
+        android:label="UsersFragment">
+        <action
+            android:id="@+id/action_usersFragment_to_editUserDetailsFragment"
+            app:destination="@id/editUserDetailsFragment" />
+        <action
+            android:id="@+id/action_usersFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCategoriesFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.AddCategoriesFragment"
+        android:label="fragment_add_categories"
+        tools:layout="@layout/fragment_add_categories">
+        <action
+            android:id="@+id/action_addCategoriesFragment_to_categoriesAdminFragment"
+            app:destination="@id/categoriesAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.AdminDashboardFragment"
+        android:label="AdminDashboardFragment">
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_categoriesAdminFragment"
+            app:destination="@id/categoriesAdminFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_profileAdminFragment"
+            app:destination="@id/profileAdminFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_commandsFragment"
+            app:destination="@id/commandsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.BooksFragment"
+        android:label="BooksFragment">
+        <action
+            android:id="@+id/action_booksFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+        <action
+            android:id="@+id/action_booksFragment_to_editBookDetailsFragment"
+            app:destination="@id/editBookDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesAdminFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.CategoriesAdminFragment"
+        android:label="CategoriesAdminFragment">
+        <action
+            android:id="@+id/action_categoriesAdminFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+        <action
+            android:id="@+id/action_categoriesAdminFragment_to_editCategoriesDetailsFragment"
+            app:destination="@id/editCategoriesDetailsFragment" />
+        <action
+            android:id="@+id/action_categoriesAdminFragment_to_addCategoriesFragment"
+            app:destination="@id/addCategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCategoriesDetailsFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.EditCategoriesDetailsFragment"
+        android:label="EditCategoriesDetailsFragment">
+        <action
+            android:id="@+id/action_editCategoriesDetailsFragment_to_categoriesAdminFragment"
+            app:destination="@id/categoriesAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserDetailsFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.EditUserDetailsFragment"
+        android:label="EditUserDetailsFragment">
+        <action
+            android:id="@+id/action_editUserDetailsFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileAdminFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.ProfileAdminFragment"
+        android:label="ProfileAdminFragment">
+        <action
+            android:id="@+id/action_profileAdminFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+        <action
+            android:id="@+id/action_profileAdminFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_categoriesAdminFragment_to_addCategoriesFragment"
+        app:destination="@id/addCategoriesFragment" />
+    <fragment
         android:id="@+id/getStartedFragment"
         android:name="com.example.zeebooks.feature_onboarding.ui.fragment.GetStartedFragment"
         android:label="fragment_get_started"
@@ -37,35 +140,11 @@
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_resetPasswordFragment"
-            app:destination="@id/resetPasswordFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_dashboardActivity"
             app:destination="@id/dashboardActivity" />
         <action
-            android:id="@+id/action_loginFragment_to_nav_dashboard"
-            app:destination="@id/nav_dashboard" />
-    </fragment>
-    <fragment
-        android:id="@+id/resetPasswordFragment"
-        android:name="com.example.zeebooks.feature_onboarding.ui.fragment.ResetPasswordFragment"
-        android:label="fragment_reset_password"
-        tools:layout="@layout/fragment_reset_password" >
-        <action
-            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_resetPasswordFragment_to_newPasswordFragment"
-            app:destination="@id/newPasswordFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/newPasswordFragment"
-        android:name="com.example.zeebooks.feature_onboarding.ui.fragment.NewPasswordFragment"
-        android:label="fragment_new_password"
-        tools:layout="@layout/fragment_new_password" >
-        <action
-            android:id="@+id/action_newPasswordFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_loginFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
     </fragment>
     <activity
         android:id="@+id/dashboardActivity"
@@ -79,5 +158,12 @@
             android:id="@+id/action_termsAndConditionsFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
     </fragment>
-    <include app:graph="@navigation/nav_dashboard" />
+    <fragment
+        android:id="@+id/commandsFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.CommandsFragment"
+        android:label="CommandsFragment" >
+        <action
+            android:id="@+id/action_commandsFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+    </fragment>
 </navigation>

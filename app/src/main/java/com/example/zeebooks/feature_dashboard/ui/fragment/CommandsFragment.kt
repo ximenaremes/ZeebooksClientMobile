@@ -15,7 +15,7 @@ class CommandsFragment : BaseFragment<FragmentCommandsBinding>() {
 
     override val resId = R.layout.fragment_commands
 
-    private val sharedViewModel: CommandsViewModel by navGraphViewModels(R.id.nav_dashboard) {
+    private val sharedViewModel: CommandsViewModel by navGraphViewModels(R.id.nav_onboarding) {
         defaultViewModelProviderFactory
     }
 

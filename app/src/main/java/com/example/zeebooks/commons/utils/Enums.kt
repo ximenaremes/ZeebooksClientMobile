@@ -4,7 +4,6 @@ import com.example.zeebooks.R
 
 enum class Enums (
     val stringResource: Int) {
-
     VALID_LASTNAME(R.string.textErroLastName) ,
     VALID_FIRSTNAME(R.string.textErroFirstName) ,
     VALID_EMAIL(R.string.textErroEmail),

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="nameAuthor"
+            type="String" />
+
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="ratingb"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:paddingStart="@dimen/margin_24"
+        android:paddingBottom="@dimen/margin_14"
+        android:paddingEnd="@dimen/margin_24"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_rounded_white"
+            android:paddingBottom="@dimen/margin_12"
+            android:paddingTop="@dimen/margin_12">
+
+
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="104dp"
+                android:layout_height="156dp"
+                android:layout_marginStart="@dimen/margin_24"
+                android:background="@drawable/background_rounded_white"
+                android:src="@{image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/FB.14.DarkColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_24"
+                android:text="@{name}"
+                app:layout_constraintEnd_toStartOf="@id/iconFavourite"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="@{nameAuthor}"
+                app:layout_constraintEnd_toStartOf="@id/iconFavourite"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+            <TextView
+                android:id="@+id/priceValue"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="@{ratingb}"
+                app:layout_constraintEnd_toStartOf="@id/iconFavourite"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+            <ImageView
+                android:id="@+id/iconFavourite"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:background="@drawable/background_rounded_white"
+                android:src="@drawable/ic_heart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/iconFavourite"-->
+            <!--            android:layout_width="30dp"-->
+            <!--            android:layout_height="30dp"-->
+            <!--            android:layout_marginStart="@dimen/margin_24"-->
+            <!--            android:layout_marginEnd="@dimen/margin_24"-->
+            <!--            android:layout_marginTop="@dimen/margin_24"-->
+            <!--            android:background="@drawable/background_rounded_white"-->
+            <!--            android:src="@drawable/ic_heart"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

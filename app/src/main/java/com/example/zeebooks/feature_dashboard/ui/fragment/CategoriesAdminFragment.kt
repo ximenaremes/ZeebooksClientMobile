@@ -2,6 +2,7 @@ package com.example.zeebooks.feature_dashboard.ui.fragment
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import com.example.zeebooks.R
@@ -19,7 +20,7 @@ class CategoriesAdminFragment : BaseFragment<FragmentCategoriesAdminBinding>() {
 
     private val categoriesListAdapter = CategoriesListAdapter()
 
-    private val sharedViewModel: CategoriesViewModel by navGraphViewModels(R.id.nav_dashboard) {
+    private val sharedViewModel: CategoriesViewModel by navGraphViewModels(R.id.nav_onboarding) {
         defaultViewModelProviderFactory
     }
 
@@ -32,7 +33,7 @@ class CategoriesAdminFragment : BaseFragment<FragmentCategoriesAdminBinding>() {
                     categoriesListAdapter.submitList(it)
                 }
             } else {
-                val exception = result.exceptionOrNull()
+                result.exceptionOrNull()
             }
         }
     }
@@ -50,6 +51,8 @@ class CategoriesAdminFragment : BaseFragment<FragmentCategoriesAdminBinding>() {
 
         binding.allCategories.adapter = categoriesListAdapter
         observe()
+
+        sharedViewModel.getAllCategories()
 
         categoriesListAdapter.setOnDeleteClickListener { categoryId ->
             sharedViewModel.deleteCategoryById(categoryId)

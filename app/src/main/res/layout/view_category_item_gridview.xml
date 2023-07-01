@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="category"
+            type="com.example.zeebooks.feature_home.domain.model.CategoryModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:paddingStart="@dimen/margin_14"
+        android:paddingEnd="@dimen/margin_14"
+        android:paddingBottom="@dimen/margin_14"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/background_rounded_white"
+                android:src="@{category.image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/FB.14.DarkColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginHorizontal="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="@{category.name}"
+                android:gravity="start|center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cover" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

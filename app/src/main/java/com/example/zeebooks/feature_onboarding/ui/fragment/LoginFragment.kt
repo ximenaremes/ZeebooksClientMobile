@@ -35,23 +35,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             login.setOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
             }
-            textForgetPassword.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_resetPasswordFragment)
-            }
-
             textInputEmail.setOnClickListener {
                 checkFocusableInputEmail()
             }
             textInputPassword.setOnClickListener {
                 checkFocusableInputPassword()
-            }
-
-            imageToggle.setOnClickListener {
-                if (imageToggle.text.toString() == ".") {
-                    textRetine.setText(R.string.retine)
-                } else {
-                    textRetine.setText(R.string.retinut)
-                }
             }
 
             btnLogin.setOnClickListener {
@@ -240,7 +228,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
         Handler().postDelayed({
             dialog?.dismiss()
-            findNavController().navigate(R.id.action_loginFragment_to_nav_dashboard)
+            findNavController().navigate(R.id.action_loginFragment_to_adminDashboardFragment)
 
         }, 2500)
 

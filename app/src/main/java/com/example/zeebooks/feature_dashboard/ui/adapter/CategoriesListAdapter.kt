@@ -1,6 +1,5 @@
 package com.example.zeebooks.feature_dashboard.ui.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -10,7 +9,6 @@ import com.bumptech.glide.Glide
 import android.util.Base64
 import com.example.zeebooks.databinding.ViewCategoryItemBinding
 import com.example.zeebooks.feature_home.domain.model.CategoryModel
-import java.util.*
 
 
 class CategoriesListAdapter :
@@ -36,16 +34,15 @@ class CategoriesListAdapter :
     }
 
 
-    @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: CategoriesListAdapter.CategoryViewHolder, position: Int) {
         getItem(position)?.let { item ->
             with(holder.viewBinding) {
 
                 name = item.name
-                image = item.imagine
-                numberOfBook = item.numberOfBook.toString()
+                image = item.image
+//                numberOfBook = item.numberOfBook.toString()
 
-                val baza64Imagine = item.imagine
+                val baza64Imagine = item.image
 
                 if (baza64Imagine != null) {
                     val bytesImagine = Base64.decode(baza64Imagine, Base64.DEFAULT)

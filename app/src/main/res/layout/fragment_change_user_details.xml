@@ -35,6 +35,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background_field_edit"
             android:hint="@string/lastname_text"
+            android:text="Remes"
             android:inputType="textPersonName"
             android:textColor="@color/border" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -58,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_field_edit"
                 android:hint="@string/firstName_text"
+                android:text="Ximena"
                 android:inputType="textPersonName"
                 android:textColor="@color/border" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_field_edit"
                 android:hint="@string/type_input_email_text"
-                android:text="ximena.remes@yahoo.com"
+                android:text="ximena@yahoo.com"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/border" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -105,6 +107,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_field_edit"
                 android:hint="@string/phone_number_text"
+                android:text="0757350446"
                 android:inputType="phone"
                 android:textColor="@color/border" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -128,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_field_edit"
                 android:hint="@string/user_details_date_of_join_text"
-                android:text="10.03.2023"
+                android:text="02 ian 2022"
                 android:inputType="date"
                 android:textColor="@color/border" />
         </com.google.android.material.textfield.TextInputLayout>

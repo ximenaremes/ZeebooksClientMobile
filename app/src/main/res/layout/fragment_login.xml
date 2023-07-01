@@ -151,43 +151,6 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputPassword"
             tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
 
-        <ToggleButton
-            android:id="@+id/image_toggle"
-            android:layout_width="54dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/shuffle_button"
-            android:textColor="@color/light_gray"
-            android:textOff="."
-            android:textOn=""
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textInputPassword" />
-
-        <TextView
-            android:id="@+id/textRetine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="18dp"
-            android:text="@string/retine"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@id/image_toggle"
-            app:layout_constraintTop_toBottomOf="@id/textInputPassword" />
-
-        <TextView
-            android:id="@+id/textForgetPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_18"
-            android:layout_marginEnd="24dp"
-            android:text="@string/forget_password_text"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textInputPassword" />
-
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="0dp"
@@ -200,7 +163,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_toggle" />
+            app:layout_constraintTop_toBottomOf="@+id/textInputPassword" />
 
         <LinearLayout
             android:id="@+id/login"

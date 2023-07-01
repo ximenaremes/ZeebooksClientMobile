@@ -2,6 +2,7 @@ package com.example.zeebooks.commons.network
 
 import com.example.zeebooks.commons.domain.model.User
 import com.example.zeebooks.commons.domain.model.request.RegisterRequest
+import com.example.zeebooks.feature_home.domain.model.BookModel
 import com.example.zeebooks.feature_home.domain.model.CategoryModel
 
 import okhttp3.MultipartBody
@@ -26,7 +27,6 @@ interface ApiService {
     @GET("users/nonAdminUserCount")
     suspend fun getNumberOfUsers(): Int
 
-
     @DELETE("users/deleteUser/{id}")
     suspend fun deleteUserById(@Path ("id") id: String): User
 
@@ -37,10 +37,24 @@ interface ApiService {
     @DELETE("category/deleteCategories/{id}")
     suspend fun deleteCategoryById(@Path ("id") id: String): CategoryModel
 
+    @GET("category/{id}")
+    suspend fun getBookByCategoryId(@Path ("id") id: String): List<BookModel>
 
     @Multipart
     @POST("category/addCategory")
     suspend fun addCategory(@Part imagine: MultipartBody.Part, @Body categoryModel: CategoryModel): CategoryModel
+
+    //BOOKS
+    @GET("book/year/{yearOfAppearance}")
+    suspend fun getBooksByYear(@Path ("yearOfAppearance") yearOfAppearance : String) : List<BookModel>
+
+    @GET("book/byRating/{ratingb}")
+    suspend fun getBooksByRating(@Path ("ratingb") ratingb : String) : List<BookModel>
+
+    @GET("book/{id}")
+    suspend fun getBookById(@Path ("id") id: String): BookModel
+
+
 
 
 }

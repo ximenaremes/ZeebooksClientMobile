@@ -20,7 +20,6 @@ class UsersListAdapter :
     private var itemSelectedListener: ((User?) -> Unit)? = null
     private var deleteClickListener: ((String) -> Unit)? = null
 
-
     inner class UserViewHolder(val viewBinding: ViewUserItemBinding) :
         RecyclerView.ViewHolder(viewBinding.root) {
         val cardView = viewBinding.cardView
@@ -69,7 +68,6 @@ class UsersListAdapter :
                     }
                 }
 
-
                 val expandedHeight = 650
                 val collapsedHeight = 270
 
@@ -92,7 +90,6 @@ class UsersListAdapter :
                             dateOfJoinText.visibility = View.GONE
                             dateOfJoinValue.visibility = View.GONE
                             buttonDelete.visibility = View.GONE
-
                         }
                         anim.duration = 300
                         anim.start()

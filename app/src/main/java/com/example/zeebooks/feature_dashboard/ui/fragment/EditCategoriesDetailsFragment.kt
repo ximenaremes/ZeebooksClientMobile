@@ -20,7 +20,7 @@ class EditCategoriesDetailsFragment : BaseFragment<FragmentEditCategoriesDetails
 
     private val categoriesListAdapter = CategoriesListAdapter()
 
-    private val sharedViewModel: CategoriesViewModel by navGraphViewModels(R.id.nav_dashboard) {
+    private val sharedViewModel: CategoriesViewModel by navGraphViewModels(R.id.nav_onboarding) {
         defaultViewModelProviderFactory
     }
 

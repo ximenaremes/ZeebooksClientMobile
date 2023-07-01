@@ -40,6 +40,9 @@ class AdminDashboardFragment : BaseFragment<FragmentAdminDashboardBinding>() {
             icon.setImageResource(R.drawable.ic_profile)
             icon.alpha = 0.7f
 
+            icon.setOnClickListener {
+                findNavController().navigate(R.id.action_adminDashboardFragment_to_profileAdminFragment)
+            }
             overviewBottomSheet.buttonAllUsers.setOnClickListener {
                 findNavController().navigate(R.id.action_adminDashboardFragment_to_usersFragment)
             }
@@ -50,7 +53,7 @@ class AdminDashboardFragment : BaseFragment<FragmentAdminDashboardBinding>() {
                 findNavController().navigate(R.id.action_adminDashboardFragment_to_categoriesAdminFragment)
             }
             overviewBottomSheet.buttonCommand.setOnClickListener {
-                findNavController().navigate(R.id.action_adminDashboardFragment_to_categoriesAdminFragment)
+                findNavController().navigate(R.id.action_adminDashboardFragment_to_commandsFragment)
             }
 
             binding.viewPager.adapter = pagerAdapter

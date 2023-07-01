@@ -75,7 +75,7 @@
             <ImageView
                 android:id="@+id/backgroundListBooks"
                 android:layout_width="0dp"
-                android:layout_height="370dp"
+                android:layout_height="320dp"
                 android:layout_marginStart="@dimen/margin_34"
                 android:layout_marginTop="@dimen/margin_32"
                 android:src="@drawable/background_list_books"
@@ -119,10 +119,11 @@
                 app:layout_constraintTop_toTopOf="@id/backgroundListBooks" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/allBookByYear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
                 android:layout_marginEnd="@dimen/margin_8"
                 android:layout_marginBottom="@dimen/margin_24"
                 android:orientation="horizontal"
@@ -133,23 +134,13 @@
                 app:layout_constraintTop_toBottomOf="@id/description"
                 tools:listitem="@layout/view_book_item" />
 
-            <TextView
-                android:id="@+id/categorii"
-                style="@style/FB.23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_34"
-                android:layout_marginTop="@dimen/margin_25"
-                android:text="@string/categories"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/backgroundListBooks" />
 
             <TextView
-                android:id="@+id/viewMore2"
+                android:id="@+id/viewMore3"
                 style="@style/FB.11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_33"
+                android:layout_marginTop="@dimen/margin_30"
                 android:layout_marginEnd="@dimen/margin_19"
                 android:text="@string/view_more"
                 android:textColor="@color/btn"
@@ -162,22 +153,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_34"
-                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_21"
                 android:text="@string/recomandate"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/categorii" />
+                app:layout_constraintTop_toBottomOf="@id/backgroundListBooks"  />
 
-            <TextView
-                android:id="@+id/viewMore3"
-                style="@style/FB.11"
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/allBookByRating"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_33"
-                android:layout_marginEnd="@dimen/margin_19"
-                android:text="@string/view_more"
-                android:textColor="@color/btn"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_66"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/viewMore2" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recomandate"
+                tools:listitem="@layout/view_book_item_list" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

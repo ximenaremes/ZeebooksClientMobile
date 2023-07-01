@@ -77,7 +77,7 @@
     <string name="list_books_title">Descoperă acum</string>
     <string name="description_categories_book">Vânează cărțile noi înaintea cititorilor din bibliotecă</string>
     <string name="view_more">vezi toate</string>
-    <string name="categories"> Categorii </string>
+    <string name="categories"> Toate categoriile </string>
     <string name="recomandate">Recomandate</string>
     <!-- endregion -->
 
@@ -115,13 +115,11 @@
     <!-- endregion -->
 
     <!-- region categories -->
-    <string name="categories_one">Literatură și poezie</string>
-    <string name="categories_two">Psihologie și motivaționale</string>
-    <string name="categories_three">Istorie, politică, artă</string>
-    <string name="categories_four">Cărți pentru copii</string>
-    <string name="categories_five">Hobby și ghiduri practice</string>
-    <string name="categories_six">Spiritualitate și religie</string>
+    <string name="categories_text_no_data">Nu au fost identificate cărți disponibile.</string>
+
     <!-- endregion -->
+
+
 
 
     <!-- region Payment -->
@@ -251,6 +249,7 @@
 
     <string name="allUsers">Toți utilizatorii</string>
     <string name="allCategories">Toate categoriile</string>
+    <string name="allBooks">Toate cărțile</string>
     <string name="numberOfBook"> Numărul de cărți din categorie este:</string>
     <string name="add_category">Adăugare categorie</string>
     <string name="edit_categories">Editare categorie</string>

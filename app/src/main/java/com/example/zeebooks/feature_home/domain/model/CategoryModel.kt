@@ -1,16 +1,15 @@
 package com.example.zeebooks.feature_home.domain.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class CategoryModel(
     val id :String,
     val name: String,
-    val imagine:String,
-    val numberOfBook: Int
+    val image:String,
+//    val numberOfBook: Int
 
 
-)
-
-//data class CategoryModel(
-//    val name: String,
-//    val image: String
-//)
+): Parcelable
 

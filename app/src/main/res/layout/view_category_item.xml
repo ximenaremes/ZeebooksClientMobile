@@ -13,9 +13,9 @@
             name="image"
             type="String" />
 
-        <variable
-            name="numberOfBook"
-            type="String" />
+<!--        <variable-->
+<!--            name="numberOfBook"-->
+<!--            type="String" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +39,6 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="@dimen/margin_20"
-                android:background="@drawable/background_rounded_filter"
                 android:src="@{image}"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
@@ -78,27 +77,27 @@
                 app:layout_constraintEnd_toStartOf="@id/iconDelete"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/bookText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_20"
-                android:layout_marginStart="@dimen/margin_24"
-                android:text="@string/numberOfBook"
-                android:visibility="visible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconDelete" />
+<!--            <TextView-->
+<!--                android:id="@+id/bookText"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/margin_20"-->
+<!--                android:layout_marginStart="@dimen/margin_24"-->
+<!--                android:text="@string/numberOfBook"-->
+<!--                android:visibility="visible"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/iconDelete" />-->
 
-            <TextView
-                android:id="@+id/bookValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_20"
-                android:layout_marginStart="@dimen/margin_12"
-                android:text="@{numberOfBook}"
-                android:visibility="gone"
-                app:layout_constraintStart_toEndOf="@id/bookText"
-                app:layout_constraintTop_toBottomOf="@id/iconDelete" />
+<!--            <TextView-->
+<!--                android:id="@+id/bookValue"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/margin_20"-->
+<!--                android:layout_marginStart="@dimen/margin_12"-->
+<!--                android:text="@{numberOfBook}"-->
+<!--                android:visibility="gone"-->
+<!--                app:layout_constraintStart_toEndOf="@id/bookText"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/iconDelete" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

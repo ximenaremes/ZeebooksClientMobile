@@ -15,6 +15,10 @@
         <item name="android:fontFamily">@font/pt_sans_bold</item>
     </style>
 
+    <style name="FR.11">
+        <item name="android:textSize">11dp</item>
+    </style>
+
     <style name="FR.14">
         <item name="android:textSize">14dp</item>
     </style>
@@ -45,12 +49,24 @@
         <item name="android:textColor">@color/grayscale_label</item>
     </style>
 
+    <style name="FR.11.GrayscaleLabel">
+        <item name="android:textColor">@color/grayscale_label</item>
+    </style>
+
     <style name="FB.16.Dark">
         <item name="android:textColor">@color/text_about</item>
     </style>
 
     <style name="FB.16.Blue">
         <item name="android:textColor">@color/my_acc_pie_chart_color_1</item>
+    </style>
+
+    <style name="FB.20.DarkColor">
+        <item name="android:textColor">@color/secondary_dark</item>
+    </style>
+
+    <style name="FB.16.DarkColor">
+        <item name="android:textColor">@color/secondary_dark</item>
     </style>
 
     <style name="FB.18">
@@ -131,8 +147,6 @@
         <item name="android:textColor">@color/blue</item>
     </style>
 
-    <style name="FB.20.DarkColor">
-        <item name="android:textColor">@color/secondary_dark</item>
-    </style>
+
 
 </resources>

@@ -24,19 +24,12 @@ class UsersFragment : BaseFragment<FragmentUsersBinding>() {
     override val resId = R.layout.fragment_users
 
     private val usersListAdapter = UsersListAdapter()
-//    private lateinit var loadingProgressBar: ProgressBar
 
-
-    private val sharedViewModel: UsersViewModel by navGraphViewModels(R.id.nav_dashboard) {
+    private val sharedViewModel: UsersViewModel by navGraphViewModels(R.id.nav_onboarding) {
         defaultViewModelProviderFactory
     }
 
     private fun observe() {
-
-//        sharedViewModel.isLoading.onEach { isLoading ->
-//            binding.progressBar.loadingProgressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-//        }.launchIn(viewLifecycleOwner.lifecycleScope)
-
 
         sharedViewModel.usersLiveData.observe(viewLifecycleOwner) { result ->
             if (result.isSuccess) {
@@ -45,20 +38,16 @@ class UsersFragment : BaseFragment<FragmentUsersBinding>() {
                     usersListAdapter.submitList(it)
                 }
             } else {
-                val exception = result.exceptionOrNull()
+                result.exceptionOrNull()
             }
         }
         sharedViewModel.numberOfUsers.observe(viewLifecycleOwner) { number ->
             binding.totalNumber.text = number.toString()
         }
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        loadingProgressBar = binding.progressBar.loadingProgressBar
 
         with(binding) {
             toolbar.iconBack.setOnClickListener { findNavController().navigateUp() }

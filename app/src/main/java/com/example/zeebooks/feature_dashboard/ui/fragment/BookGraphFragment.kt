@@ -22,7 +22,7 @@ class BookGraphFragment : BaseFragment<FragmentBookGraphBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        setupBarChart()
+        setupBarChart()
     }
 
     private fun setupBarChart() {
@@ -51,7 +51,7 @@ class BookGraphFragment : BaseFragment<FragmentBookGraphBinding>() {
             column.setHasLabelsOnlyForSelected(true)
             columns.add(column)
 
-            axisValues.add(AxisValue(i.toFloat()).setLabel("Categorie ${i + 1}"))
+            axisValues.add(AxisValue(i.toFloat()).setLabel("202${i}"))
         }
 
         val axisX = Axis(axisValues)

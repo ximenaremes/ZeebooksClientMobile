@@ -27,7 +27,7 @@ class EditUserDetailsFragment : BaseFragment<FragmentEditUserDetailsBinding>() {
 
     override val resId = R.layout.fragment_edit_user_details
 
-    private val sharedViewModel: UsersViewModel by navGraphViewModels(R.id.nav_dashboard) {
+    private val sharedViewModel: UsersViewModel by navGraphViewModels(R.id.nav_onboarding) {
         defaultViewModelProviderFactory
     }
 
