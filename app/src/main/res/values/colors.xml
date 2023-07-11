@@ -20,7 +20,7 @@
 
     <!-- region Constant colors -->
 
-
+    <color name="lighter_yellow">#DEE4A8</color>
     <color name="lighter_green">#A1E39F</color>
     <color name="light_green">#C5FFC7</color>
     <color name="green">#008A3F</color>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="order"
+            type="com.example.zeebooks.feature_home.domain.model.OrderBookModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:paddingStart="@dimen/margin_4"
+        android:paddingEnd="@dimen/margin_4"
+        android:paddingBottom="@dimen/margin_14"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_rounded_white"
+            android:paddingTop="@dimen/margin_12"
+            android:paddingBottom="@dimen/margin_12">
+
+
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="104dp"
+                android:layout_height="156dp"
+                android:layout_marginStart="@dimen/margin_24"
+                android:background="@drawable/background_rounded_white"
+                android:src="@drawable/ic_order"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/FB.14.DarkColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_38"
+                android:text="Comanda cu nr."
+                android:maxLines="2"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewName"
+                style="@style/FB.14.DarkColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_38"
+                android:text="@{ order.name }"
+                android:maxLines="2"
+                app:layout_constraintStart_toEndOf="@id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/priceValue"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+            <TextView
+                android:id="@+id/value"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="RON"
+                app:layout_constraintStart_toEndOf="@id/priceValue"
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/status"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="Status: "
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toBottomOf="@id/value"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/statusValue"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="@{order.status}"
+                app:layout_constraintStart_toEndOf="@id/status"
+                app:layout_constraintTop_toBottomOf="@id/value"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

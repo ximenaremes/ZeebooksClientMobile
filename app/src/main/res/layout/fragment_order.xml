@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_24"
+            android:paddingTop="@dimen/margin_24"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_all_books" />
+
+            <TextView
+                style="@style/FB.20.DarkColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_34"
+                android:gravity="center"
+                android:text="@string/payment_subtitle_t" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titlu"
+            style="@style/FB.18.GrayscaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_24"
+            android:gravity="center"
+            android:text="@string/payment_text"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/transport"
+            style="@style/FB.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:text="@string/payment_transport"
+            app:layout_constraintTop_toBottomOf="@id/titlu"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/transportValue"
+            style="@style/FB.16.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_20"
+            android:gravity="center"
+            android:text="FAN Curier"
+            app:layout_constraintTop_toBottomOf="@id/titlu"
+            app:layout_constraintStart_toEndOf="@+id/transport" />
+
+        <TextView
+            android:id="@+id/modalitate"
+            style="@style/FB.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:text="@string/payment_plata"
+            app:layout_constraintTop_toBottomOf="@id/transport"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/modalitateValue"
+            style="@style/FB.16.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_20"
+            android:gravity="center"
+            android:text="Ramburs"
+            app:layout_constraintTop_toBottomOf="@id/transportValue"
+            app:layout_constraintStart_toEndOf="@+id/modalitate"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/plata"
+            style="@style/FB.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:text="@string/payment_modalitate"
+            app:layout_constraintTop_toBottomOf="@id/modalitate"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/plataValue"
+            style="@style/FB.16.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_20"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/modalitateValue"
+            app:layout_constraintStart_toEndOf="@+id/plata"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/moneda"
+            style="@style/FB.16.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_10"
+            android:text="RON"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/modalitateValue"
+            app:layout_constraintStart_toEndOf="@+id/plataValue"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/adresaInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plata">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_field"
+            android:hint="Adresa de livrare"
+            android:inputType="text"
+            android:textColor="@color/border"
+            tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/buttonCommand"
+            style="@style/FB.14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+           android:layout_marginTop="@dimen/margin_24"
+            android:background="@drawable/background_button_cancel"
+            android:padding="@dimen/margin_12"
+            android:text="@string/payment_button_text"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adresaInput"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

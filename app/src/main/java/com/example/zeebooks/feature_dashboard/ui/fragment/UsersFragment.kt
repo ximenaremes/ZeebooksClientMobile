@@ -81,7 +81,7 @@ class UsersFragment : BaseFragment<FragmentUsersBinding>() {
         val title = popupView.findViewById<TextView>(R.id.logoutText)
         val message = popupView.findViewById<TextView>(R.id.messageText)
         title.setText(R.string.delete_user)
-        message.setText(R.string.delete_message)
+        message.setText(R.string.delete_message_user)
 
         val btnCancel = popupView.findViewById<TextView>(R.id.btn_cancel)
         val btnConfirm = popupView.findViewById<TextView>(R.id.btn_confirm)

@@ -16,9 +16,14 @@ import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.commons.utils.Constants
 import com.example.zeebooks.commons.utils.Enums
 import com.example.zeebooks.databinding.FragmentAddCategoriesBinding
+import com.example.zeebooks.feature_home.domain.model.CategoryModel
 import com.example.zeebooks.feature_home.viewmodel.CategoriesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.toRequestBody
+import java.io.ByteArrayOutputStream
 
 @AndroidEntryPoint
 class AddCategoriesFragment : BaseFragment<FragmentAddCategoriesBinding>() {
@@ -49,22 +54,22 @@ class AddCategoriesFragment : BaseFragment<FragmentAddCategoriesBinding>() {
 
             binding.buttonAddCategories.setOnClickListener {
                 validateInputs()
-//                val categoryName = binding.textLastName.text.toString()
-//                val imageFile = selectedImageUri?.let { uri ->
-//                    requireActivity().contentResolver.openInputStream(uri)?.use { inputStream ->
-//                        val outputStream = ByteArrayOutputStream()
-//                        inputStream.copyTo(outputStream)
-//                        val byteArray = outputStream.toByteArray()
-//                        val requestFile = byteArray.toRequestBody("image/*".toMediaTypeOrNull())
-//                        MultipartBody.Part.createFormData("imagine", "image.jpg", requestFile)
-//                    }
+                val categoryName = binding.nameCategory.text.toString()
+
+             val imageFile = selectedImageUri?.let { uri ->
+                 requireActivity().contentResolver.openInputStream(uri)?.use { inputStream ->
+                      val outputStream = ByteArrayOutputStream()
+                      inputStream.copyTo(outputStream)
+                      val byteArray = outputStream.toByteArray()
+                   val requestFile = byteArray.toRequestBody("image/*".toMediaTypeOrNull())
+                   MultipartBody.Part.createFormData("imagine", "image.jpg", requestFile)
+                  }
                 }
-//
-//                imageFile?.let { file ->
-//                    val categoryModel = CategoryModel(categoryName)
-//                    sharedViewModel.addCategory(file, categoryModel)
-//                }
-//            }
+
+                imageFile?.let { file ->
+                    sharedViewModel.addCategory(file, categoryName)
+             }
+            }
         }
     }
 

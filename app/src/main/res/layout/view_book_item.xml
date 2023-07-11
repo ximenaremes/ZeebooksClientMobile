@@ -6,16 +6,8 @@
     <data>
 
         <variable
-            name="name"
-            type="String" />
-
-        <variable
-            name="nameAuthor"
-            type="String" />
-
-        <variable
-            name="image"
-            type="String" />
+            name="book"
+            type="com.example.zeebooks.feature_home.domain.model.BookModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +23,7 @@
             android:layout_marginStart="@dimen/margin_4"
             android:layout_marginEnd="@dimen/margin_4"
             android:background="@drawable/background_rounded_white"
-            android:src="@{image}"
+            android:src="@{book.image}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_8"
             android:layout_marginTop="@dimen/margin_6"
-            android:text="@{name}"
+            android:text="@{book.name}"
             android:maxLines="2"
             app:layout_constraintTop_toBottomOf="@id/cover"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +49,7 @@
             android:layout_marginHorizontal="@dimen/margin_8"
             android:layout_marginBottom="@dimen/margin_10"
             android:layout_marginTop="@dimen/margin_6"
-            android:text="@{nameAuthor}"
+            android:text="@{book.nameAuthor}"
             android:maxLines="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

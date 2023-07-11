@@ -23,16 +23,11 @@ class ViewMoreBookRFragment : BaseFragment<FragmentViewMoreBookRBinding>() {
     override val resId = R.layout.fragment_view_more_book_r
 
     private val bookByRatingAdapter = BookAdapter()
+    private var selectedBookId: String? = null
 
     private val sharedViewModel: BookViewModel by navGraphViewModels(R.id.nav_home) {
         defaultViewModelProviderFactory
     }
-
-//    private val sharedViewModel: CategoriesViewModel by navGraphViewModels(R.id.nav_home) {
-//        defaultViewModelProviderFactory
-//    }
-
-
     private fun observe() {
 
         sharedViewModel.booksRating.observe(viewLifecycleOwner) { books ->
@@ -59,7 +54,11 @@ class ViewMoreBookRFragment : BaseFragment<FragmentViewMoreBookRBinding>() {
             toolbar.titleText.setText(R.string.recomandate)
             toolbar.iconBack.setOnClickListener { findNavController().navigateUp() }
         }
-        bookByRatingAdapter.setOnItemSelectedListener {
-            findNavController().navigate(R.id.action_viewMoreBookRFragment_to_detailsBookFragment)
+
+        bookByRatingAdapter.setOnItemSelectedListener { book ->
+            selectedBookId = book.id
+            val action =
+                ViewMoreBookRFragmentDirections.actionViewMoreBookRFragmentToDetailsBookFragment(bookId = book.id)
+            findNavController().navigate(action)
         }
     }}

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import android.util.Base64
+import com.example.zeebooks.databinding.ViewCategoryItemGridviewBinding
 import com.example.zeebooks.feature_home.domain.model.CategoryModel
 
 
@@ -17,13 +18,27 @@ class BookByYearAdapter :
 
     private var selectedItem = POSITION_NONE
     private var itemSelectedListener: (BookModel) -> Unit = {}
-    private var deleteClickListener: ((String) -> Unit)? = null
-    private var editClickListener: ((String) -> Unit)? = null
+//    private var deleteClickListener: ((String) -> Unit)? = null
+//    private var editClickListener: ((String) -> Unit)? = null
+//    private var onClick: (CategoryModel) -> Unit = {}
 
 
-    inner class BookViewHolder(val viewBinding: ViewBookItemBinding) :
-        RecyclerView.ViewHolder(viewBinding.root) {
+    inner class BookViewHolder(val binding: ViewBookItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(book: BookModel) {
+            binding.book = book
+            binding.executePendingBindings()
+
+            val baza64Imagine = book.image
+
+            if (baza64Imagine != null) {
+                val bytesImagine = Base64.decode(baza64Imagine, Base64.DEFAULT)
+                Glide.with(binding.cover.context).load(bytesImagine).into(binding.cover)
+            }
+        }
     }
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -36,61 +51,42 @@ class BookByYearAdapter :
 
 
     override fun onBindViewHolder(holder: BookByYearAdapter.BookViewHolder, position: Int) {
-        getItem(position)?.let { item ->
-            with(holder.viewBinding) {
+                val book = getItem(position)
+                holder.bind(book)
 
-                name = item.name
-                nameAuthor =item.nameAuthor
-                image = item.image
-
-                val baza64Imagine = item.image
-
-                if (baza64Imagine != null) {
-                    val bytesImagine = Base64.decode(baza64Imagine, Base64.DEFAULT)
-                    Glide.with(holder.itemView.context).load(bytesImagine).into(holder.viewBinding.cover)
+                holder.itemView.setOnClickListener {
+                    itemSelectedListener(book)
                 }
 
-//                holder.viewBinding.iconDelete.setOnClickListener {
-//                    val categoryId = getItem(position)?.id
-//                    if (categoryId != null) {
-//                        deleteClickListener?.invoke(categoryId)
-//                    }
 //                }
+//                cardView.setOnClickListener {
+//                    selectItem(position)
+//                    itemSelectedListener.invoke(getItem(selectedItem))
+//                }
+
+//            }
 //
-//                holder.viewBinding.iconEditDetails.setOnClickListener {
-//                    val categoryId = getItem(position)?.id
-//                    if (categoryId != null) {
-//                        editClickListener?.invoke(categoryId)
-//                    }
-//                }
-                cardView.setOnClickListener {
-                    selectItem(position)
-                    itemSelectedListener.invoke(getItem(selectedItem))
-                }
-
-            }
-
-        }
+//        }
     }
 
-    fun setOnEditClickListener(listener: (String) -> Unit) {
-        editClickListener = listener
-    }
-
-
-    fun setOnDeleteClickListener(listener: (String) -> Unit) {
-        deleteClickListener = listener
-    }
+//    fun setOnEditClickListener(listener: (String) -> Unit) {
+//        editClickListener = listener
+//    }
+//
+//
+//    fun setOnDeleteClickListener(listener: (String) -> Unit) {
+//        deleteClickListener = listener
+//    }
 
     fun setOnItemSelectedListener(listener: (BookModel) -> Unit) {
         itemSelectedListener = listener
     }
 
-    private fun selectItem(index: Int) {
-        if (selectedItem != POSITION_NONE) notifyItemChanged(selectedItem)
-        selectedItem = index
-        notifyItemChanged(selectedItem)
-    }
+//    private fun selectItem(index: Int) {
+//        if (selectedItem != POSITION_NONE) notifyItemChanged(selectedItem)
+//        selectedItem = index
+//        notifyItemChanged(selectedItem)
+//    }
 
     private object BookDiff : DiffUtil.ItemCallback<BookModel>() {
         override fun areContentsTheSame(

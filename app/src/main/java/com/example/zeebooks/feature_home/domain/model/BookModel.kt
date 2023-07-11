@@ -17,12 +17,14 @@ data class BookModel (
     val numberOfCopies: String,
     val yearOfAppearance: String,
     val status: String,
-    val isbn: String
+    val isbn: String,
+
+    var favorite: Boolean = false,
+
+
 //    val category: CategoryModel,
 //    val language: LanguageModel,
 //    val publishingHouse: PublishingHouseModel
-
-//
 //    val rating: String,
 //    val carts: String,
 //    val user: String,
@@ -31,6 +33,8 @@ data class BookModel (
 //    val language: String,
 //    val publishingHouse: String
 ) : Parcelable
+
+
 
 
 

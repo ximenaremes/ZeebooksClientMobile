@@ -12,9 +12,9 @@ class AddCategoryUseCase @Inject constructor(
 ) {
 
     suspend fun addCategory(
-        imagine: MultipartBody.Part,
-        categoryModel: CategoryModel
+        image: MultipartBody.Part,
+        name:String
     ): Result<CategoryModel> {
-        return dashboardRepository.addCategory(imagine, categoryModel)
+        return dashboardRepository.addCategory(image, name)
     }
 }

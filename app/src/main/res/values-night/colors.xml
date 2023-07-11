@@ -1,6 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="gray_background">#1C1C1E</color>
-    \\TODO ADD MORE COLORS FOR THEME DARK MODE
+    <!-- region Constant colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white2">#D5FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="light_red">#FABBBD</color>
+    <color name="red">#DE444A</color>
+    <color name="darker_red">#BE161D</color>
+    <color name="darker_red_half_transparent">#80BE161D</color>
+    <color name="dark_red">#8E1116</color>
+
+    <color name="primary_blue">#1D93B9</color>
+    <color name="second_blue">#4F6ACB</color>
+
+    <color name="gray_background">#F6F8FC</color>
+
+    <!-- region Constant colors -->
+
+    <color name="lighter_yellow">#DEE4A8</color>
+    <color name="lighter_green">#A1E39F</color>
+    <color name="light_green">#C5FFC7</color>
+    <color name="green">#008A3F</color>
+    <color name="dark_green">#06732B</color>
+    <color name="light_gray">#97A1BB</color>
+    <color name="lighter_gray">#D5DEEB</color>
+
+
+    <color name="primary_blue_half_transparent">#804783FE</color>
+    <color name="primary_blue_dark_mode">#ACCCFF</color>
+
+
+    <color name="dark_blue_quarter_transparent">#40001447</color>
+    <color name="dark_blue_half_transparent">#80001447</color>
+    <color name="darker_blue">#4D57AB</color>
+
+    <color name="secondary_blue">#47B1FE</color>
+    <color name="secondary_dark">#293C7D</color>
+
+    <color name="grayscale_label">#6A7797</color>
+    <color name="grayscale_body">#343F5E</color>
+    <color name="grayscale_navy">#222754</color>
+
+    <color name="tertiary_blue_dark_mode">#ADDCFF</color>
+    <color name="tertiary_dark_blue">#0084E3</color>
+
+    <color name="primary_dark">#175AE3</color>
+    <color name="primary_light">#DAE9FF</color>
+    <color name="no_name_blue_20">#332D61CD</color>
+    <color name="shadow_blue">#66226BFF</color>
+
+    <!-- endregion -->
+
+    <!-- region Input field -->
+
+    <color name="input_field_solid_color">#FBFDFF</color>
+    <color name="input_field_error_solid_color">#FDE8E9</color>
+    <color name="input_field_error_stroke_color">@color/darker_red</color>
+    <!-- endregion -->
+
+    <!-- region My accounts -->
+    <color name="my_acc_pie_chart_color_1">#4682B4</color>
+    <color name="my_acc_pie_chart_color_2">#0000CD</color>
+    <color name="my_acc_pie_chart_color_3">#B0C4DE</color>
+    <color name="my_acc_pie_chart_color_4">#483D8B</color>
+    <color name="my_acc_pie_chart_color_5">#87CEEB</color>
+    <color name="my_acc_pie_chart_color_6">#5F9EA0</color>
+    <array name="my_acc_chart_colors">
+        <item>@color/secondary_dark</item>
+        <item>@color/primary_blue</item>
+        <item>@color/primary_dark</item>
+        <item>@color/primary_blue_dark_mode</item>
+        <item>@color/my_acc_pie_chart_color_1</item>
+        <item>@color/my_acc_pie_chart_color_2</item>
+        <item>@color/my_acc_pie_chart_color_3</item>
+        <item>@color/my_acc_pie_chart_color_4</item>
+        <item>@color/my_acc_pie_chart_color_5</item>
+        <item>@color/my_acc_pie_chart_color_6</item>
+    </array>
+    <!-- endregion -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="btn">#016483</color>
+    <color name="blue">#016483</color>
+    <color name="blue2">#A4648399</color>
+    <color name="dark">#E0604722</color>
+
+
+    <color name="border">#9D9D9D</color>
+    <color name="text">#4037D2</color>
+    <color name="inputErrorsRedColor">#E91E63</color>
+    <color name="error">#8E1116</color>
+    <color name="borderBottomNav">#9CF5F5F5</color>
+    <color name="borderInputText">#9D9D9D</color>
+
+    <color name="background_color_layout">#2952A3</color>
+    <color name="shadow_blue_40">#66226BFF</color>
+    <color name="shadow_blue_41">#66495E24</color>
+
+
+    <!-- region Explore -->
+    <color name="dashboard_background_color">#662B7890</color>
+    <color name="dashboard_background_color_sheet">#9EC9D6</color>
+    <color name="border_field_search">#016483</color>
+    <color name="vertical_line">#9D9D9D</color>
+    <color name="circle_filter">#A62B7890</color>
+    <!-- endregion -->
+
+    <!-- region Profile -->
+    <color name="backround_image">#153F7D75</color>
+    <color name="background_profile">#3438A5E1</color>
+    <color name="text_about">#004712</color>
+    <color name="border_field">#3F7FDA</color>
+    <color name="color_profile_text">#60198C</color>
+    <color name="color_profile">#124449</color>
+    <color name="button_cancel">#6AA29C</color>
+    <color name="button_confirm">#E91010</color>
+    <!-- endregion -->
+
+
+    <!-- region Categories -->
+    <color name="categories_text">#153F7D</color>
+
+    <!-- endregion -->
+
+    <color name="book_details_text">#332DA8</color>
+
+
+
 </resources>

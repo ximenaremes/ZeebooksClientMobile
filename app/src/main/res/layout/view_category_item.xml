@@ -4,18 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="name"
-            type="String" />
+            name="category"
+            type="com.example.zeebooks.feature_home.domain.model.CategoryModel" />
 
-        <variable
-            name="image"
-            type="String" />
-
-<!--        <variable-->
-<!--            name="numberOfBook"-->
-<!--            type="String" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +31,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="@dimen/margin_20"
-                android:src="@{image}"
+                android:src="@{category.image}"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_20"
                 android:layout_marginTop="@dimen/margin_16"
-                android:text="@{name}"
+                android:text="@{category.name}"
                 app:layout_constraintStart_toEndOf="@id/imageCategory"
                 app:layout_constraintTop_toTopOf="parent" />
 

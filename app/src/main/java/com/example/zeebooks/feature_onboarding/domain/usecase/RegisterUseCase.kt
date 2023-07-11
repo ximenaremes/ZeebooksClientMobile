@@ -9,7 +9,6 @@ import javax.inject.Inject
 class RegisterUseCase @Inject constructor(
     private val onboardingRepository: OnboardingRepository
 ){
-
     suspend fun registerUser(registerRequest: RegisterRequest): Result<User> {
         return onboardingRepository.createUser(registerRequest)
     }

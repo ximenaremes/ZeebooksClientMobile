@@ -46,10 +46,10 @@ class DashboardRemoteDataSource @Inject constructor(
         }
     }
 
-    suspend fun addCategory(imagine: MultipartBody.Part, categoryModel: CategoryModel): Result<CategoryModel>{
+    suspend fun addCategory(image: MultipartBody.Part, name:String): Result<CategoryModel>{
         return withContext(Dispatchers.IO){
             kotlin.runCatching {
-                RetrofitClient.apiService.addCategory(imagine, categoryModel)
+                RetrofitClient.apiService.addCategory(image, name)
             }
         }
     }

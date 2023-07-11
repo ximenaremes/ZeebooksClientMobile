@@ -13,6 +13,8 @@ import com.example.zeebooks.feature_home.domain.usecase.GetAllCategoriesUseCase
 import com.example.zeebooks.feature_home.domain.usecase.GetBookByCategoryIdUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import okhttp3.MultipartBody
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -53,6 +55,24 @@ class CategoriesViewModel @Inject constructor(
             deleteCategoryByIdUseCase.deleteCategoryById(id)
             getAllCategories()
         }
+    }
+
+    fun addCategory(image: MultipartBody.Part,
+                    name:String) {
+        viewModelScope.launch {
+            addCategoryUseCase.addCategory(image, name)
+                .fold(
+                    onSuccess = {
+                        Timber.e("SUCCESS ADDED BOOK $it")
+                    },
+                    onFailure = {
+                        Timber.e("FAILURE ADDED BOOK $it")
+
+                    }
+
+                )
+        }
+
     }
 
     fun validation(

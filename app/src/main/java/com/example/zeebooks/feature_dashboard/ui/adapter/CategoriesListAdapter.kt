@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import android.util.Base64
 import com.example.zeebooks.databinding.ViewCategoryItemBinding
+import com.example.zeebooks.feature_home.domain.model.BookModel
 import com.example.zeebooks.feature_home.domain.model.CategoryModel
 
 
@@ -19,9 +20,20 @@ class CategoriesListAdapter :
     private var deleteClickListener: ((String) -> Unit)? = null
     private var editClickListener: ((String) -> Unit)? = null
 
-
     inner class CategoryViewHolder(val viewBinding: ViewCategoryItemBinding) :
         RecyclerView.ViewHolder(viewBinding.root) {
+        fun bind(category: CategoryModel) {
+            viewBinding.category = category
+            viewBinding.executePendingBindings()
+
+            val baza64Imagine = category.image
+
+            if (baza64Imagine != null) {
+                val bytesImagine = Base64.decode(baza64Imagine, Base64.DEFAULT)
+                Glide.with(viewBinding.imageCategory.context).load(bytesImagine)
+                    .into(viewBinding.imageCategory)
+            }
+        }
     }
 
     override fun onCreateViewHolder(
@@ -35,33 +47,20 @@ class CategoriesListAdapter :
 
 
     override fun onBindViewHolder(holder: CategoriesListAdapter.CategoryViewHolder, position: Int) {
-        getItem(position)?.let { item ->
-            with(holder.viewBinding) {
+        val book = getItem(position)
+        holder.bind(book)
 
-                name = item.name
-                image = item.image
-//                numberOfBook = item.numberOfBook.toString()
+        holder.viewBinding.iconDelete.setOnClickListener {
+            val categoryId = getItem(position)?.id
+            if (categoryId != null) {
+                deleteClickListener?.invoke(categoryId)
+            }
+        }
 
-                val baza64Imagine = item.image
-
-                if (baza64Imagine != null) {
-                    val bytesImagine = Base64.decode(baza64Imagine, Base64.DEFAULT)
-                    Glide.with(holder.itemView.context).load(bytesImagine).into(holder.viewBinding.imageCategory)
-                }
-
-                holder.viewBinding.iconDelete.setOnClickListener {
-                    val categoryId = getItem(position)?.id
-                    if (categoryId != null) {
-                        deleteClickListener?.invoke(categoryId)
-                    }
-                }
-
-                holder.viewBinding.iconEditDetails.setOnClickListener {
-                    val categoryId = getItem(position)?.id
-                    if (categoryId != null) {
-                        editClickListener?.invoke(categoryId)
-                    }
-                }
+        holder.viewBinding.iconEditDetails.setOnClickListener {
+            val categoryId = getItem(position)?.id
+            if (categoryId != null) {
+                editClickListener?.invoke(categoryId)
             }
         }
     }

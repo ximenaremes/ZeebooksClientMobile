@@ -13,7 +13,7 @@
         android:title=""
         android:icon="@drawable/ic_heart_full" />
 
-    <item android:id="@+id/nav_payment"
+    <item android:id="@+id/cartFragment"
         android:title=""
         android:icon="@drawable/ic_shopping_cart" />
 

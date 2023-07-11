@@ -49,33 +49,35 @@
                 android:layout_marginTop="@dimen/margin_30"
                 android:gravity="center"
                 android:text="@string/payment_description" />
-
-            <TextView
-                android:id="@+id/buttonEmptyList"
-                style="@style/FB.16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_30"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/margin_30"
-                android:paddingVertical="@dimen/margin_12"
-                android:textColor="@color/white"
-                android:background="@drawable/background_button"
-                android:text="@string/payment_button_text" />
         </LinearLayout>
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/listDebitCards"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginTop="@dimen/margin_40"-->
-<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/toolbar" />-->
-<!--&lt;!&ndash;        tools:listitem="@layout/view_book_item"&ndash;&gt;-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listCart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:listitem="@layout/view_book_cart"/>
+
+        <TextView
+            android:id="@+id/buttonCommand"
+            style="@style/FB.14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_80"
+            android:background="@drawable/background_button_cancel"
+            android:padding="@dimen/margin_12"
+            android:text="@string/payment_button_text"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

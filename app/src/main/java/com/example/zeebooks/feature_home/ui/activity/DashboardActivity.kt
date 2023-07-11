@@ -26,7 +26,7 @@ class DashboardActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.exploreFragment -> showBottomNav()
                 R.id.wishlistFragment -> showBottomNav()
-                R.id.paymentFragment -> showBottomNav()
+                R.id.cartFragment -> showBottomNav()
                 R.id.profileFragment -> showBottomNav()
                 R.id.categoriesFragment -> showBottomNav()
                 else -> hideBottomNav()

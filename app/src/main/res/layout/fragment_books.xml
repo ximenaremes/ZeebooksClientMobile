@@ -36,9 +36,9 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/totalNumberAuthor"
+                android:id="@+id/totalNumber"
                 style="@style/FB.20"
-                android:layout_width="185dp"
+                android:layout_width="200dp"
                 android:layout_height="75dp"
                 android:layout_marginTop="@dimen/margin_14"
                 android:layout_marginBottom="@dimen/margin_24"
@@ -51,70 +51,22 @@
                 app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
             <ImageView
-                android:id="@+id/imageAuthor"
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="@dimen/margin_10"
+                android:id="@+id/imageUser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginBottom="@dimen/margin_14"
                 android:gravity="center"
                 android:src="@drawable/ic_all_books"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/totalNumberAuthor"
-                app:layout_constraintStart_toStartOf="@+id/totalNumberAuthor"
-                app:layout_constraintTop_toTopOf="@id/totalNumberAuthor" />
-
-            <ImageView
-                android:id="@+id/imageCategory"
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="@dimen/margin_40"
-                android:gravity="center"
-                android:src="@drawable/ic_all_users"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/totalNumberAuthor"
-                app:layout_constraintStart_toEndOf="@+id/imageAuthor"
-                app:layout_constraintTop_toTopOf="@id/totalNumberAuthor" />
-
-            <TextView
-                android:id="@+id/totalNumber"
-                style="@style/FB.20"
-                android:layout_width="185dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="@dimen/margin_14"
-                android:layout_marginBottom="@dimen/margin_24"
-                android:layout_marginEnd="@dimen/margin_24"
-                android:gravity="center"
-                android:paddingStart="@dimen/margin_90"
-                android:rotation="180"
-                android:textColor="@color/grayscale_navy"
-                android:background="@drawable/background_search"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
-            <ImageView
-                android:id="@+id/imageEditura"
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="@dimen/margin_10"
-                android:gravity="center"
-                android:src="@drawable/ic_book_logo"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/totalNumber"
                 app:layout_constraintStart_toStartOf="@+id/totalNumber"
-                app:layout_constraintTop_toTopOf="@id/totalNumber" />
-
-            <ImageView
-                android:id="@+id/imageLanguage"
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="@dimen/margin_40"
-                android:gravity="center"
-                android:src="@drawable/ic_language"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/imageEditura"
-                app:layout_constraintStart_toEndOf="@+id/imageEditura"
-                app:layout_constraintTop_toTopOf="@id/totalNumberAuthor" />
+                app:layout_constraintTop_toTopOf="@id/totalNumber"
+                app:layout_constraintVertical_bias="1.0" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/allBooks"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_16"
@@ -125,7 +77,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/totalNumber"
-                tools:listitem="@layout/view_category_item" />
+                tools:listitem="@layout/view_book_item_admin" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

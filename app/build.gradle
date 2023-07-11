@@ -95,6 +95,8 @@ dependencies {
     implementation 'com.borjabravo:readmoretextview:2.1.0'
     implementation "androidx.preference:preference-ktx:1.2.0"
 //    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
 
     implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
     implementation 'com.google.firebase:firebase-bom:32.1.1'

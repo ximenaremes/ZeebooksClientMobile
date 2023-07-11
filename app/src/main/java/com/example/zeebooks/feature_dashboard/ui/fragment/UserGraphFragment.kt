@@ -7,6 +7,8 @@ import com.example.zeebooks.R
 import com.example.zeebooks.commons.ui.fragment.BaseFragment
 import com.example.zeebooks.databinding.FragmentUserGraphBinding
 import dagger.hilt.android.AndroidEntryPoint
+import lecho.lib.hellocharts.formatter.AxisValueFormatter
+import lecho.lib.hellocharts.formatter.SimpleAxisValueFormatter
 import lecho.lib.hellocharts.model.*
 import lecho.lib.hellocharts.view.LineChartView
 
@@ -28,8 +30,9 @@ class UserGraphFragment : BaseFragment<FragmentUserGraphBinding>() {
 
         values.add(PointValue(0f, 0f))
         values.add(PointValue(1f, 0f))
-        values.add(PointValue(2f, 2f))
-        values.add(PointValue(3f, 0f))
+        values.add(PointValue(2f, 0f))
+        values.add(PointValue(3f, 2f))
+        values.add(PointValue(4f, 0f))
 
         val line = Line(values)
 //        line.color = R.color.text
@@ -42,7 +45,8 @@ class UserGraphFragment : BaseFragment<FragmentUserGraphBinding>() {
             AxisValue(0f).setLabel("Martie"),
             AxisValue(1f).setLabel("Aprilie"),
             AxisValue(2f).setLabel("Mai"),
-            AxisValue(3f).setLabel("Iunie")
+            AxisValue(3f).setLabel("Iunie"),
+            AxisValue(4f).setLabel("Iulie"),
         )
 
         val axisY = Axis()

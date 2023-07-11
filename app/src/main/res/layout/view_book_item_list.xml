@@ -6,20 +6,8 @@
     <data>
 
         <variable
-            name="name"
-            type="String" />
-
-        <variable
-            name="nameAuthor"
-            type="String" />
-
-        <variable
-            name="image"
-            type="String" />
-
-        <variable
-            name="ratingb"
-            type="String" />
+            name="book"
+            type="com.example.zeebooks.feature_home.domain.model.BookModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,17 +16,16 @@
         android:layout_height="wrap_content"
         android:background="@color/gray_background"
         android:paddingStart="@dimen/margin_24"
-        android:paddingBottom="@dimen/margin_14"
         android:paddingEnd="@dimen/margin_24"
+        android:paddingBottom="@dimen/margin_14"
         tools:ignore="RtlSymmetry">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/background_rounded_white"
-            android:paddingBottom="@dimen/margin_12"
-            android:paddingTop="@dimen/margin_12">
-
+            android:paddingTop="@dimen/margin_12"
+            android:paddingBottom="@dimen/margin_12">
 
             <ImageView
                 android:id="@+id/cover"
@@ -46,7 +33,7 @@
                 android:layout_height="156dp"
                 android:layout_marginStart="@dimen/margin_24"
                 android:background="@drawable/background_rounded_white"
-                android:src="@{image}"
+                android:src="@{book.image}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,8 +43,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_8"
-                android:layout_marginTop="@dimen/margin_24"
-                android:text="@{name}"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="@{book.name}"
                 app:layout_constraintEnd_toStartOf="@id/iconFavourite"
                 app:layout_constraintStart_toEndOf="@id/cover"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -71,7 +58,7 @@
                 android:layout_marginTop="@dimen/margin_6"
                 android:layout_marginBottom="@dimen/margin_10"
                 android:maxLines="1"
-                android:text="@{nameAuthor}"
+                android:text="@{book.nameAuthor}"
                 app:layout_constraintEnd_toStartOf="@id/iconFavourite"
                 app:layout_constraintStart_toEndOf="@id/cover"
                 app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -85,10 +72,23 @@
                 android:layout_marginTop="@dimen/margin_6"
                 android:layout_marginBottom="@dimen/margin_10"
                 android:maxLines="1"
-                android:text="@{ratingb}"
-                app:layout_constraintEnd_toStartOf="@id/iconFavourite"
+                android:text="@{book.price}"
                 app:layout_constraintStart_toEndOf="@id/cover"
                 app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+            <TextView
+                android:id="@+id/value"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="RON"
+                app:layout_constraintStart_toEndOf="@id/priceValue"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                tools:ignore="HardcodedText" />
 
             <ImageView
                 android:id="@+id/iconFavourite"
@@ -97,23 +97,35 @@
                 android:layout_marginStart="@dimen/margin_24"
                 android:layout_marginTop="@dimen/margin_24"
                 android:layout_marginEnd="@dimen/margin_24"
-                android:background="@drawable/background_rounded_white"
                 android:src="@drawable/ic_heart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_38"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="0"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                app:layout_constraintStart_toStartOf="@id/cover"
+                app:layout_constraintTop_toTopOf="@id/priceValue"/>
 
-            <!--        <ImageView-->
-            <!--            android:id="@+id/iconFavourite"-->
-            <!--            android:layout_width="30dp"-->
-            <!--            android:layout_height="30dp"-->
-            <!--            android:layout_marginStart="@dimen/margin_24"-->
-            <!--            android:layout_marginEnd="@dimen/margin_24"-->
-            <!--            android:layout_marginTop="@dimen/margin_24"-->
-            <!--            android:background="@drawable/background_rounded_white"-->
-            <!--            android:src="@drawable/ic_heart"-->
-            <!--            app:layout_constraintEnd_toEndOf="parent"-->
-            <!--            app:layout_constraintTop_toTopOf="parent" />-->
+            <ImageView
+                android:id="@+id/iconCommand"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:padding="2dp"
+                android:background="@drawable/button"
+                android:src="@drawable/ic_cart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

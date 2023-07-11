@@ -172,7 +172,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                 val email = binding.textPassword.text.toString()
                 val password = binding.textConfPassword.text.toString()
                 val numberPhone =binding.textConfPassword.text.toString() //
-                val role = "ADMIN"
+                val role = "STANDARD"
                 val dateOfJoin = SimpleDateFormat("dd/M/yyyy hh:mm:ss").format(Date())
 
 //                sharedViewModel.registerUserToFirebase(lastName, firstName, email, password, role, dateOfJoin)

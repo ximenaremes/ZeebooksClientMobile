@@ -60,9 +60,15 @@
     <style name="FB.16.Blue">
         <item name="android:textColor">@color/my_acc_pie_chart_color_1</item>
     </style>
+    <style name="FB.14.Blue">
+        <item name="android:textColor">@color/my_acc_pie_chart_color_1</item>
+    </style>
 
     <style name="FB.20.DarkColor">
         <item name="android:textColor">@color/secondary_dark</item>
+    </style>
+    <style name="FB.20.Dark">
+        <item name="android:textColor">@color/text_about</item>
     </style>
 
     <style name="FB.16.DarkColor">

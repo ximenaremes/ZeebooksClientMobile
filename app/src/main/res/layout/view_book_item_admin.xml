@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="book"
+            type="com.example.zeebooks.feature_home.domain.model.BookModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:paddingStart="@dimen/margin_4"
+        android:paddingEnd="@dimen/margin_4"
+        android:paddingBottom="@dimen/margin_14"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_rounded_white"
+            android:paddingTop="@dimen/margin_12"
+            android:paddingBottom="@dimen/margin_12">
+
+
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="104dp"
+                android:layout_height="156dp"
+                android:layout_marginStart="@dimen/margin_24"
+                android:background="@drawable/background_rounded_white"
+                android:src="@{book.image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/FB.14.DarkColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_38"
+                android:text="@{book.name}"
+                android:maxLines="2"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintEnd_toStartOf="@id/iconEditDetails"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="@{book.nameAuthor}"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+            <TextView
+                android:id="@+id/priceValue"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="@{book.price}"
+                app:layout_constraintStart_toEndOf="@id/cover"
+                app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+            <TextView
+                android:id="@+id/value"
+                style="@style/FR.11.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:maxLines="1"
+                android:text="RON"
+                app:layout_constraintStart_toEndOf="@id/priceValue"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                tools:ignore="HardcodedText" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_38"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="0"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                app:layout_constraintStart_toStartOf="@id/cover"
+                app:layout_constraintTop_toTopOf="@id/priceValue"/>
+
+            <ImageView
+                android:id="@+id/iconDelete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:src="@drawable/ic_delete"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconEditDetails"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_18"
+                android:src="@drawable/ic_edit_profile"
+                app:layout_constraintEnd_toStartOf="@id/iconDelete"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

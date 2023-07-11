@@ -33,10 +33,10 @@ class BookGraphFragment : BaseFragment<FragmentBookGraphBinding>() {
         val axisValues = mutableListOf<AxisValue>()
 
         val data = listOf(
-            Pair(10f, Color.BLUE),
-            Pair(20f, Color.GREEN),
-            Pair(15f, Color.RED),
-            Pair(12f, Color.YELLOW)
+            Pair(10f, R.color.red),
+            Pair(20f, Color.CYAN),
+            Pair(15f, R.color.green),
+            Pair(12f, Color.MAGENTA)
         )
 
         for (i in data.indices) {

@@ -17,6 +17,7 @@ class ViewMoreBookDFragment : BaseFragment<FragmentViewMoreBookDBinding>() {
     override val resId = R.layout.fragment_view_more_book_d
 
     private val bookByYearAdapter = BookAdapter()
+    private var selectedBookId: String? = null
 
     private val sharedViewModel: BookViewModel by navGraphViewModels(R.id.nav_home) {
         defaultViewModelProviderFactory
@@ -49,8 +50,18 @@ class ViewMoreBookDFragment : BaseFragment<FragmentViewMoreBookDBinding>() {
             toolbar.titleText.setText(R.string.list_books_title)
             toolbar.iconBack.setOnClickListener { findNavController().navigateUp() }
         }
-        bookByYearAdapter.setOnItemSelectedListener {
-            findNavController().navigate(R.id.action_viewMoreBookDFragment_to_detailsBookFragment)
+
+        bookByYearAdapter.setOnItemSelectedListener { book ->
+            selectedBookId = book.id
+            val action =
+                ViewMoreBookDFragmentDirections.actionViewMoreBookDFragmentToDetailsBookFragment(bookId = book.id)
+            findNavController().navigate(action)
+        }
+
+        bookByYearAdapter.setOnItemCommandListener { bookModel ->
+            val userId= "11"
+            sharedViewModel.addToCart(bookModel.id, userId)
+            sharedViewModel.addBookToCart(userId, bookModel.id)
         }
 
     }

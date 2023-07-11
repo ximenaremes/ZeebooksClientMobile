@@ -31,19 +31,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
+
             <lecho.lib.hellocharts.view.PieChartView
                 android:id="@+id/pieChartView"
-                android:layout_width="match_parent"
+                android:layout_width="216dp"
                 android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_12"
                 android:padding="@dimen/margin_24"
-                android:paddingStart="0dp"
-                android:layout_marginStart="@dimen/margin_12"/>
-
+                android:paddingStart="0dp" />
 
             <LinearLayout
                 android:id="@+id/legendLayout"
                 android:layout_width="151dp"
-                android:layout_height="220dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:paddingStart="@dimen/margin_10"

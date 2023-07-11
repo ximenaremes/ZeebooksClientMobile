@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="book"
-            type="com.example.zeebooks.feature_home.domain.model.BookModel" />
-
-        <variable
-            name="nameAuthor"
-            type="String" />
-
-        <variable
-            name="name"
-            type="String" />
-    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -71,9 +55,7 @@
                 android:id="@+id/cover"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="@dimen/margin_104"
-                android:layout_marginTop="@dimen/margin_32"
-                android:layout_marginEnd="@dimen/margin_104"
+                android:layout_marginTop="@dimen/margin_24"
                 android:layout_marginBottom="@dimen/margin_100"
                 app:layout_constraintBottom_toBottomOf="@id/backgroundCover"
                 app:layout_constraintCircleRadius="@dimen/margin_10"
@@ -84,7 +66,7 @@
 
             <TextView
                 android:id="@+id/authorBook"
-                style="@style/FB.16"
+                style="@style/FB.20.DarkColor"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_50"
@@ -92,34 +74,34 @@
                 android:layout_marginEnd="@dimen/margin_50"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="@{nameAuthor}"
                 app:layout_constraintEnd_toEndOf="@id/backgroundCover"
                 app:layout_constraintStart_toStartOf="@id/backgroundCover"
-                app:layout_constraintTop_toBottomOf="@id/cover"
-                tools:ignore="HardcodedText" />
+                app:layout_constraintTop_toBottomOf="@id/cover" />
 
             <TextView
                 android:id="@+id/titleBook"
-                style="@style/FB.20"
+                style="@style/FB.16.GrayscaleLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_50"
                 android:layout_marginTop="@dimen/margin_8"
                 android:layout_marginEnd="@dimen/margin_50"
+                android:layout_marginBottom="@dimen/margin_32"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="@{name}"
                 app:layout_constraintEnd_toEndOf="@id/backgroundCover"
                 app:layout_constraintStart_toStartOf="@id/backgroundCover"
                 app:layout_constraintTop_toBottomOf="@id/authorBook"
-                tools:ignore="HardcodedText" />
+                app:layout_constraintBottom_toBottomOf="@+id/backgroundCover"
+                />
+
 
             <ImageView
                 android:id="@+id/backgroundDetails"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_24"
                 android:layout_marginEnd="@dimen/margin_24"
                 android:rotation="180"
                 android:src="@drawable/background_form_white"
@@ -165,7 +147,7 @@
                 android:layout_marginBottom="@dimen/margin_24"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="@{book.ratingb}"
+                android:text="3.3"
                 app:layout_constraintBottom_toBottomOf="@id/backgroundDetails"
                 app:layout_constraintEnd_toEndOf="@id/verticalLine1"
                 app:layout_constraintStart_toStartOf="@id/backgroundDetails"
@@ -208,7 +190,6 @@
                 android:layout_marginEnd="@dimen/margin_10"
                 android:layout_marginBottom="@dimen/margin_24"
                 android:gravity="center"
-                android:text="@{book.numberOfPage}"
                 app:layout_constraintBottom_toBottomOf="@id/backgroundDetails"
                 app:layout_constraintEnd_toEndOf="@id/verticalLine2"
                 app:layout_constraintStart_toStartOf="@id/verticalLine1"
@@ -285,7 +266,6 @@
                 android:layout_marginBottom="@dimen/margin_24"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="@{book.yearOfAppearance}"
                 app:layout_constraintBottom_toBottomOf="@id/backgroundDetails"
                 app:layout_constraintEnd_toEndOf="@id/backgroundDetails"
                 app:layout_constraintStart_toEndOf="@id/verticalLine3"
@@ -297,7 +277,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_24"
                 android:layout_marginEnd="@dimen/margin_24"
                 android:background="@drawable/background_button"
                 android:text="@string/purchase_now"
@@ -308,9 +288,9 @@
             <ImageView
                 android:id="@+id/backgroundDescription"
                 android:layout_width="0dp"
-                android:layout_height="365dp"
+                android:layout_height="70dp"
                 android:layout_marginStart="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_24"
                 android:layout_marginEnd="@dimen/margin_24"
                 android:src="@drawable/background_form_white"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -320,72 +300,175 @@
 
             <TextView
                 android:id="@+id/descriptionText"
-                style="@style/FB.23"
+                style="@style/FB.21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_24"
                 android:layout_marginTop="@dimen/margin_20"
                 android:text="@string/book_description"
-                android:textColor="@color/book_details_text"
+                android:textColor="@color/darker_blue"
                 app:layout_constraintStart_toStartOf="@id/backgroundDescription"
                 app:layout_constraintTop_toTopOf="@id/backgroundDescription" />
 
-
-            <com.borjabravo.readmoretextview.ReadMoreTextView
+            <TextView
                 android:id="@+id/text_view"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginHorizontal="@dimen/margin_24"
+                android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
                 android:layout_marginTop="@dimen/margin_24"
-                android:layout_marginBottom="@dimen/margin_40"
-                android:text="@{book.description}"
-                android:textSize="16sp"
-                app:colorClickableText="@color/btn"
-                app:layout_constraintBottom_toBottomOf="@id/backgroundDescription"
-                app:layout_constraintEnd_toEndOf="@id/backgroundDescription"
+                android:textSize="@dimen/margin_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundDescription"
                 app:layout_constraintStart_toStartOf="@id/backgroundDescription"
-                app:layout_constraintTop_toBottomOf="@id/descriptionText"
-                app:trimCollapsedText="@string/view_more_text"
-                app:trimExpandedText="@string/view_less_text"
-                app:trimLength="50"
-                app:trimMode="trimModeLength" />
+                app:layout_constraintTop_toBottomOf="@id/descriptionText" />
+
+            <ImageView
+                android:id="@+id/spText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:visibility="gone"
+                android:src="@drawable/background_vertical_line"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundDescription"
+                app:layout_constraintStart_toStartOf="@+id/backgroundDescription"
+                app:layout_constraintTop_toBottomOf="@id/text_view" />
+
+            <TextView
+                android:id="@+id/isbnText"
+                style="@style/FB.14.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_24"
+                android:text="@string/book_isbn_deatils"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/backgroundDescription"
+                app:layout_constraintTop_toBottomOf="@id/spText" />
+
+            <TextView
+                android:id="@+id/isbnValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundDescription"
+                app:layout_constraintTop_toBottomOf="@id/spText" />
+            <TextView
+                android:id="@+id/statusText"
+                style="@style/FB.14.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_24"
+                android:text="Status"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/backgroundDescription"
+                app:layout_constraintTop_toBottomOf="@id/isbnText" />
+
+            <TextView
+                android:id="@+id/statusValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundDescription"
+                app:layout_constraintTop_toBottomOf="@id/isbnText" />
+
+            <TextView
+                android:id="@+id/priceText"
+                style="@style/FB.14.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginStart="@dimen/margin_24"
+                android:text="Pret"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/backgroundDescription"
+                app:layout_constraintTop_toBottomOf="@id/statusText" />
 
             <TextView
                 android:id="@+id/priceValue"
-                style="@style/FB.20"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/margin_24"
-                android:layout_marginBottom="@dimen/margin_24"
-                android:text="@{book.price}"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginEnd="@dimen/margin_8"
                 android:textColor="@color/btn"
-                app:layout_constraintBottom_toBottomOf="@id/backgroundDescription"
-                app:layout_constraintEnd_toEndOf="@id/backgroundDescription"
-                app:layout_constraintTop_toBottomOf="@id/text_view" />
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/RON"
+                app:layout_constraintTop_toBottomOf="@id/statusText" />
+
+            <TextView
+                android:id="@+id/RON"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:textColor="@color/btn"
+                android:textStyle="bold"
+                android:text="RON"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundDescription"
+                app:layout_constraintTop_toBottomOf="@id/statusText" />
+
+
+
+
+            <ImageView
+                android:id="@+id/iconSelector"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:src="@drawable/ic_down_arrow"
+                android:rotation="90"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/backgroundDescription"
+                app:layout_constraintEnd_toEndOf="@id/backgroundDescription" />
+
 
             <ImageView
                 android:id="@+id/backgroundRating"
                 android:layout_width="0dp"
-                android:layout_height="365dp"
+                android:layout_height="70dp"
                 android:layout_marginStart="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_14"
                 android:layout_marginEnd="@dimen/margin_24"
+                android:layout_marginBottom="@dimen/margin_30"
                 android:rotation="180"
                 android:src="@drawable/background_form_white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/backgroundDescription"
+                app:layout_constraintBottom_toBottomOf="parent"
                 tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/iconSelectorRating"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:src="@drawable/ic_down_arrow"
+                android:rotation="90"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/backgroundRating"
+                app:layout_constraintEnd_toEndOf="@id/backgroundRating" />
 
             <TextView
                 android:id="@+id/RatingText"
-                style="@style/FB.23"
+                style="@style/FB.21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_24"
                 android:layout_marginTop="@dimen/margin_20"
                 android:text="@string/ratinds_and_review"
-                android:textColor="@color/book_details_text"
+                android:textColor="@color/darker_blue"
                 app:layout_constraintStart_toStartOf="@id/backgroundRating"
                 app:layout_constraintTop_toTopOf="@id/backgroundRating" />
 
@@ -394,20 +477,41 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_100"
+                android:layout_marginTop="@dimen/margin_14"
+                android:visibility="gone"
                 android:src="@drawable/background_vertical_line"
                 app:layout_constraintEnd_toEndOf="@id/backgroundRating"
+                app:layout_constraintStart_toStartOf="@id/backgroundRating"
+                app:layout_constraintTop_toBottomOf="@id/ratingtext" />
+
+            <TextView
+                android:id="@+id/ratingtext"
+                style="@style/FB.14.GrayscaleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_20"
+                android:visibility="gone"
+                android:text="@string/book_sp"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundRating"
                 app:layout_constraintStart_toStartOf="@id/backgroundRating"
                 app:layout_constraintTop_toBottomOf="@id/RatingText" />
 
             <RatingBar
                 android:id="@+id/ratingBar"
-                android:layout_width="241dp"
-                android:layout_height="45dp"
-                android:layout_marginHorizontal="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_10"
                 android:progressTint="@color/my_acc_pie_chart_color_1"
-                app:layout_constraintEnd_toEndOf="@id/backgroundRating"
+                android:numStars="5"
+                android:rating="0"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundRating"
                 app:layout_constraintStart_toStartOf="@id/backgroundRating"
                 app:layout_constraintTop_toBottomOf="@id/verticalLine" />
 
@@ -417,54 +521,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginBottom="@dimen/margin_10"
                 android:background="@drawable/background_button_field_border"
                 android:padding="@dimen/margin_12"
                 android:text="@string/rating_button"
+                android:visibility="gone"
                 android:textColor="@color/btn"
                 app:layout_constraintEnd_toEndOf="@+id/backgroundRating"
                 app:layout_constraintStart_toStartOf="@id/backgroundRating"
-                app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-                tools:layout_editor_absoluteX="170dp"
-                tools:layout_editor_absoluteY="1371dp" />
-
-            <TextView
-                android:id="@+id/bookTitle"
-                style="@style/FB.24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_25"
-                android:text="@string/books_similari"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/backgroundRating" />
-
-            <TextView
-                android:id="@+id/viewMore"
-                style="@style/FB.12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_40"
-                android:layout_marginEnd="@dimen/margin_24"
-                android:text="@string/view_more"
-                android:textColor="@color/btn"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/backgroundRating" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_24"
-                android:layout_marginTop="@dimen/margin_16"
-                android:layout_marginEnd="@dimen/margin_24"
-                android:layout_marginBottom="@dimen/margin_30"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bookTitle"
-                tools:listitem="@layout/view_book_item" />
+                app:layout_constraintBottom_toBottomOf="@+id/backgroundRating"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

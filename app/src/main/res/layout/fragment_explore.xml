@@ -35,6 +35,7 @@
                 android:searchIcon="@drawable/ic_search"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+<!--            app:showAsAction="collapseActionView|ifRoom"-->
 
             <ImageView
                 android:id="@+id/backgroundFilter"

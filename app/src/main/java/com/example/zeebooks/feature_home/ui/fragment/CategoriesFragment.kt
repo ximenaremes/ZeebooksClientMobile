@@ -35,16 +35,6 @@ class CategoriesFragment : BaseFragment<FragmentCategoriesBinding>() {
                 result.exceptionOrNull()
             }
         })
-
-        sharedViewModel.categories.observe(viewLifecycleOwner, Observer { result ->
-            if (result.isSuccess) {
-                val books = result.getOrNull()
-                books?.let {
-                }
-            } else {
-                result.exceptionOrNull()
-            }
-        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

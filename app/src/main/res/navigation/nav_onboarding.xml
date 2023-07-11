@@ -35,7 +35,8 @@
     <fragment
         android:id="@+id/adminDashboardFragment"
         android:name="com.example.zeebooks.feature_dashboard.ui.fragment.AdminDashboardFragment"
-        android:label="AdminDashboardFragment">
+        android:label="AdminDashboardFragment"
+        >
         <action
             android:id="@+id/action_adminDashboardFragment_to_categoriesAdminFragment"
             app:destination="@id/categoriesAdminFragment" />
@@ -62,6 +63,9 @@
         <action
             android:id="@+id/action_booksFragment_to_editBookDetailsFragment"
             app:destination="@id/editBookDetailsFragment" />
+        <action
+            android:id="@+id/action_booksFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
     </fragment>
     <fragment
         android:id="@+id/categoriesAdminFragment"
@@ -165,5 +169,13 @@
         <action
             android:id="@+id/action_commandsFragment_to_adminDashboardFragment"
             app:destination="@id/adminDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.example.zeebooks.feature_dashboard.ui.fragment.AddBookFragment"
+        android:label="AddBookFragment" >
+        <action
+            android:id="@+id/action_addBookFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
     </fragment>
 </navigation>

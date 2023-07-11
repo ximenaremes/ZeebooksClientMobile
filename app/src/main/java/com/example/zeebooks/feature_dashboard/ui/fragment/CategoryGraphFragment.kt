@@ -31,14 +31,24 @@ class CategoryGraphFragment : BaseFragment<FragmentCategoryGraphBinding>() {
         val legendLayout = view?.findViewById<LinearLayout>(R.id.legendLayout)
 
         val pieData = mutableListOf<SliceValue>()
-        pieData.add(SliceValue(30f, Color.BLUE).setValue(30f))
-        pieData.add(SliceValue(20f, Color.GREEN).setValue(20f))
-        pieData.add(SliceValue(50f, Color.RED).setValue(50f))
+        pieData.add(SliceValue(0f, Color.BLUE).setValue(0f))
+        pieData.add(SliceValue(0f, Color.GREEN).setValue(0f))
+        pieData.add(SliceValue(25f, Color.RED).setValue(25f))
+        pieData.add(SliceValue(0f, Color.MAGENTA).setValue(0f))
+        pieData.add(SliceValue(5f, Color.CYAN).setValue(5f))
+        pieData.add(SliceValue(2f, Color.YELLOW).setValue(2f))
+        pieData.add(SliceValue(15f, Color.DKGRAY).setValue(15f))
+        pieData.add(SliceValue(10f, Color.LTGRAY).setValue(10f))
 
         val colorToTextMap = HashMap<Int, String>()
-        colorToTextMap[Color.BLUE] = "Blue"
-        colorToTextMap[Color.GREEN] = "Green"
-        colorToTextMap[Color.RED] = "Red"
+        colorToTextMap[Color.BLUE] = "Literatura"
+        colorToTextMap[Color.GREEN] = "Biografii"
+        colorToTextMap[Color.RED] = "Ficțiune"
+        colorToTextMap[Color.MAGENTA] = "Istorie"
+        colorToTextMap[Color.CYAN] = "Filozofie"
+        colorToTextMap[Color.YELLOW] = "Poezie"
+        colorToTextMap[Color.DKGRAY] = "Psihologie"
+        colorToTextMap[Color.LTGRAY] = "Altele"
 
         val pieChartData = PieChartData(pieData)
         pieChartData.setHasLabels(true).valueLabelTextSize = 14

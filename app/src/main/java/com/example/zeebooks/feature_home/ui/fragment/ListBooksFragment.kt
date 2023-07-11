@@ -19,6 +19,7 @@ class ListBooksFragment : BaseFragment<FragmentListBooksBinding>() {
     override val resId = R.layout.fragment_list_books
 
     private val bookByCategoryId = BookAdapter()
+    private var selectedBookId: String? = null
 
     private val sharedViewModel: CategoriesViewModel by navGraphViewModels(R.id.nav_home) {
         defaultViewModelProviderFactory
@@ -55,6 +56,12 @@ class ListBooksFragment : BaseFragment<FragmentListBooksBinding>() {
         categoryId?.let {
             sharedViewModel.getBookByCategoryId(categoryId)
         }
+        bookByCategoryId.setOnItemSelectedListener { category ->
+            selectedBookId = category.id
+            val action = ListBooksFragmentDirections.actionListBooksFragmentToDetailsBookFragment(bookId = category.id)
+            findNavController().navigate(action)
+        }
+
 
 
     }

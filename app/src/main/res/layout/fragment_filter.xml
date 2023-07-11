@@ -33,35 +33,16 @@
             tools:layout_editor_absoluteY="0dp"
             tools:ignore="ContentDescription" />
 
-<!--        <include-->
-<!--            android:id="@+id/toolbar"-->
-<!--            layout="@layout/view_toolbar"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_100"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/backgroundCover" />
-
         <ImageView
-            android:id="@+id/backgroundCover"
+            android:id="@+id/backgroundAuthor"
             android:layout_width="0dp"
-            android:layout_height="365dp"
+            android:layout_height="385dp"
             android:layout_marginHorizontal="@dimen/margin_24"
-            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_100"
             android:src="@drawable/background_form_white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/viewPager" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/descriptionText"
@@ -73,20 +54,220 @@
             android:textColor="@color/btn"
             android:layout_marginStart="@dimen/margin_24"
             android:layout_marginTop="@dimen/margin_20"
-            app:layout_constraintStart_toStartOf="@id/backgroundCover"
-            app:layout_constraintTop_toTopOf="@id/backgroundCover" />
+            app:layout_constraintStart_toStartOf="@id/backgroundAuthor"
+            app:layout_constraintTop_toTopOf="@id/backgroundAuthor" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/author1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundAuthor"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionText">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textAuthor1"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="Edgar Cayce"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/author2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundAuthor"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/author1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textAuthor2"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="Lynne Mctaggart"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/author3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundAuthor"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/author2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textAuthor3"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="Matt Haig"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/author4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundAuthor"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/author3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textAuthor4"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="Brian Clegg"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/author5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundAuthor"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/author4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textAuthor5"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="Moni Stanila"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
         <ImageView
             android:id="@+id/backgroundDetails"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="265dp"
             android:layout_marginHorizontal="@dimen/margin_24"
             android:layout_marginTop="@dimen/margin_30"
             android:src="@drawable/background_form_white"
             android:rotation="180"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/backgroundCover"/>
+            app:layout_constraintTop_toBottomOf="@id/backgroundAuthor"/>
 
         <TextView
             android:id="@+id/votesText"
@@ -102,10 +283,176 @@
             app:layout_constraintStart_toStartOf="@id/backgroundDetails"
             app:layout_constraintTop_toTopOf="@id/backgroundDetails" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pretMic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundDetails"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundDetails"
+            app:layout_constraintTop_toBottomOf="@+id/votesText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_background"
+            android:paddingTop="@dimen/margin_12"
+            android:paddingBottom="@dimen/margin_12">
+
+            <TextView
+                android:id="@+id/textMic"
+                style="@style/FB.14.DarkColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:paddingStart="@dimen/margin_24"
+                android:text=" mai mic de 50 RON"
+                android:gravity="start|center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/textMicValue"
+                style="@style/FB.14.DarkColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:paddingStart="@dimen/margin_24"
+                android:text="40"
+                android:visibility="invisible"
+                android:gravity="start|center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pretMediu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundDetails"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundDetails"
+            app:layout_constraintTop_toBottomOf="@+id/pretMic">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textMediu"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="50 RON"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/textMediuValue"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="50"
+                    android:visibility="invisible"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pretMare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/backgroundDetails"
+            app:layout_constraintEnd_toEndOf="@+id/backgroundDetails"
+            app:layout_constraintTop_toBottomOf="@+id/pretMediu">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textMare"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="peste 50 RON"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/textMareValue"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="100"
+                    android:visibility="invisible"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <ImageView
             android:id="@+id/ratingBackground"
             android:layout_width="0dp"
-            android:layout_height="365dp"
+            android:layout_height="450dp"
             android:layout_marginTop="@dimen/margin_24"
             android:layout_marginHorizontal="@dimen/margin_24"
             android:src="@drawable/background_form_white"
@@ -126,67 +473,258 @@
             app:layout_constraintStart_toStartOf="@id/ratingBackground"
             app:layout_constraintTop_toTopOf="@id/ratingBackground" />
 
-        <ImageView
-            android:id="@+id/genBackground"
-            android:layout_width="0dp"
-            android:layout_height="365dp"
-            android:layout_marginTop="@dimen/margin_24"
-            android:layout_marginHorizontal="@dimen/margin_24"
-            android:rotation="180"
-            android:src="@drawable/background_form_white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ratingBackground" />
-
-        <TextView
-            android:id="@+id/genText"
-            style="@style/FR.16"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rating5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/filter_type"
-            android:textAllCaps="true"
-            android:textColor="@color/btn"
+            android:background="@drawable/background_rounded_white"
             android:layout_marginStart="@dimen/margin_24"
-            android:layout_marginTop="@dimen/margin_20"
-            app:layout_constraintStart_toStartOf="@id/genBackground"
-            app:layout_constraintTop_toTopOf="@id/genBackground" />
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/ratingBackground"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBackground"
+            app:layout_constraintTop_toBottomOf="@+id/ratingText">
 
-        <ImageView
-            android:id="@+id/languageBackground"
-            android:layout_width="0dp"
-            android:layout_height="365dp"
-            android:layout_marginTop="@dimen/margin_24"
-            android:layout_marginHorizontal="@dimen/margin_24"
-            android:src="@drawable/background_form_white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/genBackground" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
 
-        <TextView
-            android:id="@+id/languageText"
-            style="@style/FR.16"
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textRating5"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="5"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rating4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/filter_language"
-            android:textAllCaps="true"
-            android:textColor="@color/btn"
+            android:background="@drawable/background_rounded_white"
             android:layout_marginStart="@dimen/margin_24"
-            android:layout_marginTop="@dimen/margin_20"
-            app:layout_constraintStart_toStartOf="@id/languageBackground"
-            app:layout_constraintTop_toTopOf="@id/languageBackground" />
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/ratingBackground"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBackground"
+            app:layout_constraintTop_toBottomOf="@+id/rating5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textRating4"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="4"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rating3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/ratingBackground"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBackground"
+            app:layout_constraintTop_toBottomOf="@+id/rating4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textRating3"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="3"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rating2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/ratingBackground"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBackground"
+            app:layout_constraintTop_toBottomOf="@+id/rating3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textRating2"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="2"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rating1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/ratingBackground"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBackground"
+            app:layout_constraintTop_toBottomOf="@+id/rating2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textRating1"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="1"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rating0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/ratingBackground"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBackground"
+            app:layout_constraintTop_toBottomOf="@+id/rating1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textRating0"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="0"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
             android:id="@+id/yearsBackground"
             android:layout_width="0dp"
-            android:layout_height="365dp"
+            android:layout_height="335dp"
             android:layout_marginHorizontal="@dimen/margin_24"
             android:layout_marginTop="@dimen/margin_24"
-            android:layout_marginBottom="@dimen/margin_120"
+            android:layout_marginBottom="@dimen/margin_24"
             android:rotation="180"
             android:src="@drawable/background_form_white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/languageBackground"
+            app:layout_constraintTop_toBottomOf="@id/ratingBackground"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
@@ -202,6 +740,166 @@
             app:layout_constraintStart_toStartOf="@id/yearsBackground"
             app:layout_constraintTop_toTopOf="@id/yearsBackground" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/year2023"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/yearsBackground"
+            app:layout_constraintEnd_toEndOf="@+id/yearsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/yearsText">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textYear2023"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="2023"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/year2022"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/yearsBackground"
+            app:layout_constraintEnd_toEndOf="@+id/yearsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/year2023">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textYear2022"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="2022"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/year2021"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/yearsBackground"
+            app:layout_constraintEnd_toEndOf="@+id/yearsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/year2022">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textYear2021"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="2021"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/year2020"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:paddingStart="@dimen/margin_24"
+            android:paddingEnd="@dimen/margin_24"
+            android:paddingBottom="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="@+id/yearsBackground"
+            app:layout_constraintEnd_toEndOf="@+id/yearsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/year2021">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_background"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingBottom="@dimen/margin_12">
+
+                <TextView
+                    android:id="@+id/textYear2020"
+                    style="@style/FB.14.DarkColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:paddingStart="@dimen/margin_24"
+                    android:text="2020"
+                    android:gravity="start|center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -215,15 +913,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <include
-            android:id="@+id/containerButton"
-            layout="@layout/view_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

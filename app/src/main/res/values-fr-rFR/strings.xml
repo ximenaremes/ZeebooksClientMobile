@@ -34,7 +34,13 @@
     <string name="success_title_popup_login_admin">Autentificare ca administrator reușită!</string>
     <string name="message_popup">Te rugăm să aștepți câteva momente în timp ce pregătim totul pentru tine.</string>
     <string name="error_title_popup">Credențiale invalide!</string>
+
+    <string name="success_title1_popup_order"> Comandă plasată cu succes!</string>
+    <string name="success_title2_popup_order"> Curierul nostru este nerăbdător să livreze comanda ta! </string>
+    <string name="success_title3_popup_order"> Stai aproape de telefon și pregătește-te să primești cărțile preferate direct la ușa ta!"</string>
+    <string name="success_title4_popup_order"> Așteaptă cu nerăbdare momentul în care telefonul tău va suna, deoarece curierul nostru se va asigura că ajunge la tine în cel mai scurt timp posibil. </string>
     <!-- endregion -->
+
 
     <!-- region validation -->
     <string name="textErroLastName">Numele este obligatoriu!</string>
@@ -86,15 +92,16 @@
     <string name="book_description">Descriere</string>
     <string name="view_more_text">vezi mai mult</string>
     <string name="view_less_text">vezi mai puțin</string>
-    <string name="ratinds_and_review">Voturi</string>
-    <string name="rating_button">Acordă un rating</string>
-    <string name="write_a_review">Scrie o recenzie</string>
-    <string name="books_similari">Cărți similare</string>
+    <string name="ratinds_and_review">Rating</string>
+    <string name="rating_button">Evaluați acest produs</string>
+    <string name="book_sp">Părerea ta este importantă și utilă pentru noi și pentru alți utilizatori ai site-ului</string>
+    <string name="book_author_deatils">Editura</string>
+    <string name="book_isbn_deatils">ISBN</string>
     <!-- endregion -->
 
     <!-- region filter -->
-    <string name="filter_title">Filtre</string>
-    <string name="filter_sort">Sortare</string>
+    <string name="filter_title">Filtrează</string>
+    <string name="filter_sort">Autori</string>
     <string name="filter_price">Preț</string>
     <string name="filter_rating">Rating</string>
     <string name="filter_type">Gen</string>
@@ -117,9 +124,15 @@
 
     <!-- region Payment -->
     <string name="payment_title">Coș de cumpărături</string>
+    <string name="payment_title_order">Finalizare comandă</string>
     <string name="payment_subtitle">Coșul tău este gol.</string>
+    <string name="payment_subtitle_t">Acum ești la un singur pas distanță de a te bucura de cărțile tale preferate!</string>
     <string name="payment_description">Descoperă cele mai avantajoase oferte și achiziționează într-un mod sigur.</string>
-    <string name="payment_button_text">Vezi produsele</string>
+    <string name="payment_button_text">Finalizează comanda</string>
+    <string name="payment_text">Vei găsi toate detaliile comenzii tale aici!</string>
+    <string name="payment_transport">Modalitatea de transport: </string>
+    <string name="payment_plata">Modalitatea de plată: </string>
+    <string name="payment_modalitate">Suma totală de plată: </string>
     <!-- endregion -->
 
 
@@ -243,17 +256,32 @@
     <string name="allUsers">Toți utilizatorii</string>
     <string name="allCategories">Toate categoriile</string>
     <string name="allBooks">Toate cărțile</string>
-
+    <string name="allCommand">Toate comenzile</string>
     <string name="numberOfBook"> Numărul de cărți din categorie este:</string>
     <string name="add_category">Adăugare categorie</string>
     <string name="edit_categories">Editare categorie</string>
+    <string name="edit_book">Editare carte</string>
     <string name="edit_user">Adăugare utilizator</string>
+    <string name="add_book">Adăugare carte</string>
     <string name="email_text">E-mail</string>
     <string name="add_user">Salvează</string>
     <string name="delete_user">Ștergere</string>
-    <string name="delete_message">Ești sigur că dorești să ștergi utilizatorul?</string>
+    <string name="delete_message_user">Ești sigur că dorești să ștergi utilizatorul?</string>
+    <string name="delete_message_category">Ești sigur că dorești să ștergi categoria?</string>
+    <string name="delete_message_book">Ești sigur că dorești să ștergi cartea?</string>
     <string name="name_categories">Nume</string>
     <string name="image_categories">Încarcă o imagine</string>
+
+    <string name="book_name">Nume</string>
+    <string name="book_author">Autor</string>
+    <string name="book_price">Pret</string>
+    <string name="book_rating">Rating</string>
+    <string name="book_dees">Descriere</string>
+    <string name="book_numberOfPage">Numărul de pagini</string>
+    <string name="book_numberOfCopies">Numărul de bucăți</string>
+    <string name="book_year">Anul apariției</string>
+    <string name="book_status">Status</string>
+    <string name="book_isbn">ISBN</string>
 
 
 </resources>

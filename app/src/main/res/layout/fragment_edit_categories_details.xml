@@ -55,29 +55,6 @@
                 android:textColor="@color/border" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/firstNameText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="@dimen/margin_16"
-            android:layout_marginEnd="24dp"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lastNameText">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textFirstName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_field_edit"
-                android:hint="@string/image_categories"
-                android:inputType="textPersonName"
-                android:textColor="@color/border" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <Button
             android:id="@+id/buttonChangeCategories"
             android:layout_width="0dp"
@@ -91,7 +68,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/firstNameText" />
+            app:layout_constraintTop_toBottomOf="@+id/lastNameText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

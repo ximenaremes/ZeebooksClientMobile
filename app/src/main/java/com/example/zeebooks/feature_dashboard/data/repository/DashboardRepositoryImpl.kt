@@ -30,11 +30,12 @@ class DashboardRepositoryImpl @Inject internal constructor(
         return dashboardRemoteDataSource.deleteCategoryById(id)
     }
 
-    override suspend fun addCategory(imagine: MultipartBody.Part, categoryModel: CategoryModel): Result<CategoryModel> {
-        return dashboardRemoteDataSource.addCategory(imagine,categoryModel)
+    override suspend fun addCategory(image: MultipartBody.Part, name:String): Result<CategoryModel> {
+        return dashboardRemoteDataSource.addCategory(image,name)
     }
 
     override suspend fun getNumberOfUsers(): Result<Int> {
         return dashboardRemoteDataSource.getNumberOfUsers()
     }
+
 }
